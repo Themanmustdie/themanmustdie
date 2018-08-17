@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Ultimate Game Tools/RopeEditor/Sample Scenes/02 - Lamp.unity
+  isLoaded: 1
+  isActive: 1
