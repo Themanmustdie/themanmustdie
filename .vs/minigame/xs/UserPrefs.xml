@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{9F94E66D-0073-06B6-1765-F37AFFF31CA8}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/pendulum/iceDispear.cs">
+    <Files>
+      <File FileName="Assets/pendulum/boxDispear.cs" Line="22" Column="6" />
+      <File FileName="Assets/pendulum/explore.cs" Line="28" Column="34" />
+      <File FileName="Assets/pendulum/tractionDispear.cs" Line="23" Column="6" />
+      <File FileName="Assets/Shatter Toolkit/Examples/Shared Assets/Scripts/SceneGUI.cs" Line="13" Column="1" />
+      <File FileName="Assets/pendulum/iceCubeDispear.cs" Line="5" Column="21" />
+      <File FileName="Assets/pendulum/iceDispear.cs" Line="21" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
