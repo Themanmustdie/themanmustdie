@@ -61,13 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\animator.cs" />
-    <Compile Include="Assets\pendulum\boxDispear.cs" />
-    <Compile Include="Assets\pendulum\explore.cs" />
-    <Compile Include="Assets\pendulum\force.cs" />
-    <Compile Include="Assets\pendulum\iceCubeDispear.cs" />
-    <Compile Include="Assets\pendulum\iceDispear.cs" />
-    <Compile Include="Assets\pendulum\tractionDispear.cs" />
+    <Compile Include="Assets\RollBox\animator.cs" />
+    <Compile Include="Assets\Script\boxDispear.cs" />
+    <Compile Include="Assets\Script\explore.cs" />
+    <Compile Include="Assets\Script\force.cs" />
+    <Compile Include="Assets\Script\iceCubeDispear.cs" />
+    <Compile Include="Assets\Script\iceDispear.cs" />
+    <Compile Include="Assets\Script\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\tractionDispear.cs" />
     <Compile Include="Assets\Shatter Toolkit\Core\Library\Common\Tools.cs" />
     <Compile Include="Assets\Shatter Toolkit\Core\Library\Hull\Edge.cs" />
     <Compile Include="Assets\Shatter Toolkit\Core\Library\Hull\EdgeHit.cs" />

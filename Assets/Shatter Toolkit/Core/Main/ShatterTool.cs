@@ -199,6 +199,12 @@ public class ShatterTool : MonoBehaviour
 	/// </param>
 	public void Split(Plane[] planes)
 	{
+        //if(gameObject.tag == "rope") {
+        //    var joint = gameObject.GetComponent<HingeJoint>();
+        //    joint.connectedBody = null;
+        //    //Destroy(gameObject);
+        //    return;
+        //}
 		if (planes != null && planes.Length > 0 && hull != null && !hull.IsEmpty)
 		{
 			UvMapper uvMapper = GetComponent<UvMapper>();

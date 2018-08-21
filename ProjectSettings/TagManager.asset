@@ -6,6 +6,7 @@ TagManager:
   tags:
   - floor
   - ice cube
+  - rope
   layers:
   - Default
   - TransparentFX
