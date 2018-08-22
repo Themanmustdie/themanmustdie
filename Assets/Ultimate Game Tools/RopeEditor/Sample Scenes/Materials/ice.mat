@@ -18,7 +18,39 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BenTi:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BenTi_normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bing_wenli:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: c133986a55d8de04e8e4c88b974bcb9a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpRamp:
+        m_Texture: {fileID: 2800000, guid: 0309b02996a1b954b919e23ecd62f2fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpTex:
+        m_Texture: {fileID: 2800000, guid: 0309b02996a1b954b919e23ecd62f2fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CoverageTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: c640abca947dbda4d93443a80040c2da, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -34,6 +66,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DiffuseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -42,11 +78,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainTex:
+    - _GlitterTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b19d2cde6f07f1040b4add81177ffbb6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_bingwenli:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -56,6 +100,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampTex:
+        m_Texture: {fileID: 2800000, guid: 0309b02996a1b954b919e23ecd62f2fe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ReflectionTex:
@@ -74,35 +126,77 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _xiaosan_texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BumpAmt: 0.12
+    - _Aniso: 0
+    - _BumpAmt: 0.011
     - _BumpScale: 1
+    - _Coverage: 0
     - _Cutoff: 0.5
+    - _Depth: 1
     - _DetailNormalMapScale: 1
+    - _DistertionIntensity: -0.462
+    - _DistortStrength: 4
     - _DstBlend: 0
+    - _EdgeThickness: 2
+    - _EmissiveBoost: 2.75
+    - _Fresnel: 0.359
+    - _FresnelBoost: 4
     - _FresnelScale: 0.75
     - _GerstnerIntensity: 1
+    - _Glitter: 0.5
+    - _Gloss: 20
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Height: 25
     - _Metallic: 0
     - _Mode: 0
+    - _Normal_bingwenli_qiangdu: 2
     - _OcclusionStrength: 1
+    - _Opacity: 0.415
     - _Parallax: 0.02
+    - _RampPower: 1
     - _ReflDistort: 0.44
     - _RefrDistort: 0.4
+    - _Refraction: 0
     - _Shininess: 200
+    - _Smooth: 0.5
     - _SmoothnessTextureChannel: 0
+    - _Specular: 1
     - _SpecularHighlights: 1
+    - _Spread: 1
     - _SrcBlend: 1
+    - _Transition: 0.5
+    - _TransitionSmooth: 0.5
+    - _Transparency: 0
     - _UVSec: 0
     - _WaveScale: 0.063
     - _ZWrite: 1
+    - _gloss: 0.4330766
+    - _normal02: 2
+    - _specular: 1.579953
+    - _tuqi: 0.1335529
+    - _waifaguang_bian: 2
+    - _xiaosan_bian: 0.03658742
+    - _xiosan: 0.3076923
     m_Colors:
     - WaveSpeed: {r: 19, g: 9, b: -16, a: -7}
     - _AnimationDirection: {r: 1, g: 1, b: 1, a: 1}
     - _AnimationTiling: {r: 2.2, g: 2.2, b: -1.1, a: -1.1}
     - _BaseColor: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
+    - _BenTiColor: {r: 1, g: 1, b: 1, a: 1}
     - _BumpDirection: {r: 1, g: 1, b: -1, a: 1}
     - _BumpTiling: {r: 1, g: 1, b: -2, a: 3}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -117,7 +211,13 @@ Material:
     - _GSteepness: {r: 1, g: 1, b: 1, a: 1}
     - _HorizonColor: {r: 0.172, g: 0.463, b: 0.435, a: 1}
     - _InvFadeParemeter: {r: 0.15, g: 0.15, b: 0.5, a: 1}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectionColor: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
     - _RefrColor: {r: 0.34, g: 0.85, b: 0.92, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 0.72, g: 0.72, b: 0.72, a: 1}
     - _WorldLightDir: {r: 0, g: 0.1, b: -0.5, a: 0}
+    - _bian_color: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
+    - _waifaguang: {r: 0.4196079, g: 0.6862745, b: 1, a: 1}
+    - _xiaosan_color: {r: 0.4078432, g: 0.4627451, b: 0.5019608, a: 1}

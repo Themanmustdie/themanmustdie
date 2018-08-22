@@ -28,7 +28,6 @@ public class TractionDispear : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                print("hit:" + hit.collider.gameObject.name);
                 if (hit.collider.tag == "rope")
                 {
                     var enemies = GameObject.FindGameObjectsWithTag("rope");

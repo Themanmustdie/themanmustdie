@@ -1,21 +1,12 @@
 fileFormatVersion: 2
 guid: 9ef26a39a400bec44a36b85fd38a2d65
-labels:
-- shatter
-- toolkit
-- split
-- cut
-- triangulate
-- triangulator
-- cutter
-- splitter
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -36,7 +27,7 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: 12
+  textureFormat: -1
   maxTextureSize: 512
   textureSettings:
     serializedVersion: 2
