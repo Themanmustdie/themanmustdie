@@ -1,18 +1,20 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class tractionDispear : MonoBehaviour {
+public class TractionDispear : MonoBehaviour
+{
+    public GameObject cam;
+    bool flag;
     DateTime t_MouseDown;
-    bool flag = false;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (!flag && Input.GetMouseButtonDown(0))
         {
             t_MouseDown = DateTime.Now;
@@ -21,14 +23,25 @@ public class tractionDispear : MonoBehaviour {
 
         if (flag && DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 2, 0))
         {
-            Destroy(gameObject);
+
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);  
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                print("hit:" + hit.collider.gameObject.name);
+                if (hit.collider.tag == "rope")
+                {
+                    var enemies = GameObject.FindGameObjectsWithTag("rope");
+                    foreach (GameObject enemy in enemies)
+                        Destroy(enemy);
+                }
+            }
+
         }
-	}
+        if (Input.GetMouseButtonUp(0))
+        {
+            flag = false;
+        }
+    }
 
-
-    //void exploreAndDispear() {
-    //    BoxCollider collider = GetComponent<BoxCollider>();
-    //    collider.attachedRigidbody.AddExplosionForce(50f,  Vector3.zero, 0, 0);
-    //    Destroy(gameObject, 1.0f);
-    //}
 }

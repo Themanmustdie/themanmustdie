@@ -1,18 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class iceDispear : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+public class IceDispear : MonoBehaviour
+{
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,6 +9,18 @@ public class iceDispear : MonoBehaviour {
         {
             Destroy(gameObject, 2.0f);
         }
+
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
     }
 }

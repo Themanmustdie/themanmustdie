@@ -1,19 +1,20 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class animator : MonoBehaviour {
-    public Animator animator_;
+public class Animator : MonoBehaviour
+{
+    public UnityEngine.Animator animator_;
+    bool flag;
     DateTime t_MouseDown;
-    bool flag = false;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (!flag && Input.GetMouseButtonDown(0))
         {
             t_MouseDown = DateTime.Now;
@@ -25,10 +26,11 @@ public class animator : MonoBehaviour {
             animator_.SetBool("isFire", true);
         }
 
-        if(Input.GetMouseButtonUp(0)){
+        if (Input.GetMouseButtonUp(0))
+        {
             flag = false;
             animator_.SetBool("isFire", false);
         }
-	}
+    }
 
 }

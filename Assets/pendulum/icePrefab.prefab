@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4095167708932234}
   - component: {fileID: 65363347671364742}
   - component: {fileID: 54017140249301290}
-  - component: {fileID: 114706071311090554}
+  - component: {fileID: 114101723615932130}
   m_Layer: 0
   m_Name: icePrefab
   m_TagString: Untagged
@@ -1509,7 +1509,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114706071311090554
+--- !u!114 &114101723615932130
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

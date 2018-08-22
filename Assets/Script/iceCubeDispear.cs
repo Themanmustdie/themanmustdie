@@ -1,21 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class iceCubeDispear : MonoBehaviour {
+public class IceCubeDispear : MonoBehaviour
+{
 
     public GameObject prefab;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnCollisionEnter(Collision collision)//测试是否触发触发器
     {
@@ -24,5 +12,11 @@ public class iceCubeDispear : MonoBehaviour {
             Destroy(gameObject);
             Instantiate(prefab, prefab.transform.position, prefab.transform.rotation);
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
