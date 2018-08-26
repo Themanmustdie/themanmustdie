@@ -9811,6 +9811,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9157806, y: 0.91578084, z: 0.91578084}
   m_Center: {x: 0, y: 0, z: 0.45789042}
+--- !u!114 &888436946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888436943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a89edd31bf136b94c9f4b8fdbc4e10da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1284506183519726, guid: af01e718ebd4941f2988d2ad81379de4, type: 2}
 --- !u!1 &890699652
 GameObject:
   m_ObjectHideFlags: 0
@@ -15008,6 +15020,7 @@ GameObject:
   - component: {fileID: 1347402594}
   - component: {fileID: 1347402593}
   - component: {fileID: 1347402592}
+  - component: {fileID: 1347402595}
   m_Layer: 0
   m_Name: Rope
   m_TagString: rope
@@ -15301,6 +15314,18 @@ MonoBehaviour:
   m_strStatus: Rope generated in 0.005097389 seconds
   m_bLastStatusIsError: 0
   m_strAssetFile: 
+--- !u!114 &1347402595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347402590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6eb5e74a165f4052adc42e315e4b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1021532873}
 --- !u!1 &1362525925
 GameObject:
   m_ObjectHideFlags: 0
@@ -17079,6 +17104,7 @@ GameObject:
   - component: {fileID: 1537856214}
   - component: {fileID: 1537856213}
   - component: {fileID: 1537856212}
+  - component: {fileID: 1537856216}
   m_Layer: 0
   m_Name: roll ball
   m_TagString: Untagged
@@ -17165,6 +17191,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537856210}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1537856216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1537856210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9a149d78369d144bb3f30a1d406c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rope: {fileID: 1347402590}
 --- !u!1 &1539856001
 GameObject:
   m_ObjectHideFlags: 0
