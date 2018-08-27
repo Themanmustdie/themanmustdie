@@ -250,7 +250,7 @@
     <Compile Include="Assets\bindokun\Ferr\Path\SVG\SVG.cs" />
     <Compile Include="Assets\bindokun\Ferr\Path\SVG\SVGLine.cs" />
     <Compile Include="Assets\bindokun\Ferr\Path\SVG\SVGPath.cs" />
-    <Compile Include="Assets\Scripts\alan\Animator.cs" />
+    <Compile Include="Assets\Scripts\alan\AnimatorFire.cs" />
     <Compile Include="Assets\Scripts\alan\BoxDispear.cs" />
     <Compile Include="Assets\Scripts\alan\Explore.cs" />
     <Compile Include="Assets\Scripts\alan\Force.cs" />
