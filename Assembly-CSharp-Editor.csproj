@@ -61,8 +61,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Shatter Toolkit\Core\Library\Editor\ShatterToolEditor.cs" />
-    <Compile Include="Assets\Ultimate Game Tools\RopeEditor\Editor\UltimateRopeEditor.cs" />
+    <Compile Include="Assets\alan\Shatter Toolkit\Core\Library\Editor\ShatterToolEditor.cs" />
+    <Compile Include="Assets\alan\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+    <Compile Include="Assets\alan\Ultimate Game Tools\RopeEditor\Editor\UltimateRopeEditor.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2D\Editor\Ferr2D_PathEditor.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2D\Editor\Ferr2D_Visual.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_Builder.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_Caps.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_MaterialSelector.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_Menu.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_PathTerrainEditor.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_PathTerrainEditor_Legacy.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_SceneOverlay.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_TerrainMaterialEditor.cs" />
+    <Compile Include="Assets\bindokun\Ferr\2DTerrain\Editor\Ferr2DT_TerrainMaterialWindow.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\2DT\Editor\Ferr2DT_MaterialInspector.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\Editor\ClampDrawer.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\Editor\EditorTools.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\Editor\InspectorHandles.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\Editor\InspectorNameDrawer.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\Editor\ProceduralMeshSaver.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\Editor\RestoreMeshInspector.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Common\Editor\UnlitVertexColorEditor.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Path\Editor\Path2DPropertyDrawer.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Path\Editor\PathEditorUtil.cs" />
+    <Compile Include="Assets\bindokun\Ferr\Path\Editor\PointControlPropertyDrawer.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/bindokudeng/Documents/GitHub/themanmustdie/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -362,17 +385,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F726DC27-F710-888B-1580-06ABB11F8988}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{9F19A31D-CC8F-CAE6-86FC-F1BF20C73297}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{5E350906-68EE-8BA0-A166-5F58DE2D153C}</Project>
-      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

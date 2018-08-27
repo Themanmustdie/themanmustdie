@@ -91,7 +91,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 31
+  controlID: 136
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 32
+  controlID: 137
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,8 +254,8 @@ MonoBehaviour:
     y: 486
     width: 908
     height: 461
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -288,9 +288,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 181b0000
-    m_LastClickedID: 6936
-    m_ExpandedIDs: cefbffff00000000
+    m_SelectedIDs: 3c1e0000
+    m_LastClickedID: 7740
+    m_ExpandedIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -308,8 +308,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
-  m_ExpandedScenes:
-  - 02 - Lamp
+  m_ExpandedScenes: []
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -385,20 +384,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/bindokun
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/bindokun/Girl
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bindokudeng\Documents\GitHub\themanmustdie
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 800c0000
-    m_LastClickedID: 3200
-    m_ExpandedIDs: 00000000ac0a0000460b0000b20b0000240c00007a0d0000a60d0000940e0000240f0000520f0000fe0f0000121000005c10000076100000921000009c11000052120000aa450000ac450000ae450000b0450000b2450000b4450000b645000000ca9a3b
+    m_SelectedIDs: 24100000
+    m_LastClickedID: 4132
+    m_ExpandedIDs: 000000009e0b0000540c0000dc0c0000600d0000b60e0000080f0000340f00002410000048100000ec100000461100001e1200003412000088120000a8120000c81200001414000002150000ca480000cc480000ce480000d0480000d2480000d4480000d6480000d8480000da48000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -426,7 +425,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac0a0000460b0000b20b0000240c00007a0d0000a60d0000940e0000240f0000520f0000a20f0000fe0f0000121000005c10000076100000921000009c11000052120000aa450000ac450000ae450000b0450000b2450000b4450000b6450000
+    m_ExpandedIDs: 000000009e0b0000540c0000dc0c0000600d0000b60e0000080f0000340f00002410000048100000ec100000461100001e1200003412000088120000a8120000c81200001414000002150000ca480000cc480000ce480000d0480000d2480000d4480000d6480000d8480000da480000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,7 +479,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 197
+  m_DirectoriesAreaWidth: 196
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
