@@ -12,9 +12,6 @@ public class GirlController : PhysicsObject
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    public Button btnLeft;
-    public Button btnRight;
-
     private bool isLeftBtnDown = false;
     private bool isRightBtnDown = false;
 

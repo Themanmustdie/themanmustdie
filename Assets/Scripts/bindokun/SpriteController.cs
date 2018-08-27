@@ -45,7 +45,6 @@ class NormalMoveState : ISpriteState
     {
         this.spirteCtrl = spirteCtrl;
         this.spriteTr = spriteTr;
-       // mouseDownPos = spriteTr.position;
     }
 
     public void Move()
@@ -55,7 +54,7 @@ class NormalMoveState : ISpriteState
         
         spirteCtrl.targetPos.z = 0;
         Vector3 moveDir = spirteCtrl.targetPos - originPos;
-        if (moveDir.magnitude > 1)
+        if (moveDir.magnitude > 0.05)
         {
             spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
         }
@@ -124,7 +123,7 @@ public class SpriteController: MonoBehaviour
         stateMap[state].Move();
     }
 
-    private void OnMouseDrag()
+    public void OnMouseDrag()
     {
         state = SpriteState.DragState;
     }

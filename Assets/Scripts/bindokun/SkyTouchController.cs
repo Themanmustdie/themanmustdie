@@ -38,7 +38,7 @@ public class SkyTouchController : MonoBehaviour
         mouseUpPos.z = 0;
         
         float clickDist = (mouseUpPos - mouseDownPos).magnitude;
-        if (clickDist < 1)
+        if (clickDist < 0.3)
         {
             spriteController.targetPos = mouseUpPos;
             spriteController.ChangeState(SpriteState.NormalMoveState);

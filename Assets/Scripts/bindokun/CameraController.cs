@@ -42,7 +42,7 @@ public class CameraController : MonoBehaviour
         {
             moveDir.y = 1;
         }
-        else if (girlViewPortPos.y < 0.3)
+        else if (girlViewPortPos.y < 0.2)
         {
             moveDir.y = -1;
         }
