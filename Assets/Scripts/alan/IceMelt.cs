@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceMelt : MonoBehaviour {
+public class IceMelt : MonoBehaviour
+{
 
     public UnityEngine.Animator melt_;
     public UnityEngine.Animator fire_;
@@ -38,18 +39,22 @@ public class IceMelt : MonoBehaviour {
         if (flag && DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 2, 0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            RaycastHit[] hits = Physics.RaycastAll(ray);
+            bool isHitSprite = false;
+            bool isHitIceCube = false;
+            foreach (RaycastHit hit in hits)
             {
                 foreach (Transform child in gameObject.transform)
-                {
                     if (hit.collider.gameObject == child.gameObject)
-                    {
-                        melt_.SetBool("IsMelt", true);
-                        fire_.SetBool("isFire", true);
-                        break;
-                    }
-                }
+                        isHitIceCube = true;
+                if (hit.collider.gameObject.tag == "BoySprite")
+                    isHitSprite = true;
+            }
+
+            if (isHitSprite && isHitIceCube)
+            {
+                melt_.SetBool("IsMelt", true);
+                fire_.SetBool("isFire", true);
             }
         }
     }

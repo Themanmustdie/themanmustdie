@@ -23,19 +23,24 @@ public class TractionDispear : MonoBehaviour
 
         if (flag && DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 2, 0))
         {
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit[] hits = Physics.RaycastAll(ray);
+            bool isHitBoySprite = false;
+            bool isHitRope = false;
 
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);  
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            foreach (RaycastHit hit in hits)
             {
                 if (hit.collider.tag == "rope")
-                {
-                    var enemies = GameObject.FindGameObjectsWithTag("rope");
-                    foreach (GameObject enemy in enemies)
-                        Destroy(enemy);
-                }
+                    isHitRope = true;
+                else if (hit.collider.tag == "BoySprite")
+                    isHitBoySprite = true;
             }
-
+            if(isHitBoySprite && isHitRope)
+            {
+                var enemies = GameObject.FindGameObjectsWithTag("rope");
+                foreach (GameObject enemy in enemies)
+                    Destroy(enemy);
+            }
         }
         if (Input.GetMouseButtonUp(0))
         {

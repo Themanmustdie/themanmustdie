@@ -8,6 +8,7 @@ TagManager:
   - ice cube
   - rope
   - roll ball
+  - BoySprite
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - Foreground
   - 
   - 
   - 
