@@ -5,10 +5,13 @@ public class BoxDispear : MonoBehaviour
 
     public GameObject prefab;
 
-    void OnTriggerEnter()//测试是否触发触发器
+    private void OnCollisionEnter(Collision collision)//测试是否触发触发器
     {
-        Destroy(gameObject);
-        Instantiate(prefab, prefab.transform.position, prefab.transform.rotation);
+        if (collision.collider.tag == "roll ball")
+        {
+            Destroy(gameObject);
+            Instantiate(prefab, prefab.transform.position, prefab.transform.rotation);
+        }
     }
     // Use this for initialization
     void Start()

@@ -35,6 +35,7 @@ public class AnimatorFire : MonoBehaviour
             {
                 if (hit.collider.tag == "rope")
                 {
+                    print(hit.collider.tag);
                     animator_.SetBool("isFire", true);
                 }
             }

@@ -7,6 +7,7 @@ public class Explore : MonoBehaviour
     {
         if (collision.collider.tag == "floor")
         {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             Destroy(gameObject, 2.0f);
         }
 

@@ -29,23 +29,27 @@ public class CameraController : MonoBehaviour
         Vector3 girlViewPortPos = Camera.main.WorldToViewportPoint(grilTransform.position);
 
         Vector3 moveDir = Vector3.zero;
+        Vector3 targetCamPos = transform.position;
 
         if (girlViewPortPos.x < 0.33 && cameraTransform.position.x > 0)
         {
-            moveDir.x = -1;
+            print("111111");
+            targetCamPos.x = -1;
         }
-        else if (girlViewPortPos.x > 0.66)
+        else if (girlViewPortPos.x > 0.5)
         {
-            moveDir.x = 1;
+            print("222222222");
+            targetCamPos.x = 1;
         }
-        if (girlViewPortPos.y > 0.5)
+        if (girlViewPortPos.y > 0.3)
         {
-            moveDir.y = 1;
+            targetCamPos.y = 1;
         }
-        else if (girlViewPortPos.y < 0.2)
+        else if (girlViewPortPos.y < 0.05)
         {
-            moveDir.y = -1;
+            targetCamPos.y = -1;
         }
-        cameraTransform.Translate(moveDir.normalized * cameraMoveSpeed * Time.deltaTime);
+        cameraTransform.position = Vector3.Lerp(transform.position, targetCamPos, cameraMoveSpeed * Time.deltaTime);
+        //cameraTransform.Translate(moveDir.normalized * cameraMoveSpeed * Time.deltaTime);  
     }
 }
