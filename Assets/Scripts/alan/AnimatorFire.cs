@@ -30,14 +30,22 @@ public class AnimatorFire : MonoBehaviour
         if (flag && DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 1, 0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            RaycastHit[] hits = Physics.RaycastAll(ray);
+            bool isHitSprite = false;
+            bool isHitRope = false;
+            foreach (RaycastHit hit in hits)
             {
                 if (hit.collider.tag == "rope")
                 {
-                    print(hit.collider.tag);
-                    animator_.SetBool("isFire", true);
+                    isHitRope = true;
                 }
+                if (hit.collider.gameObject.tag == "BoySprite")
+                    isHitSprite = true;
+            }
+
+            if (isHitSprite && isHitRope)
+            {
+                animator_.SetBool("isFire", true);
             }
         }
     }
