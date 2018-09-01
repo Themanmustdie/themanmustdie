@@ -260,6 +260,8 @@
     <Compile Include="Assets\Scripts\alan\IsBegin.cs" />
     <Compile Include="Assets\Scripts\alan\MeshMelt.cs" />
     <Compile Include="Assets\Scripts\alan\TractionDispear.cs" />
+    <Compile Include="Assets\Scripts\bindokun\BtnPromptController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\BtnSettingController.cs" />
     <Compile Include="Assets\Scripts\bindokun\CameraController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\GirlController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\PhysicsObject.cs" />
