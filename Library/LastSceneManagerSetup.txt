@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/02 - Lamp.unity
+- path: Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Level1.unity
   isLoaded: 1
   isActive: 1
