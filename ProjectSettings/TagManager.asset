@@ -9,6 +9,7 @@ TagManager:
   - rope
   - roll ball
   - BoySprite
+  - CharaterCamera
   layers:
   - Default
   - TransparentFX
