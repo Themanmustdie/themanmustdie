@@ -227,8 +227,14 @@ public class ShatterTool : MonoBehaviour
 				GameObject[] newGameObjects;
 				
 				CreateNewGameObjects(newHulls, out newGameObjects);
-				
-				if (sendPostSplitMessage)
+                
+                //手动添加的代码
+                for (int i = 0; i < newGameObjects.Length; i++)
+                {
+                    Destroy(newGameObjects[i], 0.5f);
+                }
+
+                if (sendPostSplitMessage)
 				{
 					SendMessage("PostSplit", newGameObjects, SendMessageOptions.DontRequireReceiver);
 				}
