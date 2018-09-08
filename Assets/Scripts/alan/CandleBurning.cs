@@ -5,44 +5,47 @@ using UnityEngine.UI;
 
 public class CandleBurning : MonoBehaviour {
 
-    public GameObject candleLight;
-    private Light light_;
+    public GameObject ulight_1;
+    public GameObject ulight_2;
+    public GameObject ulight_3;
+    public GameObject light_1;
+    public GameObject light_2;
+    public GameObject light_3;
     public GameObject girl;
     public GameObject fire;
     public GameObject wall;
-    private Image image_;
     private SpriteRenderer gReder;
     private SpriteRenderer fReder;
-    bool isClick;
+    bool isClick = false;
 	// Use this for initialization
 	void Start () {
-        light_ = candleLight.GetComponent<Light>();
-        image_ = GetComponent<Image>();
         gReder = girl.GetComponent<SpriteRenderer>();
         fReder = fire.GetComponent<SpriteRenderer>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (!isClick && Input.GetMouseButtonDown(0))
+        {
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit[] hits = Physics.RaycastAll(ray);
+            foreach (RaycastHit hit in hits)
+            {
+                if (hit.collider.gameObject.tag == "BoySprite")
+                {
+                    ulight_1.gameObject.SetActive(true);
+                    ulight_2.gameObject.SetActive(true);
+                    ulight_3.gameObject.SetActive(true);
+                    light_1.gameObject.SetActive(true);
+                    light_2.gameObject.SetActive(true);
+                    light_3.gameObject.SetActive(true);
+                    gReder.color = Color.white;
+                    fReder.color = Color.white;
+                    Destroy(wall);
+                    isClick = true;
+                }
+            }
+        }
 	}
 
-    public void ClickCandle() {
-        if (!isClick)
-        {
-            light_.range = 15;
-            image_.color = Color.white;
-            gReder.color = Color.white;
-            fReder.color = Color.white;
-            Destroy(wall);
-            isClick = true;
-        } else
-        {
-            light_.range = 0;
-            image_.color = new Vector4(120, 120, 120, 1);
-            gReder.color = new Vector4(120, 120, 120, 1);
-            fReder.color = new Vector4(120, 120, 120, 1);
-            isClick = false;
-        }
-    }
 }
