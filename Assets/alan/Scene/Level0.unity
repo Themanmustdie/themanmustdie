@@ -2151,6 +2151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
   moveSpeed: 3
+  girl: {fileID: 1422991412}
 --- !u!212 &1033642478
 SpriteRenderer:
   m_ObjectHideFlags: 0

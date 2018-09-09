@@ -49,7 +49,7 @@ public class ConfigManager
                     JsonStruct jsonStruct = JsonUtility.FromJson<JsonStruct>(dataAsJson);
                     foreach (KeyVal keyVal in jsonStruct.keyValList)
                     {
-                        configParaMap.Add(configFile.Name.Replace(".json", "") + keyVal.key, keyVal.value);
+                        configParaMap.Add(configFile.Name.Replace(".json", "-") + keyVal.key, keyVal.value);
                     }
                 }
             }
@@ -57,7 +57,7 @@ public class ConfigManager
         }
     }
 
-    public string GetPara(int sceneIdx, string key)
+    public string GetPara(string key)
     {
         return configParaMap[key];
     }

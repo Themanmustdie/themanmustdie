@@ -17,22 +17,42 @@ interface ISpriteState
 
 class IdleState : ISpriteState
 {
-   
+    private SpriteController spirteCtrl;
+    private float stayAloneTime;
+    private Transform spriteTr;
+    private Transform girlTr;
+    private float timethreshold;
 
-    public IdleState()
+    public IdleState(Transform spriteTr, Transform girlTr, SpriteController spirteCtrl)
     {
-        
+        this.spriteTr = spriteTr;
+        this.girlTr = girlTr;
+        this.spirteCtrl = spirteCtrl;
+        stayAloneTime = 0;
+        timethreshold = float.Parse(ConfigManager.GetInstance.GetPara("commom-SpriteStayAloneDelay"));
     }
 
     public void Move()
     {
+        Vector3 moveDir = girlTr.position - spriteTr.position;
+        if (moveDir.magnitude > 0.05)
+        {
+            stayAloneTime += Time.deltaTime;
+        }
+        else
+        {
+            stayAloneTime = 0;
+        }
+        if (timethreshold < stayAloneTime)
+        {
+            spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
+        }
 
-       
     }
 
     public void Reset()
     {
-        
+        stayAloneTime = 0;
     }
 }
 
@@ -57,6 +77,10 @@ class NormalMoveState : ISpriteState
         if (moveDir.magnitude > 0.05)
         {
             spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
+        }
+        else
+        {
+            spirteCtrl.ChangeState(SpriteState.IdleState);
         }
     }
 
@@ -95,6 +119,7 @@ public class SpriteController: MonoBehaviour
     private Transform tr;
     public Vector3 targetPos;
     public float moveSpeed = 3.0f;
+    public GameObject girl;
 
     private Dictionary<SpriteState, ISpriteState> stateMap;
     private SpriteState state;
@@ -106,7 +131,7 @@ public class SpriteController: MonoBehaviour
         targetPos = tr.position;
         stateMap = new Dictionary<SpriteState, ISpriteState>();
         // State map
-        stateMap.Add(SpriteState.IdleState, new IdleState());
+        stateMap.Add(SpriteState.IdleState, new IdleState(tr, girl.GetComponent<Transform>(),this));
         stateMap.Add(SpriteState.NormalMoveState, new NormalMoveState(this, tr));
         stateMap.Add(SpriteState.DragState, new DragState(tr));
         state = SpriteState.NormalMoveState;
@@ -134,6 +159,7 @@ public class SpriteController: MonoBehaviour
 
     public void ChangeState(SpriteState state)
     {
+        stateMap[state].Reset();
         this.state = state;
     }
 }
