@@ -8,7 +8,9 @@ public class NewGrilController : MonoBehaviour
     private CharacterController charController;
     private bool isLeftBtnDown = false;
     private bool isRightBtnDown = false;
-   
+
+    public GameObject tipMaskPanel;
+
     public void OnLeftBtnDown()
     {
         if (!isRightBtnDown)
@@ -45,8 +47,34 @@ public class NewGrilController : MonoBehaviour
 
         if (isLeftBtnDown || isRightBtnDown)
             move.x = isLeftBtnDown ? -1 : 1;
-        
+
 
         charController.SimpleMove(move * speed * Time.deltaTime);
+    }
+
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        
+        if (hit.gameObject.name == "wall")
+        {
+            ShowTips("Tip1");
+        }
+    }
+
+    private void ShowTips(string tipName)
+    {
+        foreach (Transform child in tipMaskPanel.transform)
+        {
+            if (child.gameObject.name == tipName)
+            {
+                child.gameObject.SetActive(true);
+            }
+            else
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
+        tipMaskPanel.SetActive(true);
     }
 }
