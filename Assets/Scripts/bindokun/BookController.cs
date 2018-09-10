@@ -65,6 +65,8 @@ public class BookController : MonoBehaviour
         else
         {
             bookMaskPanel.SetActive(false);
+            Destroy(GetComponent<Rigidbody>());
+            GetComponent<Collider>().isTrigger = true;
         }
     }
 }
