@@ -3,6 +3,7 @@ using UnityEditor.SceneManagement;
 
 public class BtnReplayController : MonoBehaviour
 {
+    public int level;
     // Use this for initialization
     void Start()
     {
@@ -16,6 +17,6 @@ public class BtnReplayController : MonoBehaviour
 
     public void OnClick()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(level);
     }
 }

@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{9F94E66D-0073-06B6-1765-F37AFFF31CA8}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/alan/CandleBurning.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/alan/Force.cs">
     <Files>
-      <File FileName="Assets/Script/Charactor.cs" Line="14" Column="1" />
       <File FileName="Assets/Scripts/bindokun/BtnSettingController.cs" Line="5" Column="5" />
-      <File FileName="Assets/Scripts/bindokun/BtnReplayController.cs" Line="22" Column="1" />
-      <File FileName="Assets/Scripts/alan/CandleBurning.cs" Line="31" Column="57" />
-      <File FileName="Assets/Scripts/alan/IceMelt.cs" Line="33" Column="49" />
+      <File FileName="Assets/Scripts/bindokun/BtnReplayController.cs" Line="11" Column="5" />
+      <File FileName="Assets/Scripts/alan/LoadScene.cs" Line="17" Column="32" />
+      <File FileName="Assets/Scripts/alan/TractionDispear.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/alan/BoxDispear.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/alan/Force.cs" Line="23" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

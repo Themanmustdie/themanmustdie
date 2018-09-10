@@ -11,6 +11,8 @@ public class CandleBurning : MonoBehaviour {
     public GameObject light_1;
     public GameObject light_2;
     public GameObject light_3;
+    public GameObject ulbackground;
+    public GameObject lbackground;
     public GameObject girl;
     public GameObject fire;
     public GameObject wall;
@@ -39,6 +41,8 @@ public class CandleBurning : MonoBehaviour {
                     light_1.gameObject.SetActive(true);
                     light_2.gameObject.SetActive(true);
                     light_3.gameObject.SetActive(true);
+                    ulbackground.SetActive(false);
+                    lbackground.SetActive(true);
                     gReder.color = Color.white;
                     fReder.color = Color.white;
                     Destroy(wall);
