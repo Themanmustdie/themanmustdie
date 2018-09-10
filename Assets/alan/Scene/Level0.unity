@@ -2135,7 +2135,7 @@ Transform:
   m_GameObject: {fileID: 1033642474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.4739995, y: 3.2, z: 0.02}
-  m_LocalScale: {x: 0.22066452, y: 0.22066452, z: 0.22066452}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1726541572}
   m_RootOrder: 0
@@ -2149,8 +2149,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.9049999
-  m_Height: 3.3299997
+  m_Radius: 0.30166668
+  m_Height: 1.11
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1033642477
@@ -3110,9 +3110,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1422991413}
   - component: {fileID: 1422991417}
-  - component: {fileID: 1422991416}
   - component: {fileID: 1422991415}
   - component: {fileID: 1422991414}
+  - component: {fileID: 1422991416}
+  - component: {fileID: 1422991418}
   m_Layer: 8
   m_Name: Girl
   m_TagString: Untagged
@@ -3127,8 +3128,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422991412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.69, y: 1.9, z: 0.02}
-  m_LocalScale: {x: 0.18035853, y: 0.18035853, z: 0.18035853}
+  m_LocalPosition: {x: 2.165, y: 2.482, z: 0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1726541572}
   m_RootOrder: 1
@@ -3147,6 +3148,7 @@ MonoBehaviour:
   speed: 100
   tipMaskPanel: {fileID: 624998327}
   bookMaskPanel: {fileID: 1181040213}
+  isWalk: 0
 --- !u!143 &1422991415
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3157,8 +3159,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 9.1
-  m_Radius: 2.1799998
+  m_Height: 2.6
+  m_Radius: 0.6228571
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.0001
@@ -3173,8 +3175,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.1799998
-  m_Height: 9.1
+  m_Radius: 0.6228571
+  m_Height: 2.6000001
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1422991417
@@ -3214,7 +3216,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 621dae9e14d2d954bb10e27d574c7f2a, type: 3}
   m_Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 4.3599997, y: 9.1}
@@ -3223,6 +3225,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1422991418
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422991412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e9e421c2caf8f01439b8210a3c33b4a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1472174118
 GameObject:
   m_ObjectHideFlags: 0
