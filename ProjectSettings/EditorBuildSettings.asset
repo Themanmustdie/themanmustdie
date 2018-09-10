@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/alan/Scene/Level0.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/alan/Scene/Level1.unity
+    path: Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Level1.unity
     guid: 53d3e40e72c7fa44287a82ec9bbce486
-  - enabled: 1
-    path: Assets/alan/Scene/Level2.unity
-    guid: ab8c8b126a29e8a41a322aef45c751ef
   m_configObjects: {}

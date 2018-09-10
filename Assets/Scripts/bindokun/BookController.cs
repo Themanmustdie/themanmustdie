@@ -67,6 +67,9 @@ public class BookController : MonoBehaviour
             bookMaskPanel.SetActive(false);
             Destroy(GetComponent<Rigidbody>());
             GetComponent<Collider>().isTrigger = true;
+
+            Camera.main.gameObject.GetComponent<BlurBackground>().enabled = false;
+            GameObject.Find("CharacterCamera").GetComponent<BlurBackground>().enabled = false;
         }
     }
 }
