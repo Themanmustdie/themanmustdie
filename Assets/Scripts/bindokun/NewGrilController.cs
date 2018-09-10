@@ -8,14 +8,9 @@ public class NewGrilController : MonoBehaviour
     private CharacterController charController;
     private bool isLeftBtnDown = false;
     private bool isRightBtnDown = false;
-    private SpriteRenderer spriteRender;
 
     public GameObject tipMaskPanel;
     public GameObject bookMaskPanel;
-
-    private Animator actionController;
-    public bool isWalk;
-    
 
     public void OnLeftBtnDown()
     {
@@ -44,9 +39,6 @@ public class NewGrilController : MonoBehaviour
     void Start()
     {
         charController = GetComponent<CharacterController>();
-        actionController = GetComponent<Animator>();
-        isWalk = false;
-        spriteRender = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -55,32 +47,10 @@ public class NewGrilController : MonoBehaviour
         Vector2 move = Vector3.zero;
 
         if (isLeftBtnDown || isRightBtnDown)
-        {
             move.x = isLeftBtnDown ? -1 : 1;
-            isWalk = true;
 
-            if(isLeftBtnDown)
-            {
-                spriteRender.flipX = true;
-            }
-            else
-            {
-                spriteRender.flipX = false;
-            }
-        }
-        else
-        {
-            isWalk = false;
-        }
-           
+
         charController.SimpleMove(move * speed * Time.deltaTime);
-        actionController.SetBool("isWalk", isWalk);
-    }
-
-    private void StopMoving()
-    {
-        isLeftBtnDown = false;
-        isRightBtnDown = false;
     }
 
 
@@ -90,14 +60,11 @@ public class NewGrilController : MonoBehaviour
         if (hit.gameObject.name == "wall")
         {
             ShowTips("Tip1");
-            StopMoving();
         }
         else if (hit.gameObject.name == "Book")
         {
             ShowBook();
-            StopMoving();
         }
-       
     }
 
     private void ShowTips(string tipName)
