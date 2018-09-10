@@ -1092,6 +1092,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1175,6 +1176,19 @@ MonoBehaviour:
   height: 5
   rotationDamping: 0
   heightDamping: 0
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a636e8abd16c74f43b39c552d88e0f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlurBoxShader: {fileID: 4800000, guid: 52e53652be217a44f99bbc49418b5cde, type: 3}
+  BlurSize: 0.5
 --- !u!1 &624998327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,7 +3144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd3b58dfecdb62438e080223f45d6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 70
+  speed: 100
   tipMaskPanel: {fileID: 624998327}
   bookMaskPanel: {fileID: 1181040213}
 --- !u!143 &1422991415
@@ -4139,6 +4153,7 @@ GameObject:
   - component: {fileID: 2038931974}
   - component: {fileID: 2038931973}
   - component: {fileID: 2038931971}
+  - component: {fileID: 2038931972}
   m_Layer: 0
   m_Name: CharacterCamera
   m_TagString: Untagged
@@ -4162,6 +4177,19 @@ MonoBehaviour:
   height: 5
   rotationDamping: 0
   heightDamping: 0
+--- !u!114 &2038931972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038931970}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a636e8abd16c74f43b39c552d88e0f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlurBoxShader: {fileID: 4800000, guid: 52e53652be217a44f99bbc49418b5cde, type: 3}
+  BlurSize: 0.5
 --- !u!20 &2038931973
 Camera:
   m_ObjectHideFlags: 0
