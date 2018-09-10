@@ -17,6 +17,6 @@ public class BtnReplayController : MonoBehaviour
 
     public void OnClick()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(level);
+        NetCtrl.instance.LoadScene(User.ID, level);
     }
 }

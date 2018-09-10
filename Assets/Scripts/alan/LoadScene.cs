@@ -18,7 +18,7 @@ public class LoadScene : MonoBehaviour {
     {
         if (other.tag == "girl")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(level);
+            NetCtrl.instance.LoadScene(User.ID, level);
         }
     }
 }
