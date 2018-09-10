@@ -35,7 +35,7 @@ class IdleState : ISpriteState
     public void Move()
     {
         Vector3 moveDir = girlTr.position - spriteTr.position;
-        if (moveDir.magnitude > 0.05)
+        if (moveDir.magnitude > 1.2)
         {
             stayAloneTime += Time.deltaTime;
         }

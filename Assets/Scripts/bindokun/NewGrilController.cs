@@ -10,6 +10,7 @@ public class NewGrilController : MonoBehaviour
     private bool isRightBtnDown = false;
 
     public GameObject tipMaskPanel;
+    public GameObject bookMaskPanel;
 
     public void OnLeftBtnDown()
     {
@@ -55,10 +56,14 @@ public class NewGrilController : MonoBehaviour
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        
+
         if (hit.gameObject.name == "wall")
         {
             ShowTips("Tip1");
+        }
+        else if (hit.gameObject.name == "Book")
+        {
+            ShowBook();
         }
     }
 
@@ -76,5 +81,21 @@ public class NewGrilController : MonoBehaviour
             }
         }
         tipMaskPanel.SetActive(true);
+    }
+
+    private void ShowBook()
+    {
+        foreach (Transform transform in bookMaskPanel.GetComponentInChildren<Transform>())
+        {
+            if (transform.gameObject.name == "BookCover")
+            {
+                transform.gameObject.SetActive(true);
+            }
+            else
+            {
+                transform.gameObject.SetActive(false);
+            }
+        }
+        bookMaskPanel.SetActive(true);
     }
 }
