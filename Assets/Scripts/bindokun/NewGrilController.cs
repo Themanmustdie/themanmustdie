@@ -129,9 +129,6 @@ public class NewGrilController : MonoBehaviour
                 transform.gameObject.SetActive(false);
             }
         }
-
-        Camera.main.gameObject.GetComponent<BlurBackground>().enabled = true;
-        GameObject.Find("CharacterCamera").GetComponent<BlurBackground>().enabled = true;
         bookMaskPanel.SetActive(true);
     }
 }
