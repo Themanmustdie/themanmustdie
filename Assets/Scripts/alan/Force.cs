@@ -19,8 +19,8 @@ public class Force : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "floor"){
-            GetComponent<Rigidbody>().AddForce(Vector3.right * 150);
-            Destroy(gameObject, 2.0f);
+            GetComponent<Rigidbody>().AddForce(Vector3.right * 200);
+            Destroy(gameObject, 4.0f);
         }
     }
 

@@ -12,6 +12,8 @@ TagManager:
   - CharaterCamera
   - rope1
   - rope2
+  - Detection
+  - girl
   layers:
   - Default
   - TransparentFX
