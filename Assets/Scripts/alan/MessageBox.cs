@@ -19,7 +19,6 @@ namespace Common
             Messagebox.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
             Messagebox.GetComponent<RectTransform>().offsetMin = Vector2.zero;
             Messagebox.GetComponent<RectTransform>().offsetMax = Vector2.zero;
-            Time.timeScale = 1;
         }
         public static void Show(string title, string content)
         {
@@ -31,7 +30,6 @@ namespace Common
             Messagebox.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
             Messagebox.GetComponent<RectTransform>().offsetMin = Vector2.zero;
             Messagebox.GetComponent<RectTransform>().offsetMax = Vector2.zero;
-            Time.timeScale = 1;
         }
         public static void Sure()
         {
@@ -42,7 +40,6 @@ namespace Common
             GameObject.Destroy(Messagebox);
             TitleStr = "标题";
             ContentStr = null;
-            Time.timeScale = 0;
         }
         public static void Cancle()
         {
@@ -50,7 +47,6 @@ namespace Common
             GameObject.Destroy(Messagebox);
             TitleStr = "标题";
             ContentStr = null;
-            Time.timeScale = 0;
         }
     }
 }

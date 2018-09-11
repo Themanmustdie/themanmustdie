@@ -85,10 +85,8 @@ public class NetCtrl : MonoBehaviour
     /// </summary>
     public bool Register(string id,string passWord)
     {
-        print(users.userInfoList.Count);
         for (int i = 0; i < users.userInfoList.Count; i++)
         {
-            print(users.userInfoList[i].ID + " " + id);
             if (users.userInfoList[i].ID == id)
             {
                 Common.MessageBox.Show("提示", "ID已经注册过了");
@@ -100,12 +98,18 @@ public class NetCtrl : MonoBehaviour
         info.ID = id;
         info.PassWord = passWord;
         users.userInfoList.Add(info);
-        print(info.ID+info.PassWord);
         //转换成Json格式,
-        string json = JsonUtility.ToJson(users);
-        Debug.Log(json);
+        string json1 = JsonUtility.ToJson(users);
         ////写进文件中，调用FileCtrl.cs脚本中的方法
-        FileCtrl.instance.WriteFileTxt(json, FileType.USERINFO);
+        FileCtrl.instance.WriteFileTxt(json1, FileType.USERINFO);
+        DataInfo data = new DataInfo();
+        data.ID = id;
+        data.Scene = 1;
+        datas.dataInfoList.Add(data);
+        //转换成Json格式,
+        string json2 = JsonUtility.ToJson(datas);
+        ////写进文件中，调用FileCtrl.cs脚本中的方法
+        FileCtrl.instance.WriteFileTxt(json2, FileType.DataInfo);
         return true;
     }
 
@@ -124,7 +128,6 @@ public class NetCtrl : MonoBehaviour
         User.Scene = scene;
         //转换成Json格式,
         string json = JsonUtility.ToJson(datas);
-        Debug.Log(json);
         ////写进文件中，调用FileCtrl.cs脚本中的方法
         FileCtrl.instance.WriteFileTxt(json, FileType.DataInfo);
         UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
