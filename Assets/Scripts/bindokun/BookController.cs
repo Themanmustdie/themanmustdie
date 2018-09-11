@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class BookController : MonoBehaviour
 {
-    
+
     private AudioSource audioSource;
     public GameObject bookMaskPanel;
     // Use this for initialization
@@ -37,7 +37,7 @@ public class BookController : MonoBehaviour
             audioSource.Play();
         }
     }
-   
+
     public void OnClickBook()
     {
 
@@ -47,7 +47,7 @@ public class BookController : MonoBehaviour
         // find show
         foreach (Transform transform in bookMaskPanel.GetComponentInChildren<Transform>())
         {
-            if(curActiveObj == null && transform.gameObject.activeSelf)
+            if (curActiveObj == null && transform.gameObject.activeSelf)
             {
                 curActiveObj = transform.gameObject;
             }
@@ -57,7 +57,7 @@ public class BookController : MonoBehaviour
             }
             transform.gameObject.SetActive(false);
         }
-        if(nextActiveObj !=null)
+        if (nextActiveObj != null)
         {
             nextActiveObj.SetActive(true);
             bookMaskPanel.SetActive(true);

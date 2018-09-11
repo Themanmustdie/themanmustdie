@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class TipsController : MonoBehaviour
 {
-
-
     public GameObject tipMaskPanel;
-    public GameObject tip1;
 
     // Use this for initialization
     void Start()

@@ -44,11 +44,11 @@ public class CandleBurning : MonoBehaviour {
                 {
                     isClickCandle = true;
                 }
-
+               
                 if(isClickFire & isClickCandle){
-                    ulight_1.gameObject.SetActive(true);
-                    ulight_2.gameObject.SetActive(true);
-                    ulight_3.gameObject.SetActive(true);
+                    ulight_1.gameObject.SetActive(false);
+                    ulight_2.gameObject.SetActive(false);
+                    ulight_3.gameObject.SetActive(false);
                     light_1.gameObject.SetActive(true);
                     light_2.gameObject.SetActive(true);
                     light_3.gameObject.SetActive(true);
