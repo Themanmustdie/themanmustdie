@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewBurnCandleController : MonoBehaviour {
 
+    private static bool isLightened  = false;
+
     private bool isClick = false;
     private bool isClickFire = false;
     private bool isClickCandle = false;
@@ -19,7 +21,7 @@ public class NewBurnCandleController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!isClick && Input.GetMouseButtonDown(0))
+        if (!NewBurnCandleController.isLightened && Input.GetMouseButtonDown(0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
@@ -31,7 +33,7 @@ public class NewBurnCandleController : MonoBehaviour {
                     isClickFire = true;
                 }
 
-                if (hit.collider.gameObject.name == "NewDetection")
+                if (hit.collider.gameObject.name.StartsWith("NewDetection"))
                 {
                     isClickCandle = true;
                 }
@@ -39,7 +41,7 @@ public class NewBurnCandleController : MonoBehaviour {
                 if (isClickFire & isClickCandle)
                 {
                     Destroy(wall);
-                    isClick = true;
+                    NewBurnCandleController.isLightened = true;
                     aniBackgroundWall.SetBool("isLighten", true);
                 }
             }

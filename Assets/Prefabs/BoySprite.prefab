@@ -54,8 +54,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
-  moveSpeed: 3
+  moveSpeed: 8
   girl: {fileID: 1162636356738664, guid: 71888b4d5b492264e9197fedc7b0b555, type: 2}
+  enableMoving: 1
 --- !u!136 &136730701473832706
 CapsuleCollider:
   m_ObjectHideFlags: 1

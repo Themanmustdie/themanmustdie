@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd3b58dfecdb62438e080223f45d6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 200
   tipMaskPanel: {fileID: 0}
   bookMaskPanel: {fileID: 0}
   isWalk: 0
