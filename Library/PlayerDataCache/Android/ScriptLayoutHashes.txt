@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/ouyanghanyan/code/unity/gameapk/book.apk
+/Users/ouyanghanyan/code/unity/gameapk/1.2.apk
 SceneListBegin?
 Assets/alan/Scene/login.unity
 Assets/alan/Scene/Level0.unity
