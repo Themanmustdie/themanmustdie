@@ -11468,6 +11468,8 @@ GameObject:
   - component: {fileID: 1021532874}
   - component: {fileID: 1021532875}
   - component: {fileID: 1021532877}
+  - component: {fileID: 1021532880}
+  - component: {fileID: 1021532879}
   - component: {fileID: 1021532878}
   - component: {fileID: 1021532876}
   - component: {fileID: 1021532881}
@@ -11552,6 +11554,32 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1021532873}
   m_Enabled: 1
+--- !u!114 &1021532879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021532873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d03bc46a9a44519babdac0050258f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  users:
+    userInfoList: []
+  datas:
+    dataInfoList: []
+--- !u!114 &1021532880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021532873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b91bb1e4c004b42823b592943051ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1021532881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11852,7 +11880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df175a5d379b465c831ac23bb5904d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 2
 --- !u!114 &1047388974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21147,7 +21175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd541567617ed4b22b6c30abaf1efee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  level: 3
 --- !u!65 &1818263024
 BoxCollider:
   m_ObjectHideFlags: 0

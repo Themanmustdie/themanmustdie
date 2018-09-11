@@ -25,6 +25,6 @@ public class SelectLevel : MonoBehaviour {
 
     public void restart()
     {
-        NetCtrl.instance.LoadScene(User.ID, 0);
+        NetCtrl.instance.LoadScene(User.ID, 1);
     }
 }
