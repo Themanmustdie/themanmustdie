@@ -267,6 +267,7 @@
     <Compile Include="Assets\Scripts\bindokun\CameraController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\GirlController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\PhysicsObject.cs" />
+    <Compile Include="Assets\Scripts\bindokun\NewBurnCandleController.cs" />
     <Compile Include="Assets\Scripts\bindokun\NewGrilController.cs" />
     <Compile Include="Assets\Scripts\bindokun\SkyTouchController.cs" />
     <Compile Include="Assets\Scripts\bindokun\SpriteController.cs" />
