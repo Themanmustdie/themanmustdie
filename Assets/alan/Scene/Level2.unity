@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.061430432, g: 0.26502943, b: 0.33506334, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1372,7 +1372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb3eec3db428d645bbbff0d61270c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollView: {fileID: 2057030227}
+  btnPrompt: {fileID: 0}
+  btnReplay: {fileID: 0}
 --- !u!114 &553914849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,7 +3011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd541567617ed4b22b6c30abaf1efee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 4
 --- !u!65 &1250076838
 BoxCollider:
   m_ObjectHideFlags: 0
