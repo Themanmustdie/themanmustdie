@@ -16,6 +16,8 @@ public class NewGrilController : MonoBehaviour
     private Animator actionController;
     public bool isWalk;
 
+    private bool isAddForce = false;
+
 
     public void OnLeftBtnDown()
     {
@@ -97,6 +99,15 @@ public class NewGrilController : MonoBehaviour
         {
             ShowBook();
             StopMoving();
+        }
+        else if (hit.gameObject.name == "Trestle")
+        {
+            if (!isAddForce)
+            {
+                AddDownForce force_ = hit.gameObject.GetComponent<AddDownForce>();
+                force_.AddForce();
+                isAddForce = true;
+            }
         }
 
     }

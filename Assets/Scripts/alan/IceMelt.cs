@@ -45,8 +45,10 @@ public class IceMelt : MonoBehaviour
             foreach (RaycastHit hit in hits)
             {
                 foreach (Transform child in gameObject.transform)
-                    if (hit.collider.gameObject == child.gameObject)
+                {
+                    if (hit.collider.gameObject.tag == "ice cube")
                         isHitIceCube = true;
+                }
                 if (hit.collider.gameObject.tag == "BoySprite")
                     isHitSprite = true;
             }

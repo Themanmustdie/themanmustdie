@@ -14,6 +14,9 @@ TagManager:
   - rope2
   - Detection
   - girl
+  - Fire
+  - Rivets
+  - Trestle
   layers:
   - Default
   - TransparentFX
