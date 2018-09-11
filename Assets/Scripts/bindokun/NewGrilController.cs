@@ -15,6 +15,17 @@ public class NewGrilController : MonoBehaviour
 
     private Animator actionController;
     public bool isWalk;
+    private bool enableMoving = true; 
+
+    public void EnableMoving()
+    {
+        enableMoving = true;
+    }
+    public void DisableMoving()
+    {
+        enableMoving = false;
+    }
+   
 
     private bool isAddForce = false;
 
@@ -54,6 +65,11 @@ public class NewGrilController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!enableMoving)
+        {
+            return;
+        }
+
         Vector2 move = Vector3.zero;
 
         if (isLeftBtnDown || isRightBtnDown)

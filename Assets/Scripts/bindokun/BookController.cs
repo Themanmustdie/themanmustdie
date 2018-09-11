@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Utility;
 
 [RequireComponent(typeof(AudioSource))]
 public class BookController : MonoBehaviour
@@ -8,6 +9,9 @@ public class BookController : MonoBehaviour
 
     private AudioSource audioSource;
     public GameObject bookMaskPanel;
+    public GameObject butterfly;
+    public GameObject girl;
+    public GameObject boySprite;
     // Use this for initialization
     void Start()
     {
@@ -68,6 +72,13 @@ public class BookController : MonoBehaviour
 
             Camera.main.gameObject.GetComponent<BlurBackground>().enabled = false;
             GameObject.Find("CharacterCamera").GetComponent<BlurBackground>().enabled = false;
+          
+            // 处理蝴蝶 和人和精灵
+            butterfly.SetActive(true);
+            Camera.main.gameObject.GetComponent<SmoothFollow>().target = butterfly.transform;
+            GameObject.Find("CharacterCamera").GetComponent<SmoothFollow>().target = butterfly.transform;
+            girl.GetComponent<NewGrilController>().DisableMoving();
+            boySprite.GetComponent<SpriteController>().DisableMoving();
         }
     }
 }

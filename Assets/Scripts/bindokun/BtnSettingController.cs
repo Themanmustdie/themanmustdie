@@ -2,10 +2,11 @@
 
 public class BtnSettingController : MonoBehaviour {
 
-    public GameObject scrollView;
- 
-	// Use this for initialization
-	void Start () {
+    public GameObject btnPrompt;
+    public GameObject btnReplay;
+
+    // Use this for initialization
+    void Start () {
 
 	}
 	
@@ -16,6 +17,7 @@ public class BtnSettingController : MonoBehaviour {
 
     public void OnClick()
     {
-        scrollView.SetActive(!scrollView.activeSelf);
+        btnPrompt.SetActive(!btnPrompt.activeSelf);
+        btnReplay.SetActive(!btnReplay.activeSelf);
     }
 }

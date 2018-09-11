@@ -131,6 +131,16 @@ public class SpriteController : MonoBehaviour
 
     private Dictionary<SpriteState, ISpriteState> stateMap;
     private SpriteState state;
+    public bool enableMoving = true;
+
+    public void EnableMoving()
+    {
+        enableMoving = true;
+    }
+    public void DisableMoving()
+    {
+        enableMoving = false;
+    }
 
     // Use this for initialization
     void Start()
@@ -143,8 +153,6 @@ public class SpriteController : MonoBehaviour
         stateMap.Add(SpriteState.NormalMoveState, new NormalMoveState(this, tr));
         stateMap.Add(SpriteState.DragState, new DragState(tr));
         state = SpriteState.NormalMoveState;
-
-
     }
 
     // Update is called once per frame
@@ -155,7 +163,11 @@ public class SpriteController : MonoBehaviour
 
     private void Move()
     {
-        stateMap[state].Move();
+        if (enableMoving)
+        {
+            stateMap[state].Move();
+        }
+
     }
 
     public void OnMouseDrag()
@@ -164,7 +176,8 @@ public class SpriteController : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        state = SpriteState.IdleState;
+        ChangeState(SpriteState.IdleState);
+
     }
 
     public void ChangeState(SpriteState state)
