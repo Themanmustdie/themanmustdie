@@ -29,7 +29,18 @@ class IdleState : ISpriteState
         this.girlTr = girlTr;
         this.spirteCtrl = spirteCtrl;
         stayAloneTime = 0;
-        timethreshold = float.Parse(ConfigManager.GetInstance.GetPara("commom-SpriteStayAloneDelay"));
+
+        string strVal = ConfigManager.GetInstance.GetPara("commom-SpriteStayAloneDelay");
+        
+        if (strVal == "")
+        {
+            timethreshold = 1.0f;
+        }
+        else
+        {
+            timethreshold = float.Parse(strVal);
+        }
+
     }
 
     public void Move()
@@ -71,7 +82,7 @@ class NormalMoveState : ISpriteState
     {
         Vector3 originPos = spriteTr.position;
         originPos.z = 0;
-        
+
         spirteCtrl.targetPos.z = 0;
         Vector3 moveDir = spirteCtrl.targetPos - originPos;
         if (moveDir.magnitude > 0.05)
@@ -86,7 +97,7 @@ class NormalMoveState : ISpriteState
 
     public void Reset()
     {
-       // mouseDownPos = spriteTr.position;
+        // mouseDownPos = spriteTr.position;
     }
 }
 
@@ -109,11 +120,11 @@ class DragState : ISpriteState
 
     public void Reset()
     {
-        
+
     }
 }
 
-public class SpriteController: MonoBehaviour
+public class SpriteController : MonoBehaviour
 {
 
     private Transform tr;
@@ -131,10 +142,12 @@ public class SpriteController: MonoBehaviour
         targetPos = tr.position;
         stateMap = new Dictionary<SpriteState, ISpriteState>();
         // State map
-        stateMap.Add(SpriteState.IdleState, new IdleState(tr, girl.GetComponent<Transform>(),this));
+        stateMap.Add(SpriteState.IdleState, new IdleState(tr, girl.GetComponent<Transform>(), this));
         stateMap.Add(SpriteState.NormalMoveState, new NormalMoveState(this, tr));
         stateMap.Add(SpriteState.DragState, new DragState(tr));
         state = SpriteState.NormalMoveState;
+
+
     }
 
     // Update is called once per frame
@@ -154,7 +167,7 @@ public class SpriteController: MonoBehaviour
     }
     private void OnMouseUp()
     {
-       state = SpriteState.IdleState;
+        state = SpriteState.IdleState;
     }
 
     public void ChangeState(SpriteState state)

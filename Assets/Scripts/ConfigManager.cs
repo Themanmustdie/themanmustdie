@@ -38,13 +38,22 @@ public class ConfigManager
     private void Init()
     {
         configParaMap = new Dictionary<string, string>();
-        DirectoryInfo configDir = new DirectoryInfo(Application.dataPath + "/Config");
+        DirectoryInfo configDir = null;
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            //只有在windows系统的webplayer平台上才会执行
+            configDir = new DirectoryInfo(Application.dataPath + "/Config");
+        }
+        else
+        {
+            configDir = new DirectoryInfo(Application.persistentDataPath + "/Config");
+        }
         foreach (FileInfo configFile in configDir.GetFiles())
         {
-            if(configFile.Name.EndsWith(".json"))
+            if (configFile.Name.EndsWith(".json"))
             {
                 string dataAsJson = File.ReadAllText(configFile.FullName);
-                if(!dataAsJson.Equals(""))
+                if (!dataAsJson.Equals(""))
                 {
                     JsonStruct jsonStruct = JsonUtility.FromJson<JsonStruct>(dataAsJson);
                     foreach (KeyVal keyVal in jsonStruct.keyValList)
@@ -53,13 +62,17 @@ public class ConfigManager
                     }
                 }
             }
-           
+
         }
     }
 
     public string GetPara(string key)
     {
-        return configParaMap[key];
+        if (configParaMap.ContainsKey(key))
+        {
+            return configParaMap[key];
+        }
+        return "";
     }
 
 }

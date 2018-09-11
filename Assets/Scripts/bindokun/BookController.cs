@@ -13,7 +13,12 @@ public class BookController : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         ConfigManager configMgr = ConfigManager.GetInstance;
-        float delaySec = float.Parse(configMgr.GetPara("Scene1-BookDropDelay"));
+        float delaySec = 1.0f;
+        string strVal = configMgr.GetPara("Scene1-BookDropDelay");
+        if (strVal != "")
+        {
+            delaySec = float.Parse(strVal);
+        }
         StartCoroutine(DropBook(delaySec));
     }
 
