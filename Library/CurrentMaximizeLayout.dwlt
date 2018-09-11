@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 442}
-  m_MaxSize: {x: 22012, y: 10021}
+  m_MinSize: {x: 913, y: 442}
+  m_MaxSize: {x: 22008, y: 10000}
   vertical: 0
-  controlID: 365
+  controlID: 3927
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 366
+  controlID: 3928
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,8 +294,8 @@ MonoBehaviour:
     y: 487
     width: 895
     height: 460
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -353,9 +353,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2fbffff
-    m_LastClickedID: -1070
-    m_ExpandedIDs: d2fbffff00000000
+    m_SelectedIDs: 1697ffff
+    m_LastClickedID: -26858
+    m_ExpandedIDs: 448dffff1697ffff36d9ffff9ef6ffffe6fbffff00000000904500000c510000f4510000fc51000050520000645200007c52000066640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -440,20 +440,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/alan/Scene
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/alan/Scene
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Tencent_Go\Documents\GitHub\themanmustdie
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ac0b0000
-    m_LastClickedID: 2988
-    m_ExpandedIDs: 00000000ac0b0000940f0000ea1000006e110000b8110000de110000fc1100005c120000f81200004e140000c816000000ca9a3b
+    m_SelectedIDs: ba0c0000
+    m_LastClickedID: 3258
+    m_ExpandedIDs: 00000000860b00006e0f0000c41000004811000092110000b8110000d611000036120000d212000028140000a216000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -481,7 +481,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac0b0000940f0000ea1000006e110000b8110000de110000fc1100005c120000f81200004e140000c816000000ca9a3b
+    m_ExpandedIDs: 00000000860b00006e0f0000c41000004811000092110000b8110000d611000036120000d212000028140000a216000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -506,8 +506,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d2fbffff
-    m_LastClickedInstanceID: -1070
+    m_SelectedInstanceIDs: 1697ffff
+    m_LastClickedInstanceID: -26858
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 4442000094130000cadbfeff
     m_RenameOverlay:
@@ -535,7 +535,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
-  m_DirectoriesAreaWidth: 119
+  m_DirectoriesAreaWidth: 173
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
