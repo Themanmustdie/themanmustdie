@@ -45,7 +45,10 @@ public class Register : MonoBehaviour
         //如果上边的判断都没问题，就要执行存储序列化了,需要调用NetCtrl.cs中的方法
         if (NetCtrl.instance.Register(InputFieldone.text, InputFieldtwo.text))
         {
-            Common.MessageBox.Show("提示", "注册成功");
+            User.ID = InputFieldone.text;
+            User.Scene = 1;
+            gameObject.SetActive(false);
+            NetCtrl.instance.LoadScene(User.ID, User.Scene);
         }
 
 

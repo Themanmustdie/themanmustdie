@@ -15,6 +15,7 @@ public class BookController : MonoBehaviour
         ConfigManager configMgr = ConfigManager.GetInstance;
         float delaySec = 1.0f;
         string strVal = configMgr.GetPara("Scene1-BookDropDelay");
+        Debug.Log("delaySec: " + strVal);
         if (strVal != "")
         {
             delaySec = float.Parse(strVal);

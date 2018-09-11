@@ -38,16 +38,13 @@ public class ConfigManager
     private void Init()
     {
         configParaMap = new Dictionary<string, string>();
-        DirectoryInfo configDir = null;
-        if (Application.platform == RuntimePlatform.WindowsEditor)
+        string configDirPath = configDirPath = Application.persistentDataPath + "/Config";
+        if (!Directory.Exists(configDirPath))
         {
-            //只有在windows系统的webplayer平台上才会执行
-            configDir = new DirectoryInfo(Application.dataPath + "/Config");
+            Directory.CreateDirectory(configDirPath);
         }
-        else
-        {
-            configDir = new DirectoryInfo(Application.persistentDataPath + "/Config");
-        }
+
+        DirectoryInfo configDir = new DirectoryInfo(configDirPath);
         foreach (FileInfo configFile in configDir.GetFiles())
         {
             if (configFile.Name.EndsWith(".json"))

@@ -30,13 +30,10 @@ class IdleState : ISpriteState
         this.spirteCtrl = spirteCtrl;
         stayAloneTime = 0;
 
+        timethreshold = 1.0f;
         string strVal = ConfigManager.GetInstance.GetPara("commom-SpriteStayAloneDelay");
-        
-        if (strVal == "")
-        {
-            timethreshold = 1.0f;
-        }
-        else
+        Debug.Log("stayAloneTime: " + strVal);
+        if (strVal != "")
         {
             timethreshold = float.Parse(strVal);
         }
