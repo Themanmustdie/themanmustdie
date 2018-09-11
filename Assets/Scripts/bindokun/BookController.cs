@@ -13,21 +13,13 @@ public class BookController : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         ConfigManager configMgr = ConfigManager.GetInstance;
-        float delaySec = 1.0f;
-        string strVal = configMgr.GetPara("Scene1-BookDropDelay");
-        Debug.Log("delaySec: " + strVal);
-        if (strVal != "")
-        {
-            delaySec = float.Parse(strVal);
-        }
-        StartCoroutine(DropBook(delaySec));
     }
 
-    IEnumerator DropBook(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        gameObject.GetComponent<Rigidbody>().useGravity = true;
-    }
+    //IEnumerator DropBook(float delay)
+    //{
+    //    yield return new WaitForSeconds(delay);
+    //    gameObject.GetComponent<Rigidbody>().useGravity = true;
+    //}
 
     // Update is called once per frame
     void Update()
