@@ -7252,6 +7252,11 @@ Prefab:
       propertyPath: level
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 224206505714150696, guid: 49dcad75278f3144a839967d37064305,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.422974
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49dcad75278f3144a839967d37064305, type: 2}
   m_IsPrefabAsset: 0
@@ -24359,6 +24364,11 @@ Prefab:
     - target: {fileID: 1162636356738664, guid: 71888b4d5b492264e9197fedc7b0b555, type: 2}
       propertyPath: m_Name
       value: Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 114172794245911980, guid: 71888b4d5b492264e9197fedc7b0b555,
+        type: 2}
+      propertyPath: speed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71888b4d5b492264e9197fedc7b0b555, type: 2}
