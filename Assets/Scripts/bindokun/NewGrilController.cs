@@ -15,7 +15,8 @@ public class NewGrilController : MonoBehaviour
 
     private Animator actionController;
     public bool isWalk;
-    private bool enableMoving = true; 
+    private bool enableMoving = true;
+    private CameraManager cameraMgr;
 
     public void EnableMoving()
     {
@@ -60,6 +61,7 @@ public class NewGrilController : MonoBehaviour
         actionController = GetComponent<Animator>();
         isWalk = false;
         spriteRender = GetComponent<SpriteRenderer>();
+        cameraMgr = GameObject.Find("EverySceneNeed").GetComponent<CameraManager>();
     }
 
     // Update is called once per frame
@@ -142,6 +144,8 @@ public class NewGrilController : MonoBehaviour
             }
         }
         tipMaskPanel.SetActive(true);
+        // 隐藏按钮
+        GameObject.Find("UILayer").GetComponent<UIManager>().HideAllButtons();
     }
 
     private void ShowBook()
@@ -157,9 +161,9 @@ public class NewGrilController : MonoBehaviour
                 transform.gameObject.SetActive(false);
             }
         }
-
-        Camera.main.gameObject.GetComponent<BlurBackground>().enabled = true;
-        GameObject.Find("CharacterCamera").GetComponent<BlurBackground>().enabled = true;
+        cameraMgr.BlurBackground(true);
         bookMaskPanel.SetActive(true);
+        // 隐藏按钮
+        GameObject.Find("UILayer").GetComponent<UIManager>().HideAllButtons();
     }
 }

@@ -33,12 +33,10 @@ public class CameraController : MonoBehaviour
 
         if (girlViewPortPos.x < 0.33 && cameraTransform.position.x > 0)
         {
-            print("111111");
             targetCamPos.x = -1;
         }
         else if (girlViewPortPos.x > 0.5)
         {
-            print("222222222");
             targetCamPos.x = 1;
         }
         if (girlViewPortPos.y > 0.3)
@@ -50,6 +48,5 @@ public class CameraController : MonoBehaviour
             targetCamPos.y = -1;
         }
         cameraTransform.position = Vector3.Lerp(transform.position, targetCamPos, cameraMoveSpeed * Time.deltaTime);
-        //cameraTransform.Translate(moveDir.normalized * cameraMoveSpeed * Time.deltaTime);  
     }
 }

@@ -12,11 +12,14 @@ public class BookController : MonoBehaviour
     public GameObject butterfly;
     public GameObject girl;
     public GameObject boySprite;
+
+    private CameraManager cameraMgr;
     // Use this for initialization
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         ConfigManager configMgr = ConfigManager.GetInstance;
+        cameraMgr = GameObject.Find("EverySceneNeed").GetComponent<CameraManager>();
     }
 
     //IEnumerator DropBook(float delay)
@@ -70,13 +73,11 @@ public class BookController : MonoBehaviour
             Destroy(GetComponent<Rigidbody>());
             GetComponent<Collider>().isTrigger = true;
 
-            Camera.main.gameObject.GetComponent<BlurBackground>().enabled = false;
-            GameObject.Find("CharacterCamera").GetComponent<BlurBackground>().enabled = false;
+            cameraMgr.BlurBackground(false);
           
             // 处理蝴蝶 和人和精灵
             butterfly.SetActive(true);
-            Camera.main.gameObject.GetComponent<SmoothFollow>().target = butterfly.transform;
-            GameObject.Find("CharacterCamera").GetComponent<SmoothFollow>().target = butterfly.transform;
+            cameraMgr.ChangeTarget(butterfly);
             girl.GetComponent<NewGrilController>().DisableMoving();
             boySprite.GetComponent<SpriteController>().DisableMoving();
         }

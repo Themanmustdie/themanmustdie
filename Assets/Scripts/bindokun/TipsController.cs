@@ -22,6 +22,8 @@ public class TipsController : MonoBehaviour
     public void OnClickMaskPanel()
     {
         tipMaskPanel.SetActive(false);
+        // 显示按钮
+        GameObject.Find("UILayer").GetComponent<UIManager>().ShowCommonButtons();
     }
 
   

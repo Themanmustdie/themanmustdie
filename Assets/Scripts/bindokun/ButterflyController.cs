@@ -37,6 +37,8 @@ public class ButterflyController : MonoBehaviour
 
             girl.GetComponent<NewGrilController>().EnableMoving();
             boySprite.GetComponent<SpriteController>().EnableMoving();
+            // 显示按钮
+            GameObject.Find("UILayer").GetComponent<UIManager>().ShowCommonButtons();
         }
         else
         {
