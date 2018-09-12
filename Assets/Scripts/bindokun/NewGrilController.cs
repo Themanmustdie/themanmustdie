@@ -132,7 +132,8 @@ public class NewGrilController : MonoBehaviour
             if (!isAddForce)
             {
                 float distance = Vector3.Distance(hit.transform.position, transform.position);
-                if (distance < 1)
+                print("distance:" + distance);
+                if (distance < 7.3f)
                 {
                     AddDownForce force_ = hit.gameObject.GetComponent<AddDownForce>();
                     force_.AddForce();
