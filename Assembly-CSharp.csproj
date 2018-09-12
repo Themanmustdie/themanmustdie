@@ -245,6 +245,7 @@
     <Compile Include="Assets\Scripts\alan\Balance.cs" />
     <Compile Include="Assets\Scripts\alan\BoxDispear.cs" />
     <Compile Include="Assets\Scripts\alan\CandleBurning.cs" />
+    <Compile Include="Assets\Scripts\alan\DectionLoad.cs" />
     <Compile Include="Assets\Scripts\alan\Explore.cs" />
     <Compile Include="Assets\Scripts\alan\Fail.cs" />
     <Compile Include="Assets\Scripts\alan\FileCtrl.cs" />
@@ -252,6 +253,7 @@
     <Compile Include="Assets\Scripts\alan\IceCubeDispear.cs" />
     <Compile Include="Assets\Scripts\alan\IceDispear.cs" />
     <Compile Include="Assets\Scripts\alan\IceMelt.cs" />
+    <Compile Include="Assets\Scripts\alan\IceMeltAndCreateWater.cs" />
     <Compile Include="Assets\Scripts\alan\IsBegin.cs" />
     <Compile Include="Assets\Scripts\alan\LoadScene.cs" />
     <Compile Include="Assets\Scripts\alan\Login.cs" />

@@ -33,12 +33,12 @@ public class Balance : MonoBehaviour {
         }
 
 	}
-    public void CounterclockwiseRotation() {
+    public void ClockwiseRotation() {
         transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, -angle), Time.time * speed);
         heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, top1.transform.position, Time.time * speed);
         heavy2.transform.position = Vector3.Lerp(heavy2.transform.position, bottom2.transform.position, Time.time * speed);
     }
-    public void ClockwiseRotation()
+    public void CounterclockwiseRotation()
     {
         transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, angle), Time.time * speed);
         heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, bottom1.transform.position, Time.time * speed);
