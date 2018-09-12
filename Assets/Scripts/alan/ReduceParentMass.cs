@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ReduceParentMass : MonoBehaviour {
     bool flag;
-    DateTime t_MouseDown;
+    DateTime t_MouseDown;   
 	// Use this for initialization
 	void Start () {
 		
@@ -31,7 +31,7 @@ public class ReduceParentMass : MonoBehaviour {
             bool isHitWater = false;
             foreach (RaycastHit hit in hits)
             {
-                if (hit.collider.tag == "water")
+                if (hit.collider.tag == gameObject.tag)
                 {
                     isHitWater = true;
                 }

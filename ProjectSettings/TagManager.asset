@@ -17,9 +17,10 @@ TagManager:
   - Fire
   - Rivets
   - Trestle
-  - water
   - IceRigth
   - IceLeft
+  - water1
+  - water2
   layers:
   - Default
   - TransparentFX

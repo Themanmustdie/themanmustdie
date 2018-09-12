@@ -13,6 +13,7 @@ public class IceMeltAndCreateWater : MonoBehaviour {
     private bool isInstan = false;
     public string AniName;
     public string Condition;
+    public string pre;
     // Use this for initialization
     void Start()
     {
@@ -60,7 +61,7 @@ public class IceMeltAndCreateWater : MonoBehaviour {
                 fire_.SetBool("isFire", true);
                 if (!isInstan)
                 {
-                        GameObject water = (GameObject)Resources.Load("water");
+                        GameObject water = (GameObject)Resources.Load(pre);
                         water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.5f, 0), heavy.transform.rotation) as GameObject;
                         water.transform.parent = heavy.transform;
                         Rigidbody rb = heavy.GetComponent<Rigidbody>();

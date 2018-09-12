@@ -18,6 +18,12 @@ public class RivetsFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AnimatorStateInfo animatorInfo;
+        animatorInfo = fire_.GetCurrentAnimatorStateInfo(0);  //要在update获取
+        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("fire")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+        {
+            Destroy(gameObject);
+        }
         if (Input.GetMouseButtonUp(0))
         {
             flag = false;
@@ -45,12 +51,6 @@ public class RivetsFire : MonoBehaviour
             if (isHitSprite && isHitIceRivets)
             {
                 fire_.SetBool("isFire", true);
-                if (flag && DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 3, 0))
-                {
-                    fire_.SetBool("isFire", false);
-                    Destroy(gameObject);
-
-                }
             }
         }
     }

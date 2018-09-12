@@ -1531,6 +1531,7 @@ MonoBehaviour:
   heavy: {fileID: 1021712777}
   AniName: icemelt
   Condition: IsMelt
+  pre: water2
 --- !u!212 &638929674
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1944,6 +1945,7 @@ MonoBehaviour:
   heavy: {fileID: 1328861278}
   AniName: IceLeft
   Condition: IceLeft
+  pre: water1
 --- !u!212 &799682320
 SpriteRenderer:
   m_ObjectHideFlags: 0
