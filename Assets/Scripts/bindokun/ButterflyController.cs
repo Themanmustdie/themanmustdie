@@ -32,8 +32,7 @@ public class ButterflyController : MonoBehaviour
         if(trButterfly.localPosition.x > targetLocalXpos)
         {
             gameObject.SetActive(false);
-            Camera.main.gameObject.GetComponent<SmoothFollow>().target = girl.transform;
-            GameObject.Find("CharacterCamera").GetComponent<SmoothFollow>().target = girl.transform;
+            GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
 
             girl.GetComponent<NewGrilController>().EnableMoving();
             boySprite.GetComponent<SpriteController>().EnableMoving();

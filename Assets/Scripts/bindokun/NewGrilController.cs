@@ -17,6 +17,7 @@ public class NewGrilController : MonoBehaviour
     public bool isWalk;
     private bool enableMoving = true;
     private CameraManager cameraMgr;
+    private Transform trGirl;
 
     public void EnableMoving()
     {
@@ -26,7 +27,7 @@ public class NewGrilController : MonoBehaviour
     {
         enableMoving = false;
     }
-   
+
 
     private bool isAddForce = false;
 
@@ -62,12 +63,13 @@ public class NewGrilController : MonoBehaviour
         isWalk = false;
         spriteRender = GetComponent<SpriteRenderer>();
         cameraMgr = GameObject.Find("EverySceneNeed").GetComponent<CameraManager>();
+        trGirl = gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!enableMoving)
+        if (!enableMoving)
         {
             return;
         }
@@ -96,6 +98,12 @@ public class NewGrilController : MonoBehaviour
         //charController.SimpleMove(move * speed * Time.deltaTime);
         charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
         actionController.SetBool("isWalk", isWalk);
+        // 判断女孩在摄像机的位置
+        float girlPosX = Camera.main.WorldToViewportPoint(trGirl.position).x;
+        if ((girlPosX >= 0 || move.x > 0) && (girlPosX <= 1 || move.x < 0))
+        {
+            charController.SimpleMove(move * speed * Time.deltaTime);
+        }
     }
 
     private void StopMoving()
@@ -107,7 +115,7 @@ public class NewGrilController : MonoBehaviour
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
-      
+
         if (hit.gameObject.name == "wall")
         {
             Debug.Log(hit.gameObject.name);

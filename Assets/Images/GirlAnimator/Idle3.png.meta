@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 4b3aa951f889dfc449a4dbb3a2da5e93
+guid: 0bd9cbded3e8cf646bf22dd8b417bb14
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Walk4_0
+    21300000: Idle3_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -85,13 +85,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk4_0
+      name: Idle3_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 11
-        width: 163
-        height: 282
+        x: 51
+        y: 10
+        width: 170
+        height: 281
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +99,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d13d77491c03d478ab03c1674bc8bc
+      spriteID: 84b3b8e5b380c9e42a10cf0d8eeacec3
       vertices: []
       indices: 
       edges: []
@@ -107,7 +107,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1f4ed47ea563a714db34693903e15dc6
+    spriteID: 194b926d5de1e534f8388e28bf1c7929
     vertices: []
     indices: 
     edges: []
