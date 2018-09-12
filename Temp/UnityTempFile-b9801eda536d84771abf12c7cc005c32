@@ -1,0 +1,407 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:'Temp/Assembly-CSharp.dll'
+-nostdlib
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.BaselibModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.FacebookModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.HotReloadModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.LocalizationModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ProfilerModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StreamingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubstanceModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TLSModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TimelineModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UNETModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UmbraModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/Unity.Locator.dll'
+-r:'Library/ScriptAssemblies/UnityEditor.StandardEvents.dll'
+-r:'Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll'
+-r:'Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll'
+-r:'Library/ScriptAssemblies/Unity.TextMeshPro.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll'
+-r:'/Users/ouyanghanyan/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll'
+-r:'/Users/ouyanghanyan/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/mscorlib.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Core.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Xml.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/UnityScript.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll'
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2018_1_OR_NEWER
+-define:UNITY_2018_2_OR_NEWER
+-define:UNITY_2018_2_4
+-define:UNITY_2018_2
+-define:UNITY_2018
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_TEXTURE_STREAMING
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_MANAGED_JOBS
+-define:ENABLE_MANAGED_TRANSFORM_JOBS
+-define:ENABLE_MANAGED_ANIMATION_JOBS
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:INCLUDE_PUBNUB
+-define:ENABLE_VIDEO
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_ANDROID
+-define:UNITY_ANDROID
+-define:UNITY_ANDROID_API
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_EGL
+-define:ENABLE_NETWORK
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING
+-define:PLATFORM_SUPPORTS_ADS_ID
+-define:UNITY_CAN_SHOW_SPLASH_SCREEN
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_SPATIALTRACKING
+-define:ENABLE_UNITYADS_RUNTIME
+-define:UNITY_UNITYADS_API
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+-define:ENABLE_UNITY_COLLECTIONS_CHECKS
+-define:ENABLE_BURST_AOT
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+-define:CROSS_PLATFORM_INPUT
+-define:MOBILE_INPUT
+-define:UNITY_HAS_GOOGLEVR
+-define:UNITY_HAS_TANGO
+'Assets/alan/DissolveShader/DemoSzene/Timed.cs'
+'Assets/alan/IceShader/Scripts/FreezeBehaviour.cs'
+'Assets/alan/IceShader/Scripts/Gui.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Common/Tools.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/Edge.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/EdgeHit.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/FastHull.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/HullType.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/IHull.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/LegacyHull.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/Point.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Hull/Triangle.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Triangulator/ITriangulator.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/Triangulator/Triangulator.cs'
+'Assets/alan/Shatter Toolkit/Core/Library/UvMapper/UvMapper.cs'
+'Assets/alan/Shatter Toolkit/Core/Main/ShatterTool.cs'
+'Assets/alan/Shatter Toolkit/Core/Main/TargetUvMapper.cs'
+'Assets/alan/Shatter Toolkit/Core/Main/WorldUvMapper.cs'
+'Assets/alan/Shatter Toolkit/Examples/Basic/myforce.cs'
+'Assets/alan/Shatter Toolkit/Examples/Shared Assets/Scripts/MouseGUI.cs'
+'Assets/alan/Shatter Toolkit/Examples/Shared Assets/Scripts/SceneGUI.cs'
+'Assets/alan/Shatter Toolkit/Examples/Triangulator/OutlineCreator.cs'
+'Assets/alan/Shatter Toolkit/Examples/UvMapping/RotateRigidbody.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Game Objects/HierarchyHandler.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Game Objects/ShatterOnCollision.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Mouse/MouseForce.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Mouse/MouseInstantiate.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Mouse/MouseShatter.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Mouse/MouseSplit.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Scheduler/Library/IShatterTask.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Scheduler/Library/ShatterTask.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Scheduler/Library/SplitTask.cs'
+'Assets/alan/Shatter Toolkit/Helpers/Scheduler/Main/ShatterScheduler.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/AxisTouchButton.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/ButtonHandler.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/CrossPlatformInputManager.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/InputAxisScrollbar.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/MobileControlRig.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/MobileInput.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/TouchPad.cs'
+'Assets/alan/Standard Assets/CrossPlatformInput/Scripts/VirtualInput.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/AfterburnerPhysicsForce.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/ExplosionFireAndDebris.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/ExplosionPhysicsForce.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/Explosive.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/ExtinguishableParticleSystem.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/FireLight.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/Hose.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/ParticleSystemMultiplier.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/SmokeParticles.cs'
+'Assets/alan/Standard Assets/ParticleSystems/Scripts/WaterHoseParticles.cs'
+'Assets/alan/Standard Assets/Utility/ActivateTrigger.cs'
+'Assets/alan/Standard Assets/Utility/AlphaButtonClickMask.cs'
+'Assets/alan/Standard Assets/Utility/AutoMobileShaderSwitch.cs'
+'Assets/alan/Standard Assets/Utility/AutoMoveAndRotate.cs'
+'Assets/alan/Standard Assets/Utility/CameraRefocus.cs'
+'Assets/alan/Standard Assets/Utility/CurveControlledBob.cs'
+'Assets/alan/Standard Assets/Utility/DragRigidbody.cs'
+'Assets/alan/Standard Assets/Utility/DynamicShadowSettings.cs'
+'Assets/alan/Standard Assets/Utility/EventSystemChecker.cs'
+'Assets/alan/Standard Assets/Utility/FollowTarget.cs'
+'Assets/alan/Standard Assets/Utility/ForcedReset.cs'
+'Assets/alan/Standard Assets/Utility/FOVKick.cs'
+'Assets/alan/Standard Assets/Utility/FPSCounter.cs'
+'Assets/alan/Standard Assets/Utility/LerpControlledBob.cs'
+'Assets/alan/Standard Assets/Utility/ObjectResetter.cs'
+'Assets/alan/Standard Assets/Utility/ParticleSystemDestroyer.cs'
+'Assets/alan/Standard Assets/Utility/PlatformSpecificContent.cs'
+'Assets/alan/Standard Assets/Utility/SimpleActivatorMenu.cs'
+'Assets/alan/Standard Assets/Utility/SimpleMouseRotator.cs'
+'Assets/alan/Standard Assets/Utility/SmoothFollow.cs'
+'Assets/alan/Standard Assets/Utility/TimedObjectActivator.cs'
+'Assets/alan/Standard Assets/Utility/TimedObjectDestructor.cs'
+'Assets/alan/Standard Assets/Utility/WaypointCircuit.cs'
+'Assets/alan/Standard Assets/Utility/WaypointProgressTracker.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Sample Scripts/DieTimer.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Sample Scripts/FPSObjectShooter.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Sample Scripts/LogicBreakableRopes.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Sample Scripts/LogicGlobal.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Sample Scripts/LogicLamp.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Sample Scripts/LogicRopeWithCoil.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Sample Scenes/Sample Scripts/LogicSimpleRopes.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Scripts/UltimateRope.cs'
+'Assets/alan/Ultimate Game Tools/RopeEditor/Scripts/UltimateRopeLink.cs'
+'Assets/bindokun/Ferr/2D/Scripts/clipper.cs'
+'Assets/bindokun/Ferr/2D/Scripts/Ferr2D_DynamicMesh.cs'
+'Assets/bindokun/Ferr/2D/Scripts/Ferr2D_IPath.cs'
+'Assets/bindokun/Ferr/2D/Scripts/Ferr2D_Path.cs'
+'Assets/bindokun/Ferr/2D/Scripts/Ferr2D_Triangulator.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/P2T.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/DelaunayTriangle.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/AdvancingFront.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/AdvancingFrontNode.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/DTSweep.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/DTSweepBasin.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/DTSweepConstraint.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/DTSweepContext.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/DTSweepDebugContext.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/DTSweepEdgeEvent.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/DTSweepPointComparator.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Delaunay/Sweep/PointOnEdgeException.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/ITriangulatable.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Orientation.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Polygon/Contour.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Polygon/Polygon.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Polygon/PolygonPoint.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Polygon/PolygonSet.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Polygon/PolygonUtil.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Sets/ConstrainedPointSet.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Sets/PointSet.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/TriangulationAlgorithm.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/TriangulationConstraint.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/TriangulationContext.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/TriangulationDebugContext.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/TriangulationMode.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/TriangulationPoint.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Util/PointGenerator.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Util/PolygonGenerator.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Triangulation/Util/TriangulationUtil.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Utility/FixedArray3.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Utility/FixedBitArray3.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Utility/MathUtil.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Utility/Point2D.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Utility/Point2DList.cs'
+'Assets/bindokun/Ferr/2D/Scripts/poly2tri.cs/Utility/Rect2D.cs'
+'Assets/bindokun/Ferr/2DTerrain/Examples/Assets/BlobShadow.cs'
+'Assets/bindokun/Ferr/2DTerrain/Examples/Assets/InfiniteTerrain.cs'
+'Assets/bindokun/Ferr/2DTerrain/Examples/Assets/InfiniteTerrainCamera.cs'
+'Assets/bindokun/Ferr/2DTerrain/Examples/Assets/InfiniteTerrainChunk.cs'
+'Assets/bindokun/Ferr/2DTerrain/Examples/Assets/ProceduralInsert.cs'
+'Assets/bindokun/Ferr/2DTerrain/Examples/Assets/Toss.cs'
+'Assets/bindokun/Ferr/2DTerrain/Scripts/Ferr2DT_Material_Partial.cs'
+'Assets/bindokun/Ferr/2DTerrain/Scripts/Ferr2DT_PathTerrain.cs'
+'Assets/bindokun/Ferr/2DTerrain/Scripts/Ferr2DT_PathTerrain_Legacy.cs'
+'Assets/bindokun/Ferr/2DTerrain/Scripts/Ferr2DT_SegmentDescription_Partial.cs'
+'Assets/bindokun/Ferr/2DTerrain/Scripts/Ferr2DT_TerrainMaterial.cs'
+'Assets/bindokun/Ferr/Common/2DT/Ferr2DT_Material.cs'
+'Assets/bindokun/Ferr/Common/2DT/Ferr2DT_SegmentDescription.cs'
+'Assets/bindokun/Ferr/Common/2DT/IFerr2DTMaterial.cs'
+'Assets/bindokun/Ferr/Common/Interfaces/IBlendPaintable.cs'
+'Assets/bindokun/Ferr/Common/Interfaces/IBlendPaintType.cs'
+'Assets/bindokun/Ferr/Common/Interfaces/IProceduralMesh.cs'
+'Assets/bindokun/Ferr/Common/Interfaces/IToFromDataString.cs'
+'Assets/bindokun/Ferr/Common/Scripts/CameraShake.cs'
+'Assets/bindokun/Ferr/Common/Scripts/ClampAttribute.cs'
+'Assets/bindokun/Ferr/Common/Scripts/ColorUtil.cs'
+'Assets/bindokun/Ferr/Common/Scripts/DataStringUtil.cs'
+'Assets/bindokun/Ferr/Common/Scripts/EditInIsolation.cs'
+'Assets/bindokun/Ferr/Common/Scripts/Export.cs'
+'Assets/bindokun/Ferr/Common/Scripts/GizmoUtil.cs'
+'Assets/bindokun/Ferr/Common/Scripts/InspectorName.cs'
+'Assets/bindokun/Ferr/Common/Scripts/Juice.cs'
+'Assets/bindokun/Ferr/Common/Scripts/LambdaComparer.cs'
+'Assets/bindokun/Ferr/Common/Scripts/LayerUtil.cs'
+'Assets/bindokun/Ferr/Common/Scripts/LayoutAdvancer.cs'
+'Assets/bindokun/Ferr/Common/Scripts/LogoLock.cs'
+'Assets/bindokun/Ferr/Common/Scripts/ProceduralMeshUtil.cs'
+'Assets/bindokun/Ferr/Common/Scripts/RecolorTree.cs'
+'Assets/bindokun/Ferr/Common/Scripts/RenderUtility.cs'
+'Assets/bindokun/Ferr/Common/Scripts/RestoreMesh.cs'
+'Assets/bindokun/Ferr/Common/Scripts/Singleton.cs'
+'Assets/bindokun/Ferr/Common/Scripts/SOUtil.cs'
+'Assets/bindokun/Ferr/Common/Scripts/VectorExtensions.cs'
+'Assets/bindokun/Ferr/Common/Scripts/WebMessager.cs'
+'Assets/bindokun/Ferr/Path/IEdgeOverride.cs'
+'Assets/bindokun/Ferr/Path/ILerpable.cs'
+'Assets/bindokun/Ferr/Path/Path2D.cs'
+'Assets/bindokun/Ferr/Path/PathDistanceMask.cs'
+'Assets/bindokun/Ferr/Path/PathDMPoint.cs'
+'Assets/bindokun/Ferr/Path/PathUtil.cs'
+'Assets/bindokun/Ferr/Path/SVG/ISVGElement.cs'
+'Assets/bindokun/Ferr/Path/SVG/SVG.cs'
+'Assets/bindokun/Ferr/Path/SVG/SVGLine.cs'
+'Assets/bindokun/Ferr/Path/SVG/SVGPath.cs'
+'Assets/Script/Charactor.cs'
+'Assets/Scripts/alan/AddDownForce.cs'
+'Assets/Scripts/alan/AddGravity.cs'
+'Assets/Scripts/alan/AnimatorFire.cs'
+'Assets/Scripts/alan/Balance.cs'
+'Assets/Scripts/alan/BoxDispear.cs'
+'Assets/Scripts/alan/CandleBurning.cs'
+'Assets/Scripts/alan/Explore.cs'
+'Assets/Scripts/alan/Fail.cs'
+'Assets/Scripts/alan/FileCtrl.cs'
+'Assets/Scripts/alan/Force.cs'
+'Assets/Scripts/alan/IceCubeDispear.cs'
+'Assets/Scripts/alan/IceDispear.cs'
+'Assets/Scripts/alan/IceMelt.cs'
+'Assets/Scripts/alan/IsBegin.cs'
+'Assets/Scripts/alan/LoadScene.cs'
+'Assets/Scripts/alan/Login.cs'
+'Assets/Scripts/alan/MeshMelt.cs'
+'Assets/Scripts/alan/MessageBox.cs'
+'Assets/Scripts/alan/NetCtrl.cs'
+'Assets/Scripts/alan/Register.cs'
+'Assets/Scripts/alan/RivetsFire.cs'
+'Assets/Scripts/alan/SelectLevel.cs'
+'Assets/Scripts/alan/TractionDispear.cs'
+'Assets/Scripts/alan/UIMessage.cs'
+'Assets/Scripts/alan/User.cs'
+'Assets/Scripts/alan/WaterRise.cs'
+'Assets/Scripts/bindokun/BookController.cs'
+'Assets/Scripts/bindokun/BtnPromptController.cs'
+'Assets/Scripts/bindokun/BtnReplayController.cs'
+'Assets/Scripts/bindokun/BtnSettingController.cs'
+'Assets/Scripts/bindokun/ButterflyController.cs'
+'Assets/Scripts/bindokun/CameraController.cs'
+'Assets/Scripts/bindokun/Girl/GirlController.cs'
+'Assets/Scripts/bindokun/Girl/PhysicsObject.cs'
+'Assets/Scripts/bindokun/NewBurnCandleController.cs'
+'Assets/Scripts/bindokun/NewGrilController.cs'
+'Assets/Scripts/bindokun/SkyTouchController.cs'
+'Assets/Scripts/bindokun/SpriteController.cs'
+'Assets/Scripts/bindokun/TipsController.cs'
+'Assets/Scripts/ConfigManager.cs'
+'Assets/Shaders/BlurBackground.cs'
+-lib:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity'

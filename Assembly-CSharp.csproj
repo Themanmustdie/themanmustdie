@@ -49,7 +49,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2018.2.4f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
@@ -239,10 +239,14 @@
     <Compile Include="Assets\bindokun\Ferr\Path\SVG\SVGLine.cs" />
     <Compile Include="Assets\bindokun\Ferr\Path\SVG\SVGPath.cs" />
     <Compile Include="Assets\Script\Charactor.cs" />
+    <Compile Include="Assets\Scripts\alan\AddDownForce.cs" />
+    <Compile Include="Assets\Scripts\alan\AddGravity.cs" />
     <Compile Include="Assets\Scripts\alan\AnimatorFire.cs" />
+    <Compile Include="Assets\Scripts\alan\Balance.cs" />
     <Compile Include="Assets\Scripts\alan\BoxDispear.cs" />
     <Compile Include="Assets\Scripts\alan\CandleBurning.cs" />
     <Compile Include="Assets\Scripts\alan\Explore.cs" />
+    <Compile Include="Assets\Scripts\alan\Fail.cs" />
     <Compile Include="Assets\Scripts\alan\FileCtrl.cs" />
     <Compile Include="Assets\Scripts\alan\Force.cs" />
     <Compile Include="Assets\Scripts\alan\IceCubeDispear.cs" />
