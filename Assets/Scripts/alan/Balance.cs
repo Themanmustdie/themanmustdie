@@ -34,20 +34,20 @@ public class Balance : MonoBehaviour {
 
 	}
     public void ClockwiseRotation() {
-        transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, -angle), Time.time * speed);
-        heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, top1.transform.position, Time.time * speed);
-        heavy2.transform.position = Vector3.Lerp(heavy2.transform.position, bottom2.transform.position, Time.time * speed);
+        transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, -angle), speed);
+        heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, top1.transform.position, speed);
+        heavy2.transform.position = Vector3.Lerp(heavy2.transform.position, bottom2.transform.position, speed);
     }
     public void CounterclockwiseRotation()
     {
-        transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, angle), Time.time * speed);
-        heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, bottom1.transform.position, Time.time * speed);
-        heavy2.transform.position = Vector3.Lerp(heavy2.transform.position, top2.transform.position, Time.time * speed);
+        transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, angle), speed);
+        heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, bottom1.transform.position, speed);
+        heavy2.transform.position = Vector3.Lerp(heavy2.transform.position, top2.transform.position, speed);
     }
     public void Balance_()
     {
-        transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, 0), Time.time * speed);
-        heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, middle1.transform.position, Time.time * speed);
-        heavy2.transform.position = Vector3.Lerp(heavy2.transform.position, middle2.transform.position, Time.time * speed);
+        transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0, 0, 0), speed);
+        heavy1.transform.position = Vector3.Lerp(heavy1.transform.position, middle1.transform.position, speed);
+        heavy2.transform.position = Vector3.Lerp(heavy2.transform.position, middle2.transform.position, speed);
     }
 }

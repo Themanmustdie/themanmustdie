@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{9F94E66D-0073-06B6-1765-F37AFFF31CA8}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/alan/MessageBox.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/alan/IceMeltAndCreateWater.cs">
     <Files>
       <File FileName="Assets/Scripts/bindokun/BtnReplayController.cs" Line="20" Column="40" />
       <File FileName="Assets/Scripts/alan/Fail.cs" Line="23" Column="6" />
-      <File FileName="Assets/Scripts/alan/IceMelt.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/alan/Balance.cs" Line="28" Column="27" />
-      <File FileName="Assets/Scripts/alan/IceDispear.cs" Line="8" Column="45" />
-      <File FileName="Assets/Scripts/alan/IceMeltAndCreateWater.cs" Line="57" Column="21" />
-      <File FileName="Assets/Scripts/alan/DectionLoad.cs" Line="25" Column="9" />
-      <File FileName="Assets/Scripts/alan/MessageBox.cs" Line="17" Column="112" />
+      <File FileName="Assets/Scripts/alan/Balance.cs" Line="40" Column="6" />
+      <File FileName="Assets/Scripts/alan/IceMeltAndCreateWater.cs" Line="62" Column="18" />
+      <File FileName="Assets/Scripts/alan/ReduceParentMass.cs" Line="45" Column="46" />
+      <File FileName="Assets/Scripts/alan/WaterRise.cs" Line="20" Column="126" />
+      <File FileName="Assets/Scripts/bindokun/NewGrilController.cs" Line="109" Column="6" />
+      <File FileName="Assets/Scripts/alan/NetCtrl.cs" Line="86" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

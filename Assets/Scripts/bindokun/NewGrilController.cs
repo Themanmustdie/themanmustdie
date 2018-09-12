@@ -93,7 +93,8 @@ public class NewGrilController : MonoBehaviour
             isWalk = false;
         }
 
-        charController.SimpleMove(move * speed * Time.deltaTime);
+        //charController.SimpleMove(move * speed * Time.deltaTime);
+        charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
         actionController.SetBool("isWalk", isWalk);
     }
 

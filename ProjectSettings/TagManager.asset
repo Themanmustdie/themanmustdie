@@ -18,6 +18,8 @@ TagManager:
   - Rivets
   - Trestle
   - water
+  - IceRigth
+  - IceLeft
   layers:
   - Default
   - TransparentFX

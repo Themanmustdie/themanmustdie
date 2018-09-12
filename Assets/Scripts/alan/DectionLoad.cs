@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DectionLoad : MonoBehaviour {
-
+    public GameObject girl;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,24 +11,43 @@ public class DectionLoad : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-
-    private void OnCollisionEnter(Collision collision)
-    {
+        float distance = Vector3.Distance(transform.position, girl.transform.position);
         Rigidbody rb = GetComponent<Rigidbody>();
-        if (collision.collider.tag == "water")
-        {
-            rb.mass = 3;
-
-        }
-        else if(collision.collider.tag == "girl")
-        {
+        if(distance < 2.1f){
             if(rb.mass >= 2){
                 return;
             }
             rb.mass = 2;
+        } else{
+            if (rb.mass == 3)
+            {
+                return;
+            }
+            rb.mass = 1;
         }
+	}
 
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Rigidbody rb = GetComponent<Rigidbody>();
+    //    if(collision.collider.tag == "girl")
+    //    {
+    //        float distance = Vector3.Distance(transform.position, collision.transform.position);
+    //        print(distance);
+    //    }
+
+    //}
+
+    //void OnCollisionExit(Collision other)
+    //{
+    //    Rigidbody rb = GetComponent<Rigidbody>();
+    //    if (other.collider.tag == "girl")
+    //    {
+    //        if (rb.mass > 2)
+    //        {
+    //            return;
+    //        }
+    //        rb.mass = 1;
+    //    }
+    //}
 }

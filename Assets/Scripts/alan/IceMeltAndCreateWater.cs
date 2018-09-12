@@ -11,10 +11,12 @@ public class IceMeltAndCreateWater : MonoBehaviour {
     bool flag;
     DateTime t_MouseDown;
     private bool isInstan = false;
+    public string AniName;
+    public string Condition;
     // Use this for initialization
     void Start()
     {
-        melt_.SetBool("IsMelt", false);
+        melt_.SetBool(Condition, false);
         fire_.SetBool("isFire", false);
     }
 
@@ -23,7 +25,7 @@ public class IceMeltAndCreateWater : MonoBehaviour {
     {
         AnimatorStateInfo animatorInfo;
         animatorInfo = melt_.GetCurrentAnimatorStateInfo(0);  //要在update获取
-        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("icemelt") || animatorInfo.IsName("icemelt2")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName(AniName)))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
         {
             Destroy(gameObject);
         }
@@ -45,7 +47,8 @@ public class IceMeltAndCreateWater : MonoBehaviour {
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
-                if (hit.collider.gameObject.tag == "ice cube")
+                print(hit.collider.name);
+                if (hit.collider.gameObject.tag == gameObject.tag)
                     isHitIceCube = true;
                 if (hit.collider.gameObject.tag == "BoySprite")
                     isHitSprite = true;
@@ -53,17 +56,16 @@ public class IceMeltAndCreateWater : MonoBehaviour {
 
             if (isHitSprite && isHitIceCube)
             {
-                melt_.SetBool("IsMelt", true);
+                melt_.SetBool(Condition, true);
                 fire_.SetBool("isFire", true);
-                if (flag && DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 1, 0))
+                if (!isInstan)
                 {
-                    if (!isInstan)
-                    {
                         GameObject water = (GameObject)Resources.Load("water");
-                        water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.49f, 0), heavy.transform.rotation) as GameObject;
+                        water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.5f, 0), heavy.transform.rotation) as GameObject;
                         water.transform.parent = heavy.transform;
+                        Rigidbody rb = heavy.GetComponent<Rigidbody>();
+                        rb.mass = 3;
                         isInstan = true;
-                    }
                 }
             }
         }
