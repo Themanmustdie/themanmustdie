@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -15,7 +14,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -29,7 +28,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,7 +37,6 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -245,8 +242,10 @@
     <Compile Include="Assets\Scripts\alan\AddDownForce.cs" />
     <Compile Include="Assets\Scripts\alan\AddGravity.cs" />
     <Compile Include="Assets\Scripts\alan\AnimatorFire.cs" />
+    <Compile Include="Assets\Scripts\alan\Balance.cs" />
     <Compile Include="Assets\Scripts\alan\BoxDispear.cs" />
     <Compile Include="Assets\Scripts\alan\CandleBurning.cs" />
+    <Compile Include="Assets\Scripts\alan\DectionLoad.cs" />
     <Compile Include="Assets\Scripts\alan\Explore.cs" />
     <Compile Include="Assets\Scripts\alan\Fail.cs" />
     <Compile Include="Assets\Scripts\alan\FileCtrl.cs" />
@@ -254,6 +253,7 @@
     <Compile Include="Assets\Scripts\alan\IceCubeDispear.cs" />
     <Compile Include="Assets\Scripts\alan\IceDispear.cs" />
     <Compile Include="Assets\Scripts\alan\IceMelt.cs" />
+    <Compile Include="Assets\Scripts\alan\IceMeltAndCreateWater.cs" />
     <Compile Include="Assets\Scripts\alan\IsBegin.cs" />
     <Compile Include="Assets\Scripts\alan\LoadScene.cs" />
     <Compile Include="Assets\Scripts\alan\Login.cs" />
