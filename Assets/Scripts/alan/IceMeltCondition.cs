@@ -23,11 +23,11 @@ public class IceMeltCondition : MonoBehaviour
     {
         AnimatorStateInfo animatorInfo;
         animatorInfo = melt_.GetCurrentAnimatorStateInfo(0);  //要在update获取
-        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("icemelt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("4-melt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
         {
             Destroy(gameObject);
         }
-        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("onlymelt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("4-onlymelt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
         {
             fire_.SetBool("isFire", false);
         }
@@ -49,11 +49,9 @@ public class IceMeltCondition : MonoBehaviour
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
-                foreach (Transform child in gameObject.transform)
-                {
-                    if (hit.collider.gameObject.tag == "ice cube")
+                print(hit.collider.name);
+                if (hit.collider.gameObject.tag == tag)
                         isHitIceCube = true;
-                }
                 if (hit.collider.gameObject.tag == "BoySprite")
                     isHitSprite = true;
             }

@@ -17,7 +17,7 @@ public class WaterRise : MonoBehaviour {
         if (melt_ != null)
         {
             animatorInfo = melt_.GetCurrentAnimatorStateInfo(0);
-            if ((animatorInfo.normalizedTime < 1.0f) && (animatorInfo.normalizedTime > 0.0f) && (animatorInfo.IsName("icemelt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+            if ((animatorInfo.normalizedTime < 1.0f) && (animatorInfo.normalizedTime > 0.0f) && (animatorInfo.IsName("4-melt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
             {
                 waterRise.SetBool("IsRise", true);
             }
