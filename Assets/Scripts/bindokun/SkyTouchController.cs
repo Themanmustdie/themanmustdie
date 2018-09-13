@@ -38,7 +38,6 @@ public class SkyTouchController : MonoBehaviour
             float clickDist = (mouseUpPos - mouseDownPos).magnitude;
             if (clickDist < 0.3)
             {
-                Debug.Log("Mouse Up in Background: {0}");
                 spriteController.targetPos = mouseUpPos;
                 spriteController.ChangeState(SpriteState.NormalMoveState);
             }

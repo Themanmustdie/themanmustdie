@@ -17,6 +17,7 @@ public class NewBurnCandleController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         aniBackgroundWall = backgroundWall.GetComponent<Animator>();
+        isLightened = false;
     }
 	
 	// Update is called once per frame
@@ -29,17 +30,19 @@ public class NewBurnCandleController : MonoBehaviour {
             {
                 if (hit.collider.gameObject.tag == "BoySprite")
                 {
-                   
                     isClickFire = true;
+                    Debug.Log("BoySprite");
                 }
 
                 if (hit.collider.gameObject.name.StartsWith("NewDetection"))
                 {
                     isClickCandle = true;
+                    Debug.Log("NewDetection");
                 }
 
                 if (isClickFire & isClickCandle)
                 {
+                    Debug.Log("desdroy wall");
                     Destroy(wall);
                     NewBurnCandleController.isLightened = true;
                     aniBackgroundWall.SetBool("isLighten", true);
