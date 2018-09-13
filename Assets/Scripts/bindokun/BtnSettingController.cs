@@ -29,4 +29,9 @@ public class BtnSettingController : MonoBehaviour
         btnReplay.SetActive(isShowBtn);
         maskPanel.SetActive(isShowBtn);
     }
+    
+    public void OnClickMaskPanel()
+    {
+        OnClick();
+    }
 }

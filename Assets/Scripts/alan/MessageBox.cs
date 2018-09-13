@@ -25,7 +25,7 @@ namespace Common
             TitleStr = title;
             ContentStr = "    " + content;
             Messagebox = (GameObject)Resources.Load("MessageBox");
-            Messagebox = GameObject.Instantiate(Messagebox, GameObject.Find("Canvas").transform) as GameObject;
+            Messagebox = GameObject.Instantiate(Messagebox, GameObject.Find("LoginPanel").transform) as GameObject;
             Messagebox.transform.localScale = new Vector3(1, 1, 1);
             Messagebox.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
             Messagebox.GetComponent<RectTransform>().offsetMin = Vector2.zero;

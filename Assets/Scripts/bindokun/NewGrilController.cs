@@ -96,18 +96,21 @@ public class NewGrilController : MonoBehaviour
         }
 
         //charController.SimpleMove(move * speed * Time.deltaTime);
-        charController.Move(new Vector3(move.x * speed * Time.deltaTime, -0.5f, 0));
+        //charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
         actionController.SetBool("isWalk", isWalk);
         // 判断女孩在摄像机的位置
         float girlPosX = Camera.main.WorldToViewportPoint(trGirl.position).x;
-        if ((girlPosX >= 0 || move.x > 0) && (girlPosX <= 1 || move.x < 0))
+        if ((girlPosX >= 0.01 || move.x > 0) && (girlPosX <= 0.99 || move.x < 0))
         {
-            charController.SimpleMove(move * speed * Time.deltaTime);
+            //charController.SimpleMove(move * speed * Time.deltaTime);
+            charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
         }
     }
 
     private void StopMoving()
     {
+        Vector2 move = Vector2.left;
+        charController.SimpleMove(move * Time.deltaTime);
         isLeftBtnDown = false;
         isRightBtnDown = false;
     }

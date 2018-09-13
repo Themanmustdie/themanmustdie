@@ -46,11 +46,13 @@ public class BookController : MonoBehaviour
     public void OnClickBook()
     {
 
+        Debug.Log("clicked");
+
         GameObject curActiveObj = null;
         GameObject nextActiveObj = null;
 
         // find show
-        foreach (Transform transform in bookMaskPanel.GetComponentInChildren<Transform>())
+        foreach (Transform transform in bookMaskPanel.GetComponentInChildren<Transform>(true))
         {
             if (curActiveObj == null && transform.gameObject.activeSelf)
             {
@@ -60,12 +62,19 @@ public class BookController : MonoBehaviour
             {
                 nextActiveObj = transform.gameObject;
             }
+        }
+        // 设置所有子节点inactive
+        foreach (Transform transform in bookMaskPanel.GetComponentInChildren<Transform>(true))
+        {
             transform.gameObject.SetActive(false);
         }
+        
         if (nextActiveObj != null)
         {
+            // 说明还有东西要弹出来
             nextActiveObj.SetActive(true);
-            bookMaskPanel.SetActive(true);
+            Debug.Log(curActiveObj.name);
+            Debug.Log(nextActiveObj.name);
         }
         else
         {
