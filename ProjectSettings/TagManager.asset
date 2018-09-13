@@ -21,6 +21,7 @@ TagManager:
   - IceLeft
   - water1
   - water2
+  - board
   layers:
   - Default
   - TransparentFX

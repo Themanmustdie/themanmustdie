@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AddDownForce : MonoBehaviour {
     public GameObject pre;
-    public GameObject girl;
     public bool IsFallIce = false;
 	// Use this for initialization
 	void Start () {

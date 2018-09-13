@@ -266,6 +266,7 @@
     <Compile Include="Assets\Scripts\alan\RivetsFire.cs" />
     <Compile Include="Assets\Scripts\alan\SelectLevel.cs" />
     <Compile Include="Assets\Scripts\alan\TractionDispear.cs" />
+    <Compile Include="Assets\Scripts\alan\TriggerWaterRise.cs" />
     <Compile Include="Assets\Scripts\alan\UIMessage.cs" />
     <Compile Include="Assets\Scripts\alan\User.cs" />
     <Compile Include="Assets\Scripts\alan\WaterRise.cs" />
