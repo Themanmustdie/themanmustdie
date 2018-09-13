@@ -42,7 +42,7 @@ public class RivetsFire : MonoBehaviour
             bool isHitIceRivets = false;
             foreach (RaycastHit hit in hits)
             {
-                if (hit.collider.gameObject.tag == "Rivets")
+                if (hit.collider.gameObject.tag == gameObject.tag)
                     isHitIceRivets = true;
                 if (hit.collider.gameObject.tag == "BoySprite")
                     isHitSprite = true;

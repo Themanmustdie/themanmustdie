@@ -252,6 +252,7 @@
     <Compile Include="Assets\Scripts\alan\Force.cs" />
     <Compile Include="Assets\Scripts\alan\IceCubeDispear.cs" />
     <Compile Include="Assets\Scripts\alan\IceDispear.cs" />
+    <Compile Include="Assets\Scripts\alan\IceDownForce.cs" />
     <Compile Include="Assets\Scripts\alan\IceMelt.cs" />
     <Compile Include="Assets\Scripts\alan\IceMeltAndCreateWater.cs" />
     <Compile Include="Assets\Scripts\alan\IsBegin.cs" />
