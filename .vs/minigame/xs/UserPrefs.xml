@@ -4,12 +4,12 @@
     <Files>
       <File FileName="Assets/Scripts/bindokun/BtnReplayController.cs" Line="20" Column="40" />
       <File FileName="Assets/Scripts/alan/Balance.cs" Line="40" Column="6" />
-      <File FileName="Assets/Scripts/alan/IceMeltAndCreateWater.cs" Line="25" Column="18" />
+      <File FileName="Assets/Scripts/alan/IceMeltAndCreateWater.cs" Line="66" Column="66" />
       <File FileName="Assets/Scripts/alan/ReduceParentMass.cs" Line="8" Column="29" />
       <File FileName="Assets/Scripts/alan/WaterRise.cs" Line="20" Column="126" />
-      <File FileName="Assets/Scripts/alan/AddDownForce.cs" Line="25" Column="16" />
+      <File FileName="Assets/Scripts/alan/AddDownForce.cs" Line="16" Column="1" />
       <File FileName="Assets/Scripts/alan/RivetsFire.cs" Line="53" Column="47" />
-      <File FileName="Assets/Scripts/bindokun/NewGrilController.cs" Line="133" Column="14" />
+      <File FileName="Assets/Scripts/bindokun/NewGrilController.cs" Line="132" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

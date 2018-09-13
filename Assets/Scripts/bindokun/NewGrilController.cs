@@ -96,7 +96,7 @@ public class NewGrilController : MonoBehaviour
         }
 
         //charController.SimpleMove(move * speed * Time.deltaTime);
-        charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
+        charController.Move(new Vector3(move.x * speed * Time.deltaTime, -0.5f, 0));
         actionController.SetBool("isWalk", isWalk);
         // 判断女孩在摄像机的位置
         float girlPosX = Camera.main.WorldToViewportPoint(trGirl.position).x;
@@ -132,7 +132,6 @@ public class NewGrilController : MonoBehaviour
             if (!isAddForce)
             {
                 float distance = Vector3.Distance(hit.transform.position, transform.position);
-                print("distance:" + distance);
                 if (distance < 7.3f)
                 {
                     AddDownForce force_ = hit.gameObject.GetComponent<AddDownForce>();
