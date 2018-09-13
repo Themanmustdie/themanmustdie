@@ -18,7 +18,6 @@ public class CandleBurning : MonoBehaviour {
     public GameObject wall;
     private SpriteRenderer gReder;
     private SpriteRenderer fReder;
-    bool isClick = false;
     bool isClickFire = false;
     bool isClickCandle = false;
 	// Use this for initialization
@@ -29,7 +28,7 @@ public class CandleBurning : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!isClick && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
@@ -57,7 +56,6 @@ public class CandleBurning : MonoBehaviour {
                     gReder.color = Color.white;
                     fReder.color = Color.white;
                     Destroy(wall);
-                    isClick = true;
                 }
             }
             isClickFire = false;

@@ -34,7 +34,7 @@ public class RivetsFire : MonoBehaviour
             flag = true;
         }
 
-        if (flag && DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 2, 0))
+        if (flag)
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
