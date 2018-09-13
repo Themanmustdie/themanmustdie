@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceMelt : MonoBehaviour
+public class IceMeltCondition : MonoBehaviour
 {
-
+    
     public UnityEngine.Animator melt_;
     public UnityEngine.Animator fire_;
     bool flag;
     DateTime t_MouseDown;
+    public GameObject roll;
     // Use this for initialization
     void Start()
     {
@@ -22,9 +23,13 @@ public class IceMelt : MonoBehaviour
     {
         AnimatorStateInfo animatorInfo;
         animatorInfo = melt_.GetCurrentAnimatorStateInfo(0);  //要在update获取
-        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("icemelt") || animatorInfo.IsName("icemelt2")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("icemelt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
         {
             Destroy(gameObject);
+        }
+        if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("onlymelt")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+        {
+            fire_.SetBool("isFire", false);
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -46,7 +51,7 @@ public class IceMelt : MonoBehaviour
             {
                 foreach (Transform child in gameObject.transform)
                 {
-                    if (hit.collider.gameObject.tag == gameObject.tag)
+                    if (hit.collider.gameObject.tag == "ice cube")
                         isHitIceCube = true;
                 }
                 if (hit.collider.gameObject.tag == "BoySprite")
@@ -55,8 +60,14 @@ public class IceMelt : MonoBehaviour
 
             if (isHitSprite && isHitIceCube)
             {
-                melt_.SetBool("IsMelt", true);
                 fire_.SetBool("isFire", true);
+                if (roll != null)
+                {
+                    melt_.SetBool("IsMelt", true);
+                }
+                else {
+                    melt_.SetBool("IsOnlyMelt", true);
+                }
             }
         }
     }

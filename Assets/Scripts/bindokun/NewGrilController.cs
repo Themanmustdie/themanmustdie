@@ -102,8 +102,8 @@ public class NewGrilController : MonoBehaviour
         float girlPosX = Camera.main.WorldToViewportPoint(trGirl.position).x;
         if ((girlPosX >= 0.01 || move.x > 0) && (girlPosX <= 0.99 || move.x < 0))
         {
-            //charController.SimpleMove(move * speed * Time.deltaTime);
-            charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
+            charController.SimpleMove(move * speed * Time.deltaTime);
+            //charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
         }
     }
 

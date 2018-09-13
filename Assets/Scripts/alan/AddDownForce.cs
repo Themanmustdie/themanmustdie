@@ -5,6 +5,7 @@ using UnityEngine;
 public class AddDownForce : MonoBehaviour {
     public GameObject pre;
     public bool IsFallIce = false;
+    public GameObject Ice;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +19,7 @@ public class AddDownForce : MonoBehaviour {
 
 
     public void AddForce(){
-        if (!IsFallIce)
+        if (!IsFallIce || Ice == null)
         {
             GameObject clone = Instantiate(pre);
             Rigidbody rb = clone.GetComponent<Rigidbody>();
