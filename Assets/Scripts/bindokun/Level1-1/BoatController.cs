@@ -17,9 +17,10 @@ public class BoatController : MonoBehaviour
         //Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("BaffleForBigBall").GetComponent<MeshCollider>());
         //gameObject.transform.position = new Vector3(2.549f, 3.59f, 25.68f);
         Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("Barrier1").GetComponent<BoxCollider>());
-        Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("River").GetComponent<BoxCollider>());
+        //Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("River").GetComponent<BoxCollider>());
         //Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("Girl").GetComponent<CapsuleCollider>());
-        moveDir = new Vector3(7.29f, -2.595837f, 0) - gameObject.transform.position;
+        
+        moveDir = new Vector3(8.02f, -5.71f, 0.04f) - gameObject.transform.position;
     }
 
     public void MoveWhenBranchIsBurned()
