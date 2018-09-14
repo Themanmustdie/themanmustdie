@@ -62,7 +62,7 @@ public class IceMeltAndCreateWater : MonoBehaviour {
                 if (!isInstan)
                 {
                         GameObject water = (GameObject)Resources.Load(pre);
-                        water = Instantiate(water, heavy.transform.position + new Vector3(0, -1.0f, 0), heavy.transform.rotation) as GameObject;
+                        water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.5f, 0), heavy.transform.rotation) as GameObject;
                         water.transform.parent = heavy.transform;
                         Rigidbody rb = heavy.GetComponent<Rigidbody>();
                         rb.mass = 3;
