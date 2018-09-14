@@ -5,10 +5,11 @@ using UnityEngine;
 public class IceDownForce : MonoBehaviour {
     public GameObject rope;
     private bool isAddForce = false;
+    private AudioSource hitSound;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        hitSound = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,4 +21,12 @@ public class IceDownForce : MonoBehaviour {
             }
         }
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.name == "Trestle")
+        {
+            hitSound.Play();
+        }
+    }
 }

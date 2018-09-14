@@ -7,7 +7,8 @@ using UnityStandardAssets.Utility;
 public class BookController : MonoBehaviour
 {
 
-    private AudioSource audioSource;
+    private AudioSource dropSound;
+    private AudioSource openBookSound;
     public GameObject bookMaskPanel;
     public GameObject butterfly;
     public GameObject girl;
@@ -17,7 +18,8 @@ public class BookController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        dropSound = GetComponents<AudioSource>()[0];
+        openBookSound = GetComponents<AudioSource>()[1];
         ConfigManager configMgr = ConfigManager.GetInstance;
         cameraMgr = GameObject.Find("EverySceneNeed").GetComponent<CameraManager>();
     }
@@ -39,7 +41,7 @@ public class BookController : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "groud")
         {
-            audioSource.Play();
+            dropSound.Play();
         }
     }
 
@@ -73,8 +75,7 @@ public class BookController : MonoBehaviour
         {
             // 说明还有东西要弹出来
             nextActiveObj.SetActive(true);
-            Debug.Log(curActiveObj.name);
-            Debug.Log(nextActiveObj.name);
+            openBookSound.Play();
         }
         else
         {

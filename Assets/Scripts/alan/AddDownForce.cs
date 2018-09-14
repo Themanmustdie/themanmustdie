@@ -3,25 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class AddDownForce : MonoBehaviour {
+public class AddDownForce : MonoBehaviour
+{
     public GameObject pre;
     public bool IsFallIce = false;
     public GameObject Ice;
     public bool IsInstanPre = false;
     DateTime t_MouseDown;
-	// Use this for initialization
-	void Start () {
+
+    private AudioSource dropDownSound;
+    // Use this for initialization
+    void Start()
+    {
         t_MouseDown = DateTime.Now;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        dropDownSound = GetComponent<AudioSource>();
+    }
 
-	}
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
 
 
-    public void AddForce(){
+    public void AddForce()
+    {
         if (!IsFallIce || Ice == null)
         {
             if (DateTime.Now - t_MouseDown > new TimeSpan(0, 0, 0, 3, 0))
@@ -40,6 +47,10 @@ public class AddDownForce : MonoBehaviour {
         if (collision.collider.tag == "IceRigth")
         {
             IsFallIce = true;
+        }
+        else if (collision.collider.name == "midground")
+        {
+            dropDownSound.Play();
         }
 
     }
