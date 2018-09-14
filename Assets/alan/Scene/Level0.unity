@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3793,7 +3793,7 @@ MonoBehaviour:
   InputFieldone: {fileID: 1973266332}
   InputFieldtwo: {fileID: 128211207}
   register: {fileID: 1049952232}
-  select: {fileID: 1866556065}
+  select: {fileID: 707071172}
   reg_btn: {fileID: 431975412}
   log_btn: {fileID: 1907572544}
 --- !u!1 &1663585797
