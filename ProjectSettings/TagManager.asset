@@ -22,6 +22,8 @@ TagManager:
   - water1
   - water2
   - board
+  - Fruit
+  - Branch
   layers:
   - Default
   - TransparentFX
