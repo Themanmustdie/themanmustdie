@@ -5081,7 +5081,12 @@ Prefab:
     - target: {fileID: 114054586596173616, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
         type: 2}
       propertyPath: sceneLeftBound
-      value: -20
+      value: -33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114054586596173616, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: sceneRightBound
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88bf25d3da384ff47b4ca788e9a1cb6a, type: 2}

@@ -22,6 +22,7 @@ class IdleState : ISpriteState
     private Transform spriteTr;
     private Transform girlTr;
     private float timethreshold;
+    private Vector3 velocity = Vector3.zero;
 
     public IdleState(Transform spriteTr, Transform girlTr, SpriteController spirteCtrl)
     {
@@ -53,7 +54,8 @@ class IdleState : ISpriteState
         }
         if (timethreshold < stayAloneTime)
         {
-            spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
+            spriteTr.position = Vector3.SmoothDamp(spriteTr.position, girlTr.position, ref velocity, 0.3F);
+            //spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);  
         }
 
     }
@@ -68,6 +70,7 @@ class NormalMoveState : ISpriteState
 {
     private SpriteController spirteCtrl;
     private Transform spriteTr;
+    private Vector3 velocity = Vector3.zero;
 
     public NormalMoveState(SpriteController spirteCtrl, Transform spriteTr)
     {
@@ -84,7 +87,8 @@ class NormalMoveState : ISpriteState
         Vector3 moveDir = spirteCtrl.targetPos - originPos;
         if (moveDir.magnitude > 0.05)
         {
-            spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
+            spriteTr.position = Vector3.SmoothDamp(originPos, spirteCtrl.targetPos, ref velocity, 0.3F);
+          //  spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
         }
         else
         {
@@ -184,5 +188,16 @@ public class SpriteController : MonoBehaviour
     {
         stateMap[state].Reset();
         this.state = state;
+    }
+
+    public void ChangeState(SpriteState state, Vector3 targetPos)
+    {
+        if(enableMoving)
+        {
+            targetPos.z = 0;
+            this.targetPos = targetPos;
+            stateMap[state].Reset();
+            this.state = state;
+        }
     }
 }

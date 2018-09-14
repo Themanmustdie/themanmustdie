@@ -14,7 +14,7 @@ SubShader {
 
 Pass {
 
-ZTest Always ZWrite Off
+ZTest Always ZWrite Off  Lighting Off
 
 
 

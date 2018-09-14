@@ -104,13 +104,10 @@ public class BlurBackground : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-#if UNITY_EDITOR
-
         if (Application.isPlaying != true)
         {
             BlurBoxShader = Shader.Find("Hidden/BlurBackground");
         }
-#endif
     }
     public void OnDisable()
     {

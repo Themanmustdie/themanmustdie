@@ -9,6 +9,8 @@ public class CameraManager : MonoBehaviour
     public float sceneLeftBound;
     public float sceneRightBound;
 
+    public bool isLockTarget = true;
+
     private GameObject mainCamera;
     private GameObject characterCamera;
     private GameObject lastTarget;
@@ -43,13 +45,20 @@ public class CameraManager : MonoBehaviour
 
         mainCamera.AddComponent<BlurBackground>().enabled = false;
         characterCamera.AddComponent<BlurBackground>().enabled = false;
-
-        lastTarget = GameObject.Find("Girl");
+        if(isLockTarget)
+        {
+            lastTarget = GameObject.Find("Girl");
+        }
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(lastTarget == null)
+        {
+            return;
+        }
 
         float cameraLeftBound = Camera.main.ViewportToWorldPoint(Vector3.zero).x;
         float cameraRightBound = Camera.main.ViewportToWorldPoint(Vector3.one).x;

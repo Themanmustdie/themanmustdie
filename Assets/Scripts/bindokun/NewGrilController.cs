@@ -122,7 +122,6 @@ public class NewGrilController : MonoBehaviour
 
         if (hit.gameObject.name == "wall")
         {
-            Debug.Log(hit.gameObject.name);
             ShowTips("Tip1");
             StopMoving();
         }
@@ -141,6 +140,10 @@ public class NewGrilController : MonoBehaviour
                   force_.AddForce();
                   isAddForce = true;
              }
+        }
+        else if (hit.gameObject.name == "River")
+        {
+            NetCtrl.instance.LoadScene(User.ID, 2);
         }
 
     }

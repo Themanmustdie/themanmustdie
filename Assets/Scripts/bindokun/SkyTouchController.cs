@@ -18,10 +18,11 @@ public class SkyTouchController : MonoBehaviour
     void Update()
     {
         
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current.IsPointerOverGameObject() || Input.touchCount > 0 && EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
         {
             return;
         }
+        
         
         if (Input.GetMouseButtonDown(0))
         {
@@ -38,8 +39,7 @@ public class SkyTouchController : MonoBehaviour
             float clickDist = (mouseUpPos - mouseDownPos).magnitude;
             if (clickDist < 0.3)
             {
-                spriteController.targetPos = mouseUpPos;
-                spriteController.ChangeState(SpriteState.NormalMoveState);
+                spriteController.ChangeState(SpriteState.NormalMoveState, mouseUpPos);
             }
         }
     }
