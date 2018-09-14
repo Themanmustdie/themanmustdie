@@ -15,11 +15,11 @@ public class BoatController : MonoBehaviour
     void Start()
     {
         //Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("BaffleForBigBall").GetComponent<MeshCollider>());
-        gameObject.transform.position = new Vector3(2.549f, 3.59f, 25.68f);
+        //gameObject.transform.position = new Vector3(2.549f, 3.59f, 25.68f);
         Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("Barrier1").GetComponent<BoxCollider>());
         Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("River").GetComponent<BoxCollider>());
         //Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("Girl").GetComponent<CapsuleCollider>());
-        moveDir = new Vector3(7.29f, -2.96f, 0) - gameObject.transform.position;
+        moveDir = new Vector3(7.29f, -2.595837f, 0) - gameObject.transform.position;
     }
 
     public void MoveWhenBranchIsBurned()
@@ -53,7 +53,7 @@ public class BoatController : MonoBehaviour
             Physics.IgnoreCollision(GetComponent<BoxCollider>(), collision.gameObject.GetComponent<SphereCollider>());
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().AddForce(moveDir.normalized * moveSpeed, ForceMode.VelocityChange);
-            GetComponent<Rigidbody>().drag = 50;
+            GetComponent<Rigidbody>().drag = 3;
         }
         //else if (collision.gameObject.name == "Girl")
         //{

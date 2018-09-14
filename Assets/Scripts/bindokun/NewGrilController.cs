@@ -132,18 +132,23 @@ public class NewGrilController : MonoBehaviour
         }
         else if (hit.gameObject.name == "Trestle")
         {
-             float distance = Vector3.Distance(DistanceDection.transform.position, transform.position);
+            float distance = Vector3.Distance(DistanceDection.transform.position, transform.position);
             //print(distance); 
-             if (distance < 12f && distance > 6.5f)
-             {
-                  AddDownForce force_ = hit.gameObject.GetComponent<AddDownForce>();
-                  force_.AddForce();
-                  isAddForce = true;
-             }
+            if (distance < 12f && distance > 6.5f)
+            {
+                AddDownForce force_ = hit.gameObject.GetComponent<AddDownForce>();
+                force_.AddForce();
+                isAddForce = true;
+            }
         }
         else if (hit.gameObject.name == "River")
         {
             NetCtrl.instance.LoadScene(User.ID, 2);
+        }
+        else if (hit.gameObject.name.StartsWith("Fruit"))
+        {
+            hit.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            hit.gameObject.GetComponent<SphereCollider>().enabled = false;
         }
 
     }

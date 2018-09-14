@@ -14,7 +14,7 @@ public class RopeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!hasBurned)
+        if (!hasBurned && Input.GetMouseButtonUp(0))
         {
             bool isHitBranch = false;
             bool isHitSprite = false;
@@ -32,14 +32,6 @@ public class RopeController : MonoBehaviour {
                 }
             }
             if (isHitBranch && isHitSprite)
-            {
-                spriteStayTime += Time.deltaTime;
-            }
-            else
-            {
-                spriteStayTime = 0;
-            }
-            if (spriteStayTime > timethreshold)
             {
                 hasBurned = true;
                 Object.Destroy(gameObject);
