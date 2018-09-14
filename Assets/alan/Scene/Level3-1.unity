@@ -722,8 +722,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 435393034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -3.882, z: 0.2552686}
-  m_LocalScale: {x: 2.8373585, y: 2.6032507, z: 1}
+  m_LocalPosition: {x: 0.43, y: -3.882, z: 0.2552686}
+  m_LocalScale: {x: 2.2696269, y: 2.6032507, z: 1}
   m_Children: []
   m_Father: {fileID: 927972887}
   m_RootOrder: 1
@@ -1785,7 +1785,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 58
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!114 &660873957
 MonoBehaviour:
@@ -1798,9 +1798,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c26625de44b94befa5ed456bbf6c132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pre: {fileID: 1253918877375844, guid: 7853c17c11a534c4eba1f24ea43568b9, type: 2}
+  pre: {fileID: 1717866385821184, guid: 7853c17c11a534c4eba1f24ea43568b9, type: 2}
   IsFallIce: 0
   Ice: {fileID: 874114791}
+  IsInstanPre: 0
 --- !u!1001 &674405741
 Prefab:
   m_ObjectHideFlags: 0
@@ -2495,6 +2496,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1083979283}
   m_CullTransparentMesh: 0
+--- !u!1 &1127967775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127967776}
+  m_Layer: 0
+  m_Name: DistanceDection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127967776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127967775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.32, y: 0.16, z: -0.0026486947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152156629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,6 +2894,11 @@ Prefab:
       propertyPath: speed
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 114172794245911980, guid: 71888b4d5b492264e9197fedc7b0b555,
+        type: 2}
+      propertyPath: DistanceDection
+      value: 
+      objectReference: {fileID: 1127967775}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71888b4d5b492264e9197fedc7b0b555, type: 2}
   m_IsPrefabAsset: 0
@@ -3051,7 +3085,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4965754347054700, guid: 88bf25d3da384ff47b4ca788e9a1cb6a, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88bf25d3da384ff47b4ca788e9a1cb6a, type: 2}
@@ -5274,5 +5308,5 @@ Transform:
   m_LocalScale: {x: 1, y: 7.863, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

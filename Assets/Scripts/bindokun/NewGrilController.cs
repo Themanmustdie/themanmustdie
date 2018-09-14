@@ -18,6 +18,7 @@ public class NewGrilController : MonoBehaviour
     private bool enableMoving = true;
     private CameraManager cameraMgr;
     private Transform trGirl;
+    public GameObject DistanceDection;
 
     public void EnableMoving()
     {
@@ -132,16 +133,14 @@ public class NewGrilController : MonoBehaviour
         }
         else if (hit.gameObject.name == "Trestle")
         {
-            if (!isAddForce)
-            {
-                float distance = Vector3.Distance(hit.transform.position, transform.position);
-                if (distance < 7.3f)
-                {
-                    AddDownForce force_ = hit.gameObject.GetComponent<AddDownForce>();
-                    force_.AddForce();
-                    isAddForce = true;
-                }
-            }
+             float distance = Vector3.Distance(DistanceDection.transform.position, transform.position);
+            //print(distance); 
+             if (distance < 12f && distance > 6.5f)
+             {
+                  AddDownForce force_ = hit.gameObject.GetComponent<AddDownForce>();
+                  force_.AddForce();
+                  isAddForce = true;
+             }
         }
 
     }
