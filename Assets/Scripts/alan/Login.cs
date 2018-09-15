@@ -11,6 +11,7 @@ public class Login : MonoBehaviour
     public GameObject select;
     public Button reg_btn;
     public Button log_btn;
+    public GameObject loginFailDialog;
     // Use this for initialization
     void Start()
     {
@@ -36,7 +37,9 @@ public class Login : MonoBehaviour
             gameObject.SetActive(false);
             select.SetActive(true);
         }else {
-            Common.MessageBox.Show("提示", "登陆失败");
+
+            // Common.MessageBox.Show("提示", "登陆失败");
+            loginFailDialog.SetActive(true);
         }
     }
 

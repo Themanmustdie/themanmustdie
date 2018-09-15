@@ -286,6 +286,7 @@
     <Compile Include="Assets\Scripts\bindokun\ComicController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\GirlController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\PhysicsObject.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level0\CancelConfirmBtnController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\Barrier1Controller.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\BoatController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\BranchFireController.cs" />

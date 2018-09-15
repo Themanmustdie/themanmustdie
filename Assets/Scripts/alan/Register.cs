@@ -11,6 +11,8 @@ public class Register : MonoBehaviour
     public GameObject login;//登录视图界面对象
     public Button register;
     public Button cancle;
+    public GameObject pwdWrongDialog;
+    public GameObject emptyPromptDialog;
 
     void Start()
     {
@@ -32,13 +34,15 @@ public class Register : MonoBehaviour
         //判断是否输入为空
         if (InputFieldone.text.Equals(string.Empty) || InputFieldtwo.text.Equals(string.Empty) || InputFieldthree.text.Equals(string.Empty))
         {
-            Common.MessageBox.Show("提示", "账户或密码为空！！！！！！！！！");
+            //Common.MessageBox.Show("提示", "账户或密码为空！！！！！！！！！");
+            emptyPromptDialog.SetActive(true);
             return;
         }
         //判断两次输入的密码是否一致
         if (!InputFieldthree.text.Equals(InputFieldtwo.text))
         {
-            Common.MessageBox.Show("提示", "两次输入的密码不一致，请检查并重新输入");
+            //Common.MessageBox.Show("提示", "两次输入的密码不一致，请检查并重新输入");
+            pwdWrongDialog.SetActive(true);
             return;
         }
         print(InputFieldone.text+InputFieldtwo.text);
