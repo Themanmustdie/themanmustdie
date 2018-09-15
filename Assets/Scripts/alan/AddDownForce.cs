@@ -12,11 +12,13 @@ public class AddDownForce : MonoBehaviour
     DateTime t_MouseDown;
 
     private AudioSource dropDownSound;
+    private SoundManager soundManager;
     // Use this for initialization
     void Start()
     {
         t_MouseDown = DateTime.Now;
         dropDownSound = GetComponent<AudioSource>();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -50,7 +52,7 @@ public class AddDownForce : MonoBehaviour
         }
         else if (collision.collider.name == "midground")
         {
-            dropDownSound.Play();
+            soundManager.PlaySound(dropDownSound);
         }
 
     }

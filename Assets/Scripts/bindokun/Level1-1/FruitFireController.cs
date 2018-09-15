@@ -91,6 +91,7 @@ public class FruitFireController : MonoBehaviour {
             if (trChild.gameObject.name.StartsWith("Fruit"))
             {
                 trChild.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                break;
             }
 
         }
