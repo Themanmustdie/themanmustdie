@@ -33,8 +33,8 @@ public class CameraManager : MonoBehaviour
 
     public void BlurBackground(bool isBlur)
     {
-       // mainCamera.GetComponent<ImageEffect_GaussianBlur>().enabled = isBlur;
-        //characterCamera.GetComponent<ImageEffect_GaussianBlur>().enabled = isBlur;
+        mainCamera.GetComponent<ImageEffect_GaussianBlur>().enabled = isBlur;
+        characterCamera.GetComponent<ImageEffect_GaussianBlur>().enabled = isBlur;
     }
 
     // Use this for initialization
@@ -43,9 +43,9 @@ public class CameraManager : MonoBehaviour
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         characterCamera = GameObject.Find("CharacterCamera");
 
-       // mainCamera.AddComponent<ImageEffect_GaussianBlur>().enabled = false;
-      //  characterCamera.AddComponent<ImageEffect_GaussianBlur>().enabled = false;
-        if(isLockTarget)
+        mainCamera.AddComponent<ImageEffect_GaussianBlur>().enabled = false;
+        characterCamera.AddComponent<ImageEffect_GaussianBlur>().enabled = false;
+        if (isLockTarget)
         {
             lastTarget = GameObject.Find("Girl");
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -908,7 +908,6 @@ GameObject:
   - component: {fileID: 609557274}
   - component: {fileID: 609557273}
   - component: {fileID: 609557272}
-  - component: {fileID: 609557276}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -983,19 +982,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609557270}
   m_Enabled: 1
---- !u!114 &609557276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 609557270}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
-  BlurSize: 1
 --- !u!1 &624998327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,8 +2773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
-  BlurSize: 1
 --- !u!1 &1422991412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1162636356738664, guid: 71888b4d5b492264e9197fedc7b0b555,
