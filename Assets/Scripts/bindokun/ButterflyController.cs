@@ -17,6 +17,7 @@ public class ButterflyController : MonoBehaviour
     public GameObject girl;
     public GameObject boySprite;
     public GameObject comicPanel;
+
     // Use this for initialization
 
     void Start()
@@ -36,14 +37,21 @@ public class ButterflyController : MonoBehaviour
         if (trButterfly.localPosition.x > targetLocalXpos)
         {
 
+
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
                 gameObject.SetActive(false);
             }
-            else{
-                
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                gameObject.SetActive(true);
             }
+            else
+            {
+                gameObject.SetActive(false);
+            }
+
             girl.GetComponent<NewGrilController>().EnableMoving();
             boySprite.GetComponent<SpriteController>().EnableMoving();
             // 显示按钮
@@ -51,7 +59,7 @@ public class ButterflyController : MonoBehaviour
         }
         else
         {
-           trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
+            trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
         }
 
 
@@ -65,6 +73,7 @@ public class ButterflyController : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 PlayMemoryOne();
+                Destroy(gameObject);
             }
         }
 
@@ -74,6 +83,5 @@ public class ButterflyController : MonoBehaviour
     private void PlayMemoryOne()
     {
         comicPanel.SetActive(true);
-
     }
 }

@@ -15,21 +15,17 @@ public class CameraManager : MonoBehaviour
     private GameObject characterCamera;
     private GameObject lastTarget;
 
+    private float velocity = 0;
+
     public void ChangeTarget(GameObject target)
     {
-        if (target == null)
+        if (target != null)
         {
-            mainCamera.GetComponent<SmoothFollow>().target = null;
-            characterCamera.GetComponent<SmoothFollow>().target = null;
-        }
-        else
-        {
-            mainCamera.GetComponent<SmoothFollow>().target = target.transform;
-            characterCamera.GetComponent<SmoothFollow>().target = target.transform;
             lastTarget = target;
         }
-
     }
+
+
 
     public void BlurBackground(bool isBlur)
     {
@@ -49,16 +45,19 @@ public class CameraManager : MonoBehaviour
         {
             lastTarget = GameObject.Find("Girl");
         }
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(lastTarget == null)
+        if (lastTarget == null)
         {
             return;
         }
+
+        UpdateLocation();
+
 
         float cameraLeftBound = Camera.main.ViewportToWorldPoint(Vector3.zero).x;
         float cameraRightBound = Camera.main.ViewportToWorldPoint(Vector3.one).x;
@@ -85,5 +84,15 @@ public class CameraManager : MonoBehaviour
         {
             ChangeTarget(lastTarget);
         }
+    }
+
+
+    private void UpdateLocation()
+    {
+        float cameraTargetX = Mathf.SmoothDamp(mainCamera.transform.position.x, lastTarget.transform.position.x, ref velocity, 0.3f);
+        float cameraTargetY = mainCamera.transform.position.y;
+        float cameraTargetZ = mainCamera.transform.position.z;
+        mainCamera.transform.position = new Vector3(cameraTargetX, cameraTargetY, cameraTargetZ);
+        characterCamera.transform.position = new Vector3(cameraTargetX, cameraTargetY, cameraTargetZ);
     }
 }
