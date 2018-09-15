@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 40571486}
   - component: {fileID: 40571485}
   - component: {fileID: 40571484}
+  - component: {fileID: 40571492}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -459,6 +460,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &40571492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40571483}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
+  BlurSize: 1
 --- !u!1001 &72814237
 Prefab:
   m_ObjectHideFlags: 0
@@ -5668,6 +5682,7 @@ GameObject:
   - component: {fileID: 1486936443}
   - component: {fileID: 1486936442}
   - component: {fileID: 1486936441}
+  - component: {fileID: 1486936445}
   m_Layer: 0
   m_Name: CharacterCamera
   m_TagString: Untagged
@@ -5751,6 +5766,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486936445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486936440}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
+  BlurSize: 1
 --- !u!1 &1494135081
 GameObject:
   m_ObjectHideFlags: 0
