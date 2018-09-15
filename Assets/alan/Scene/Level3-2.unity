@@ -228,9 +228,10 @@ GameObject:
   - component: {fileID: 25083000}
   - component: {fileID: 25082999}
   - component: {fileID: 25082998}
+  - component: {fileID: 25083001}
   m_Layer: 1
   m_Name: right board
-  m_TagString: Untagged
+  m_TagString: right board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,8 +243,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 25082996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.7271843, y: -2.6069705, z: -0.08526266}
-  m_LocalScale: {x: 0.07393024, y: 0.5087742, z: 0.142197}
+  m_LocalPosition: {x: -4.8257256, y: -3.0911145, z: -0.85543144}
+  m_LocalScale: {x: 0.5131709, y: 0.5087742, z: 0.142197}
   m_Children: []
   m_Father: {fileID: 979669155}
   m_RootOrder: 0
@@ -273,8 +274,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.23264, y: 1.0824708, z: 23.418188}
-  m_Center: {x: 0.11950559, y: -0.35816473, z: 1.9027252}
+  m_Size: {x: 5.7548366, y: 1.2920103, z: 23.418188}
+  m_Center: {x: 0.5529952, y: 0.040026583, z: 1.9027252}
 --- !u!212 &25083000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -310,7 +311,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4048048dc90a93143b149cca04855562, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ee148704cff24132b151df31e6549b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -321,6 +322,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &25083001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25082996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cddc729014dd1417191836b0d733890a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trayWithWater: {fileID: 21300000, guid: f9523b57271c346e7a723a4e15ce42d9, type: 3}
+  trayWithoutWater: {fileID: 21300000, guid: 0ee148704cff24132b151df31e6549b0, type: 3}
 --- !u!1 &40571483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1056,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 114582875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14, y: 6.4, z: -0.08526266}
+  m_LocalPosition: {x: 13.7, y: 6.2, z: -0.08526266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 712969042}
@@ -2318,7 +2332,8 @@ MonoBehaviour:
   heavy: {fileID: 25082996}
   AniName: icemelt
   Condition: IsMelt
-  pre: water2
+  trayWithoutWater: {fileID: 0}
+  trayWithWater: {fileID: 0}
 --- !u!212 &638929674
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2768,7 +2783,8 @@ MonoBehaviour:
   heavy: {fileID: 1015102860}
   AniName: IceLeft
   Condition: IceLeft
-  pre: water1
+  trayWithoutWater: {fileID: 0}
+  trayWithWater: {fileID: 0}
 --- !u!212 &799682320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3470,9 +3486,10 @@ GameObject:
   - component: {fileID: 1015102862}
   - component: {fileID: 1015102861}
   - component: {fileID: 1015102864}
+  - component: {fileID: 1015102865}
   m_Layer: 1
   m_Name: left board
-  m_TagString: Untagged
+  m_TagString: left board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3487,8 +3504,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.23264, y: 1.0824708, z: 16.294527}
-  m_Center: {x: 0.11950559, y: -0.35816473, z: 1.7025476}
+  m_Size: {x: 4.363782, y: 1.1520952, z: 16.294527}
+  m_Center: {x: 0.20992316, y: 0.08743825, z: 1.7025476}
 --- !u!212 &1015102862
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3524,7 +3541,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4048048dc90a93143b149cca04855562, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ee148704cff24132b151df31e6549b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3542,8 +3559,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1015102860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.7722263, y: -2.6158352, z: -0.08526266}
-  m_LocalScale: {x: 0.07393024, y: 0.5087742, z: 0.142197}
+  m_LocalPosition: {x: -4.8135586, y: -3.001608, z: -0.8556111}
+  m_LocalScale: {x: 0.56197315, y: 0.5087742, z: 0.142197}
   m_Children: []
   m_Father: {fileID: 802386074}
   m_RootOrder: 0
@@ -3563,6 +3580,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &1015102865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015102860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cddc729014dd1417191836b0d733890a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trayWithWater: {fileID: 21300000, guid: f9523b57271c346e7a723a4e15ce42d9, type: 3}
+  trayWithoutWater: {fileID: 21300000, guid: 0ee148704cff24132b151df31e6549b0, type: 3}
 --- !u!1 &1021712777
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,7 +5529,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1469355225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3, y: -7.45, z: -0.08526266}
+  m_LocalPosition: {x: 6.37, y: -6.93, z: -0.08526266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1852466769}
@@ -5951,7 +5981,8 @@ MonoBehaviour:
   heavy: {fileID: 1015102860}
   AniName: IceMeltToWater
   Condition: IsMelt
-  pre: water1
+  trayWithoutWater: {fileID: 21300000, guid: 0ee148704cff24132b151df31e6549b0, type: 3}
+  trayWithWater: {fileID: 21300000, guid: f9523b57271c346e7a723a4e15ce42d9, type: 3}
 --- !u!82 &1494677691
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6071,7 +6102,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1535045830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.27, y: -3.36, z: -0.08526266}
+  m_LocalPosition: {x: -12.33, y: -3.92, z: -0.08526266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 958563037}
@@ -6580,7 +6611,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1653388284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.66, y: -3.36, z: -0.08526266}
+  m_LocalPosition: {x: 7.66, y: -4.05, z: -0.08526266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1852466769}
@@ -7296,7 +7327,8 @@ MonoBehaviour:
   heavy: {fileID: 25082996}
   AniName: IceMeltToWater
   Condition: IsMelt
-  pre: water2
+  trayWithoutWater: {fileID: 21300000, guid: 0ee148704cff24132b151df31e6549b0, type: 3}
+  trayWithWater: {fileID: 21300000, guid: f9523b57271c346e7a723a4e15ce42d9, type: 3}
 --- !u!212 &1872764640
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7492,7 +7524,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1904931106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.4, y: 1.75, z: -0.08526266}
+  m_LocalPosition: {x: 6.52, y: 1.62, z: -0.08526266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1852466769}

@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class ReduceParentMass : MonoBehaviour {
     bool flag;
-    DateTime t_MouseDown;   
+    DateTime t_MouseDown;
+    public Sprite trayWithWater;
+    public Sprite trayWithoutWater;
 	// Use this for initialization
 	void Start () {
 		
@@ -31,6 +33,7 @@ public class ReduceParentMass : MonoBehaviour {
             bool isHitWater = false;
             foreach (RaycastHit hit in hits)
             {
+                //print("hit:" + hit.collider.name);
                 if (hit.collider.tag == gameObject.tag)
                 {
                     isHitWater = true;
@@ -40,9 +43,15 @@ public class ReduceParentMass : MonoBehaviour {
                 }
                 if(isHitSprite && isHitWater)
                 {
-                    Rigidbody rb = transform.parent.gameObject.GetComponent<Rigidbody>();
-                    rb.mass = 1;
-                    Destroy(this.gameObject);
+                    SpriteRenderer render = GetComponent<SpriteRenderer>();
+                    Sprite sprite = render.sprite;
+                    print("sprite.name " + sprite.name);
+                    if (sprite.name == trayWithWater.name)
+                    {
+                        Rigidbody rb = transform.gameObject.GetComponent<Rigidbody>();
+                        rb.mass = 1;
+                        GetComponent<SpriteRenderer>().sprite = trayWithoutWater;
+                    }
                 }
             }
         }

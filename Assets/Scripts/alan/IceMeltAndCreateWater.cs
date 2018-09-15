@@ -13,8 +13,9 @@ public class IceMeltAndCreateWater : MonoBehaviour {
     private bool isInstan = false;
     public string AniName;
     public string Condition;
-    public string pre;
     private AudioSource dropWaterSound;
+    public Sprite trayWithoutWater;
+    public Sprite trayWithWater;
     // Use this for initialization
     void Start()
     {
@@ -50,7 +51,6 @@ public class IceMeltAndCreateWater : MonoBehaviour {
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
-                print(hit.collider.name);
                 if (hit.collider.gameObject.tag == gameObject.tag)
                     isHitIceCube = true;
                 if (hit.collider.gameObject.tag == "BoySprite")
@@ -64,9 +64,11 @@ public class IceMeltAndCreateWater : MonoBehaviour {
                 dropWaterSound.Play();
                 if (!isInstan)
                 {
-                        GameObject water = (GameObject)Resources.Load(pre);
-                        water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.5f, 0), heavy.transform.rotation) as GameObject;
-                        water.transform.parent = heavy.transform;
+                    //GameObject water = (GameObject)Resources.Load(pre);
+                    //water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.5f, 0), heavy.transform.rotation) as GameObject;
+                    //water.transform.parent = heavy.transform;
+                        SpriteRenderer reader = heavy.GetComponent<SpriteRenderer>();
+                        reader.sprite = trayWithWater;
                         Rigidbody rb = heavy.GetComponent<Rigidbody>();
                         rb.mass = 3;
                         isInstan = true;
