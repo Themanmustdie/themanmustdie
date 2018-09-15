@@ -1117,8 +1117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
-  BlurSize: 1
 --- !u!1001 &494822138
 Prefab:
   m_ObjectHideFlags: 0
@@ -1797,7 +1795,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9711ecc11f0c04366942aeb95d310c1d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d22f3f17a04215746b4741172d6f3b81, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2360,7 +2358,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1f37745a9dd604f32a58bb020447cafd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 38beb529eea53454788053230bdd267b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3336,8 +3334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
-  BlurSize: 1
 --- !u!1 &1277748499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,7 +4317,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1f37745a9dd604f32a58bb020447cafd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 38beb529eea53454788053230bdd267b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5894,7 +5890,7 @@ Prefab:
     - target: {fileID: 114780183316634068, guid: c353e48eb7ac94a4da160eaaa08f7600,
         type: 2}
       propertyPath: level
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c353e48eb7ac94a4da160eaaa08f7600, type: 2}

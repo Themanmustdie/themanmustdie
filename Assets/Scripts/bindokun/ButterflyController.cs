@@ -36,11 +36,14 @@ public class ButterflyController : MonoBehaviour
         if (trButterfly.localPosition.x > targetLocalXpos)
         {
 
-            if (SceneManager.GetActiveScene().buildIndex != 2)
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
+                GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
                 gameObject.SetActive(false);
             }
-            GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
+            else{
+                
+            }
             girl.GetComponent<NewGrilController>().EnableMoving();
             boySprite.GetComponent<SpriteController>().EnableMoving();
             // 显示按钮
@@ -48,7 +51,7 @@ public class ButterflyController : MonoBehaviour
         }
         else
         {
-          //  trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
+           trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
         }
 
 

@@ -664,7 +664,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 6ac6596fee54744959fc52acc8860883, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba546fe2561a12f4896b6a64a3540ded, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -709,7 +709,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 240868295}
   m_LocalRotation: {x: 0, y: -0.00030148544, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5579066, y: -0.7608906, z: 0.25379723}
+  m_LocalPosition: {x: -5.39, y: 0.29, z: 0.25}
   m_LocalScale: {x: 0.37324917, y: 0.4136298, z: 0.57156}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1209,7 +1209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 56eba597671c84fb19f216945b8d37d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc7c015e5149ab842b8cc5240153179f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1546,7 +1546,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6ac6596fee54744959fc52acc8860883, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba546fe2561a12f4896b6a64a3540ded, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2644,7 +2644,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 732743698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.77, y: 0.72, z: 0.03}
+  m_LocalPosition: {x: -16.96, y: 2.97, z: 0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2713,7 +2713,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 834c37730542244bd998a827bcecfaff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4298fb1d25528c040b1b2f29cc4d99d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2778,8 +2778,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.8950358, z: 1}
+  m_Center: {x: 0, y: -0.052482456, z: 0}
 --- !u!23 &746800909
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2983,7 +2983,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7fe7184ed1ec2412bb572970bc33a195, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5afeae4869ec614dbba0cb799b60b69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3293,7 +3293,7 @@ GameObject:
   - component: {fileID: 1047485323}
   - component: {fileID: 1047485322}
   - component: {fileID: 1047485326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Organ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3361,7 +3361,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1047485321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2719069, y: 0.69, z: 0.04}
+  m_LocalPosition: {x: -1.88, y: 1.81, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4370,8 +4370,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.9541101, z: 1}
+  m_Center: {x: 0, y: -0.022945458, z: 0}
 --- !u!23 &1559894443
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4544,7 +4544,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: da7647f2949ad4bc7afa5636fcf3f18f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99d6b7dafc3d65f44b47951ccfbaaa0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4650,7 +4650,7 @@ Prefab:
     - target: {fileID: 114780183316634068, guid: c353e48eb7ac94a4da160eaaa08f7600,
         type: 2}
       propertyPath: level
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c353e48eb7ac94a4da160eaaa08f7600, type: 2}
@@ -5142,10 +5142,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1612992285}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
+  m_Script: {fileID: 11500000, guid: de3e357af1f13164b9e2dc5d2ce97fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
+  gaussianBlurShader: {fileID: 4800000, guid: 464f8809b77fc314dbb277e22c190cd5, type: 3}
   BlurSize: 1
 --- !u!1 &1620163634
 GameObject:
@@ -5735,8 +5735,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1703347516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.96, y: -3.776, z: 0.66}
-  m_LocalScale: {x: 0.28363773, y: 0.32884315, z: 1}
+  m_LocalPosition: {x: 5.471, y: -3.845, z: 0.94}
+  m_LocalScale: {x: 0.28363773, y: 0.55580145, z: 1}
   m_Children:
   - {fileID: 1361161804}
   m_Father: {fileID: 213513910}
@@ -6256,8 +6256,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.660234, y: 5.825475, z: 4.948496}
-  m_Center: {x: 0.203816, y: -0.43864423, z: 0.85118055}
+  m_Size: {x: 8.660234, y: 5.104241, z: 4.948496}
+  m_Center: {x: 0.203816, y: -0.7992621, z: 0.85118055}
 --- !u!212 &1914208365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6448,8 +6448,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1948171748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.64, y: -4.77, z: 0.66}
-  m_LocalScale: {x: 0.53621924, y: 0.12948073, z: 1}
+  m_LocalPosition: {x: -1.64, y: -4.4954, z: 0.66}
+  m_LocalScale: {x: 0.53621924, y: 0.5315734, z: 1}
   m_Children:
   - {fileID: 1794348106}
   m_Father: {fileID: 213513910}
@@ -6707,10 +6707,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1979868406}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
+  m_Script: {fileID: 11500000, guid: de3e357af1f13164b9e2dc5d2ce97fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gaussianBlurShader: {fileID: 4800000, guid: 18f32d3bec07c4414922dee50af9ee45, type: 3}
+  gaussianBlurShader: {fileID: 4800000, guid: 464f8809b77fc314dbb277e22c190cd5, type: 3}
   BlurSize: 1
 --- !u!1001 &2039590900
 Prefab:

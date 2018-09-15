@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -287,6 +287,58 @@ Transform:
   m_Father: {fileID: 55082687}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &190176715
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1726541572}
+    m_Modifications:
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460948129440688, guid: adc5816ab2c6bab4e8aa39140023067d,
+        type: 2}
+      propertyPath: boySprite
+      value: 
+      objectReference: {fileID: 1033642474}
+    - target: {fileID: 114460948129440688, guid: adc5816ab2c6bab4e8aa39140023067d,
+        type: 2}
+      propertyPath: girl
+      value: 
+      objectReference: {fileID: 1422991412}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: adc5816ab2c6bab4e8aa39140023067d, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &199841448
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,16 +508,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: e46a65e664df38843be3e5b1dd2c136c, type: 3}
---- !u!1 &280903138 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1504847906872748, guid: 451590f212184804288a5e196f81d8da,
-    type: 2}
-  m_PrefabInternal: {fileID: 1971325483}
---- !u!4 &280903139 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da,
-    type: 2}
-  m_PrefabInternal: {fileID: 1971325483}
 --- !u!1 &321281493
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +950,7 @@ GameObject:
   - component: {fileID: 609557274}
   - component: {fileID: 609557273}
   - component: {fileID: 609557272}
+  - component: {fileID: 609557276}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -982,6 +1025,19 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609557270}
   m_Enabled: 1
+--- !u!114 &609557276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609557270}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3e357af1f13164b9e2dc5d2ce97fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gaussianBlurShader: {fileID: 4800000, guid: 464f8809b77fc314dbb277e22c190cd5, type: 3}
+  BlurSize: 1
 --- !u!1 &624998327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2770,9 +2826,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405167818}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d350256a0b88439780d9a9ae27b68ee, type: 3}
+  m_Script: {fileID: 11500000, guid: de3e357af1f13164b9e2dc5d2ce97fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gaussianBlurShader: {fileID: 4800000, guid: 464f8809b77fc314dbb277e22c190cd5, type: 3}
+  BlurSize: 1
 --- !u!1 &1422991412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1162636356738664, guid: 71888b4d5b492264e9197fedc7b0b555,
@@ -3305,7 +3363,7 @@ Transform:
   m_Children:
   - {fileID: 1033642475}
   - {fileID: 1422991413}
-  - {fileID: 280903139}
+  - {fileID: 1883177171}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3517,6 +3575,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1840905402}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1883177170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1504847906872748, guid: adc5816ab2c6bab4e8aa39140023067d,
+    type: 2}
+  m_PrefabInternal: {fileID: 190176715}
+--- !u!4 &1883177171 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4426204543401068, guid: adc5816ab2c6bab4e8aa39140023067d,
+    type: 2}
+  m_PrefabInternal: {fileID: 190176715}
 --- !u!1 &1891640794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,7 +3715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bookMaskPanel: {fileID: 1181040213}
-  butterfly: {fileID: 280903138}
+  butterfly: {fileID: 1883177170}
   girl: {fileID: 1422991412}
   boySprite: {fileID: 1033642474}
 --- !u!54 &1953209754
@@ -3686,7 +3754,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7ac87e08df232db4398658366eedcb6f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3971,58 +4039,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 918284069}
   backgroundWall: {fileID: 996654489}
---- !u!1001 &1971325483
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1726541572}
-    m_Modifications:
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 13.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426204543401068, guid: 451590f212184804288a5e196f81d8da, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114460948129440688, guid: 451590f212184804288a5e196f81d8da,
-        type: 2}
-      propertyPath: girl
-      value: 
-      objectReference: {fileID: 1422991412}
-    - target: {fileID: 114460948129440688, guid: 451590f212184804288a5e196f81d8da,
-        type: 2}
-      propertyPath: boySprite
-      value: 
-      objectReference: {fileID: 1033642474}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 451590f212184804288a5e196f81d8da, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &2132102740
 GameObject:
   m_ObjectHideFlags: 0
