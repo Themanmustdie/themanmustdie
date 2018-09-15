@@ -5,13 +5,14 @@ using UnityEngine;
 public class TriggerWaterRise : MonoBehaviour {
     public UnityEngine.Animator waterRise;
     //public UnityEngine.Animator waterRise2;
-    public GameObject water;
+    public UnityEngine.Animator waterdrop;
     public GameObject raiseWater;
     public GameObject baffle;
     public GameObject roll;
 	// Use this for initialization
 	void Start () {
-        waterRise.SetBool("IsRise", false);
+        waterRise.SetBool("IsRaise", false);
+        waterdrop.SetBool("IsDrop", false);
 	}
 	
 	// Update is called once per frame
@@ -23,12 +24,8 @@ public class TriggerWaterRise : MonoBehaviour {
     {
         if (collision.collider.tag == "board")
         {
-            waterRise.gameObject.SetActive(true);
-            waterRise.SetBool("IsRise", true);
-            if (water != null)
-            {
-                Destroy(water);
-            }
+            waterRise.SetBool("IsRaise", true);
+            waterdrop.SetBool("IsDrop", true);
             if (raiseWater != null)
             {
                 Destroy(raiseWater);

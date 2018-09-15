@@ -11,6 +11,7 @@ public class IceMeltCondition : MonoBehaviour
     bool flag;
     DateTime t_MouseDown;
     public GameObject roll;
+    public GameObject water;
     // Use this for initialization
     void Start()
     {
@@ -64,7 +65,8 @@ public class IceMeltCondition : MonoBehaviour
                     melt_.SetBool("IsMelt", true);
                 }
                 else {
-                    melt_.SetBool("IsOnlyMelt", true);
+                    Destroy(melt_.gameObject);
+                    water.SetActive(true);
                 }
             }
         }

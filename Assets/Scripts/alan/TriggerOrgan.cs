@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TriggerOrgan : MonoBehaviour {
     public GameObject end;
+    public GameObject background;
+    public Sprite bg;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,10 +18,10 @@ public class TriggerOrgan : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        print("1111");
         if (other.tag == "girl")
         {
             end.SetActive(true);
+            background.GetComponent<SpriteRenderer>().sprite = bg;
         }
     }
 }

@@ -263,6 +263,7 @@
     <Compile Include="Assets\Scripts\alan\MeshMelt.cs" />
     <Compile Include="Assets\Scripts\alan\MessageBox.cs" />
     <Compile Include="Assets\Scripts\alan\NetCtrl.cs" />
+    <Compile Include="Assets\Scripts\alan\OpenDoorAndLoadScene.cs" />
     <Compile Include="Assets\Scripts\alan\ReduceParentMass.cs" />
     <Compile Include="Assets\Scripts\alan\Register.cs" />
     <Compile Include="Assets\Scripts\alan\RivetsFire.cs" />
