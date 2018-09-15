@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Utility;
+using UnityEngine.SceneManagement;
 
 public class ButterflyController : MonoBehaviour
 {
@@ -15,12 +16,14 @@ public class ButterflyController : MonoBehaviour
     public float targetLocalXpos;
     public GameObject girl;
     public GameObject boySprite;
+    public GameObject comicPanel;
     // Use this for initialization
 
     void Start()
     {
         trButterfly = GetComponent<Transform>();
         startTime = Time.time;
+
     }
 
 
@@ -29,11 +32,15 @@ public class ButterflyController : MonoBehaviour
 
     void Update()
     {
-        if(trButterfly.localPosition.x > targetLocalXpos)
-        {
-            gameObject.SetActive(false);
-            GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
 
+        if (trButterfly.localPosition.x > targetLocalXpos)
+        {
+
+            if (SceneManager.GetActiveScene().buildIndex != 2)
+            {
+                gameObject.SetActive(false);
+            }
+            GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
             girl.GetComponent<NewGrilController>().EnableMoving();
             boySprite.GetComponent<SpriteController>().EnableMoving();
             // 显示按钮
@@ -41,7 +48,29 @@ public class ButterflyController : MonoBehaviour
         }
         else
         {
-            trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
+          //  trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
         }
+
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Girl")
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                PlayMemoryOne();
+            }
+        }
+
+    }
+
+
+    private void PlayMemoryOne()
+    {
+        comicPanel.SetActive(true);
+
     }
 }
