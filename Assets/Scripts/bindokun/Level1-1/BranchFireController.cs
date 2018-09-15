@@ -32,17 +32,10 @@ public class BranchFireController : MonoBehaviour
         animatorInfo = fire_.GetCurrentAnimatorStateInfo(0);  //要在update获取
         if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("fire")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
         {
-            foreach (Transform tr in transform)
-            {
-                if (tr.gameObject.name == "Fire")
-                {
-                    Destroy(tr.gameObject);
-                    ReleaseIce();
-                    Destroy(gameObject);
-                    hasFinish = true;
-                }
-            }
-
+            ReleaseIce();
+            Destroy(gameObject);
+            Destroy(fire_.gameObject);
+            hasFinish = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -75,7 +68,7 @@ public class BranchFireController : MonoBehaviour
         }
     }
 
-  
+
     public void ReleaseIce()
     {
         barrier.GetComponent<BoatController>().MoveWhenBranchIsBurned();
