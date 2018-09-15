@@ -16,12 +16,15 @@ public class IceMeltAndCreateWater : MonoBehaviour {
     private AudioSource dropWaterSound;
     public Sprite trayWithoutWater;
     public Sprite trayWithWater;
+
+    private SoundManager soundManager;
     // Use this for initialization
     void Start()
     {
         melt_.SetBool(Condition, false);
         fire_.SetBool("isFire", false);
         dropWaterSound = GetComponent<AudioSource>();
+        soundManager =GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -61,7 +64,7 @@ public class IceMeltAndCreateWater : MonoBehaviour {
             {
                 melt_.SetBool(Condition, true);
                 fire_.SetBool("isFire", true);
-                dropWaterSound.Play();
+                soundManager.PlaySound(dropWaterSound);
                 if (!isInstan)
                 {
                     //GameObject water = (GameObject)Resources.Load(pre);

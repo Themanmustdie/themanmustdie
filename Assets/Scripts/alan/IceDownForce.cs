@@ -7,10 +7,12 @@ public class IceDownForce : MonoBehaviour
     public GameObject rope;
     private bool isAddForce = false;
     private AudioSource hitSound;
+    private SoundManager soundManager;
     // Use this for initialization
     void Start()
     {
         hitSound = GetComponent<AudioSource>();
+        soundManager = new SoundManager();
     }
 
     // Update is called once per frame
@@ -31,15 +33,15 @@ public class IceDownForce : MonoBehaviour
     {
         if (collision.collider.name == "Trestle")
         {
-            hitSound.Play();
+            soundManager.PlaySound(hitSound);
         }
         else if (collision.collider.name == "Baffle left")
         {
-            hitSound.Play();
+            soundManager.PlaySound(hitSound);
         }
         else if (collision.collider.name == "Baffle right")
         {
-            hitSound.Play();
+            soundManager.PlaySound(hitSound);
         }
     }
 }
