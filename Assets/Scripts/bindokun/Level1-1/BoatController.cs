@@ -20,7 +20,7 @@ public class BoatController : MonoBehaviour
         //Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("River").GetComponent<BoxCollider>());
         //Physics.IgnoreCollision(GetComponent<BoxCollider>(), GameObject.Find("Girl").GetComponent<CapsuleCollider>());
         
-        moveDir = new Vector3(8.02f, -5.71f, 0.04f) - gameObject.transform.position;
+        moveDir = new Vector3(7.303f, -5.09f, -0.1527776f) - gameObject.transform.position;
     }
 
     public void MoveWhenBranchIsBurned()

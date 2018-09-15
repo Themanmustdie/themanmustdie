@@ -295,6 +295,7 @@
     <Compile Include="Assets\Scripts\bindokun\Level1-1\RopeController.cs" />
     <Compile Include="Assets\Scripts\bindokun\NewBurnCandleController.cs" />
     <Compile Include="Assets\Scripts\bindokun\NewGrilController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\OpenDoorController.cs" />
     <Compile Include="Assets\Scripts\bindokun\SkyTouchController.cs" />
     <Compile Include="Assets\Scripts\bindokun\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\bindokun\SpriteController.cs" />
