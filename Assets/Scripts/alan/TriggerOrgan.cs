@@ -22,6 +22,7 @@ public class TriggerOrgan : MonoBehaviour {
         {
             end.SetActive(true);
             background.GetComponent<SpriteRenderer>().sprite = bg;
+            Destroy(gameObject);
         }
     }
 }

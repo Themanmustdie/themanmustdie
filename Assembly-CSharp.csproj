@@ -293,6 +293,7 @@
     <Compile Include="Assets\Scripts\bindokun\Level1-1\RopeController.cs" />
     <Compile Include="Assets\Scripts\bindokun\NewBurnCandleController.cs" />
     <Compile Include="Assets\Scripts\bindokun\NewGrilController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\OpenDoorController.cs" />
     <Compile Include="Assets\Scripts\bindokun\SkyTouchController.cs" />
     <Compile Include="Assets\Scripts\bindokun\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\bindokun\SpriteController.cs" />
@@ -300,6 +301,7 @@
     <Compile Include="Assets\Scripts\bindokun\TipsController.cs" />
     <Compile Include="Assets\Scripts\bindokun\UIManager.cs" />
     <Compile Include="Assets\Scripts\ConfigManager.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Shaders\BlurBackground.cs" />
     <Compile Include="Assets\Shaders\ImageEffect_GaussianBlur.cs" />
     <None Include="Assets\bindokun\Ferr\2DTerrain\Shaders\UnlitColoredTint.shader" />
