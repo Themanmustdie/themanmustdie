@@ -17,6 +17,7 @@ public class ButterflyController : MonoBehaviour
     public GameObject girl;
     public GameObject boySprite;
     public GameObject comicPanel;
+    private UIManager uiManager;
 
     // Use this for initialization
 
@@ -24,6 +25,7 @@ public class ButterflyController : MonoBehaviour
     {
         trButterfly = GetComponent<Transform>();
         startTime = Time.time;
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
 
     }
 
@@ -73,6 +75,8 @@ public class ButterflyController : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex == 2)
             {
                 PlayMemoryOne();
+                uiManager.HideAllButtons();
+                girl.GetComponent<NewGrilController>().DisableMoving();
                 Destroy(gameObject);
             }
         }

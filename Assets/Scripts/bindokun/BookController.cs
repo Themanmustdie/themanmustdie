@@ -38,7 +38,6 @@ public class BookController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "groud")
         {
             dropSound.Play();

@@ -6,13 +6,13 @@ public class ComicController : MonoBehaviour
 {
 
     public GameObject[] comics = new GameObject[7];
-
     private int curIndex = 0;
+    private UIManager uiManager;
 
     // Use this for initialization
     void Start()
     {
-
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -23,7 +23,6 @@ public class ComicController : MonoBehaviour
 
     public void OnClickComic()
     {
-        Debug.Log(curIndex);
         curIndex++;
         if (curIndex - 1 < comics.Length)
         {
@@ -41,6 +40,8 @@ public class ComicController : MonoBehaviour
         if (curIndex >= comics.Length)
         {
             gameObject.SetActive(false);
+            uiManager.ShowCommonButtons();
+            GameObject.Find("Girl").GetComponent<NewGrilController>().EnableMoving();
         }
 
         // comics[comics.Length - 1].SetActive(false);

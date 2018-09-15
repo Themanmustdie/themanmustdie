@@ -8,6 +8,7 @@ public class BtnSettingController : MonoBehaviour
     private CameraManager cameraMgr;
     private bool isShowBtn;
     public GameObject maskPanel;
+    public GameObject promptList;
     // Use this for initialization
     void Start()
     {
@@ -28,6 +29,11 @@ public class BtnSettingController : MonoBehaviour
         btnPrompt.SetActive(isShowBtn);
         btnReplay.SetActive(isShowBtn);
         maskPanel.SetActive(isShowBtn);
+        foreach(Transform child in promptList.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
     }
     
     public void OnClickMaskPanel()

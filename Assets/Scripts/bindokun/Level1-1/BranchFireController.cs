@@ -64,6 +64,7 @@ public class BranchFireController : MonoBehaviour
             if (isHitSprite && isHitIceRivets)
             {
                 fire_.SetBool("isFire", true);
+                GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(1);
             }
         }
     }

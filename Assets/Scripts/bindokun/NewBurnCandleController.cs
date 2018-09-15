@@ -31,18 +31,18 @@ public class NewBurnCandleController : MonoBehaviour {
                 if (hit.collider.gameObject.tag == "BoySprite")
                 {
                     isClickFire = true;
-                    Debug.Log("BoySprite");
+                 //   Debug.Log("BoySprite");
                 }
 
                 if (hit.collider.gameObject.name.StartsWith("NewDetection"))
                 {
                     isClickCandle = true;
-                    Debug.Log("NewDetection");
+                   // Debug.Log("NewDetection");
                 }
 
                 if (isClickFire & isClickCandle)
                 {
-                    Debug.Log("desdroy wall");
+                  //  Debug.Log("desdroy wall");
                     Destroy(wall);
                     NewBurnCandleController.isLightened = true;
                     aniBackgroundWall.SetBool("isLighten", true);

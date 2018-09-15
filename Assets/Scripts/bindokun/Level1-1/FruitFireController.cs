@@ -91,6 +91,7 @@ public class FruitFireController : MonoBehaviour {
             if (trChild.gameObject.name.StartsWith("Fruit"))
             {
                 trChild.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(0);
                 break;
             }
 
