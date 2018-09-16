@@ -127,7 +127,6 @@ class DragState : ISpriteState
 
 public class SpriteController : MonoBehaviour
 {
-
     private Transform tr;
     public Vector3 targetPos;
     public float moveSpeed = 3.0f;

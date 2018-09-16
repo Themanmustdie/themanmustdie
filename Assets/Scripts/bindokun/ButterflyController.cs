@@ -45,7 +45,7 @@ public class ButterflyController : MonoBehaviour
                 GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
                 gameObject.SetActive(false);
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 2)
+            else if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3)
             {
                 gameObject.SetActive(true);
             }
@@ -72,7 +72,7 @@ public class ButterflyController : MonoBehaviour
     {
         if (other.gameObject.name == "Girl")
         {
-            if (SceneManager.GetActiveScene().buildIndex == 2)
+            if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3)
             {
                 PlayMemoryOne();
                 uiManager.HideAllButtons();
