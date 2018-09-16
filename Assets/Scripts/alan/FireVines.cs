@@ -51,7 +51,7 @@ public class FireVines : MonoBehaviour {
             foreach (RaycastHit hit in hits)
             {
                 //print(hit.collider.name);
-                if (hit.collider.gameObject.tag == gameObject.tag)
+                if (hit.collider.gameObject.tag == "vines")
                 {
                     isHitIceRivets = true;
                     GameObject boy = GameObject.Find("BoySprite");
