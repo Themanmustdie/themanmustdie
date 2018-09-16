@@ -253,6 +253,7 @@
     <Compile Include="Assets\Scripts\alan\Explore.cs" />
     <Compile Include="Assets\Scripts\alan\Fail.cs" />
     <Compile Include="Assets\Scripts\alan\FileCtrl.cs" />
+    <Compile Include="Assets\Scripts\alan\FireVines.cs" />
     <Compile Include="Assets\Scripts\alan\Force.cs" />
     <Compile Include="Assets\Scripts\alan\IceCubeDispear.cs" />
     <Compile Include="Assets\Scripts\alan\IceDispear.cs" />
@@ -291,6 +292,7 @@
     <Compile Include="Assets\Scripts\bindokun\Girl\GirlController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\PhysicsObject.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level0\CancelConfirmBtnController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level0\FadeInOutImageController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1\BookPromptTrigger.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\Barrier1Controller.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\BoatController.cs" />
