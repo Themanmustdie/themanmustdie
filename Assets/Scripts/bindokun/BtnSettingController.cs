@@ -5,10 +5,10 @@ public class BtnSettingController : MonoBehaviour
 
     public GameObject btnPrompt;
     public GameObject btnReplay;
+    public GameObject btnGoBack;
     private CameraManager cameraMgr;
     private bool isShowBtn;
     public GameObject maskPanel;
-    public GameObject promptList;
     // Use this for initialization
     void Start()
     {
@@ -29,15 +29,7 @@ public class BtnSettingController : MonoBehaviour
         btnPrompt.SetActive(isShowBtn);
         btnReplay.SetActive(isShowBtn);
         maskPanel.SetActive(isShowBtn);
-        foreach(Transform child in promptList.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        btnGoBack.SetActive(isShowBtn);
 
-    }
-    
-    public void OnClickMaskPanel()
-    {
-        OnClick();
     }
 }

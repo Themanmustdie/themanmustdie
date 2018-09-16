@@ -7,10 +7,10 @@ public class BtnPromptController : MonoBehaviour
 
     public GameObject[] promptList;
     private int curPromptIdx = 0;
-
-    public GameObject btnReplay;
+    
     private bool[] hasPromptList;
     private bool hasInit = false;
+    private UIManager uiMgr;
 
     
     private void Init()
@@ -20,6 +20,7 @@ public class BtnPromptController : MonoBehaviour
         {
             hasPromptList[i] = false;
         }
+        uiMgr = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
     
 
@@ -38,14 +39,26 @@ public class BtnPromptController : MonoBehaviour
 
     public void OnClick()
     {
+        if (!hasInit)
+        {
+            hasInit = true;
+            Init();
+        }
         if (curPromptIdx >= 0 && curPromptIdx < promptList.Length)
         {
             promptList[curPromptIdx].SetActive(true);
             promptList[curPromptIdx].transform.parent.gameObject.SetActive(true);
-            btnReplay.SetActive(false);
-            gameObject.SetActive(false);
+            uiMgr.HideAllButtonsButMaskPanel();
+            uiMgr.isPrompting = true;
         }
+    }
 
+    public void HidePrompt()
+    {
+        if (curPromptIdx >= 0 && curPromptIdx < promptList.Length)
+        {
+            promptList[curPromptIdx].SetActive(false);
+        }
     }
 
     public void SwitchPrompt()
@@ -68,7 +81,6 @@ public class BtnPromptController : MonoBehaviour
             {
                 if (!hasPromptList[i])
                 {
-                    Debug.Log(i);
                     curPromptIdx = i;
                     break;
                 }
