@@ -9,6 +9,8 @@ public class ReduceParentMass : MonoBehaviour {
     public Sprite trayWithWater;
     public Sprite trayWithoutWater;
     private bool hasPrompt = false;
+
+    private float time_;
 	// Use this for initialization
 	void Start () {
 		
@@ -38,33 +40,41 @@ public class ReduceParentMass : MonoBehaviour {
                 if (hit.collider.tag == gameObject.tag)
                 {
                     isHitWater = true;
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
                 }
-                if (hit.collider.tag == "BoySprite"){
-                    isHitSprite = true;
-                }
-                if(isHitSprite && isHitWater)
-                {
-                    SpriteRenderer render = GetComponent<SpriteRenderer>();
-                    Sprite sprite = render.sprite;
-                    print("sprite.name " + sprite.name);
-                    if (sprite.name == trayWithWater.name)
-                    {
-                        Rigidbody rb = transform.gameObject.GetComponent<Rigidbody>();
-                        rb.mass = 1;
-                        GetComponent<SpriteRenderer>().sprite = trayWithoutWater;
-                        if(!hasPrompt && gameObject.name == "right board")
-                        {
-                            GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(2);
-                            hasPrompt = true;
-                        }
-                        else if (!hasPrompt && gameObject.name == "left board")
-                        {
-                            GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(3);
-                            hasPrompt = true;
-                        }
-                    }
-                }
+
             }
+
+             if (isHitWater)
+            {
+                Invoke("StartFire", time_);
+            }
+            isHitWater = false;
         }
 	}
+
+    public void StartFire()
+    {
+        SpriteRenderer render = GetComponent<SpriteRenderer>();
+        Sprite sprite = render.sprite;
+        print("sprite.name " + sprite.name);
+        if (sprite.name == trayWithWater.name)
+        {
+            Rigidbody rb = transform.gameObject.GetComponent<Rigidbody>();
+            rb.mass = 1;
+            GetComponent<SpriteRenderer>().sprite = trayWithoutWater;
+            if (!hasPrompt && gameObject.name == "right board")
+            {
+                GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(2);
+                hasPrompt = true;
+            }
+            else if (!hasPrompt && gameObject.name == "left board")
+            {
+                GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(3);
+                hasPrompt = true;
+            }
+        }
+    }
 }
