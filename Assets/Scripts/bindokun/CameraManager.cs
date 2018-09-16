@@ -16,12 +16,18 @@ public class CameraManager : MonoBehaviour
     private GameObject lastTarget;
 
     private float velocity = 0;
+    private bool isReachBound;
 
     public void ChangeTarget(GameObject target)
     {
         if (target != null)
         {
             lastTarget = target;
+            isReachBound = false;
+        }
+        else
+        {
+            isReachBound = true;
         }
     }
 
@@ -44,6 +50,11 @@ public class CameraManager : MonoBehaviour
         if (isLockTarget)
         {
             lastTarget = GameObject.Find("Girl");
+            isReachBound = false;
+        }
+        else
+        {
+            isReachBound = true;
         }
 
     }
@@ -89,6 +100,10 @@ public class CameraManager : MonoBehaviour
 
     private void UpdateLocation()
     {
+        if(isReachBound)
+        {
+            return;
+        }
         float cameraTargetX = Mathf.SmoothDamp(mainCamera.transform.position.x, lastTarget.transform.position.x, ref velocity, 0.3f);
         float cameraTargetY = mainCamera.transform.position.y;
         float cameraTargetZ = mainCamera.transform.position.z;

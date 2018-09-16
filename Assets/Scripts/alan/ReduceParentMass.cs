@@ -8,6 +8,7 @@ public class ReduceParentMass : MonoBehaviour {
     DateTime t_MouseDown;
     public Sprite trayWithWater;
     public Sprite trayWithoutWater;
+    private bool hasPrompt = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -51,6 +52,16 @@ public class ReduceParentMass : MonoBehaviour {
                         Rigidbody rb = transform.gameObject.GetComponent<Rigidbody>();
                         rb.mass = 1;
                         GetComponent<SpriteRenderer>().sprite = trayWithoutWater;
+                        if(!hasPrompt && gameObject.name == "right board")
+                        {
+                            GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(2);
+                            hasPrompt = true;
+                        }
+                        else if (!hasPrompt && gameObject.name == "left board")
+                        {
+                            GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(3);
+                            hasPrompt = true;
+                        }
                     }
                 }
             }

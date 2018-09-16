@@ -296,8 +296,11 @@
     <Compile Include="Assets\Scripts\bindokun\Level1-1\BranchFireController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\FruitFireController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\RopeController.cs" />
-    <Compile Include="Assets\Scripts\bindokun\Level3-1\IcePromptController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level3-1\IceMeltPromptController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level3-1\RightIceMeltPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level3-1\TrestlePromptController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level3-2\IceMeltPrompt.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level3-2\SecondIceMeltPrompt.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level4\IceMeltPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level4\LampPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level4\SecondLampPromptController.cs" />
