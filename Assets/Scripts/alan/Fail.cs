@@ -16,7 +16,7 @@ public class Fail : MonoBehaviour {
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.tag == "girl")
+        if (collider.tag == "girl" || collider.tag == "balance")
         {
             NetCtrl.instance.LoadScene(User.ID, scene);
         }

@@ -28,7 +28,7 @@ public class RivetsFire : MonoBehaviour
         AnimatorStateInfo animatorInfo;
         animatorInfo = fire_.GetCurrentAnimatorStateInfo(0);  //要在update获取
         if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("fire")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
-        {;
+        {
             Destroy(gameObject);
             Destroy(fire_.gameObject);
             hasFinish = true;

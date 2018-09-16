@@ -26,6 +26,9 @@ TagManager:
   - Branch
   - left board
   - right board
+  - vines
+  - balance
+  - PromptButton
   layers:
   - Default
   - TransparentFX
