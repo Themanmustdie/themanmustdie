@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3087,6 +3087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteController: {fileID: 1033642477}
+  spriteMotionMaskPanel: {fileID: 1673327557}
 --- !u!1 &998103975
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +3542,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   moveSpeed: 8
   girl: {fileID: 1422991412}
+  spriteMaskPanel: {fileID: 1673327557}
   enableMoving: 1
 --- !u!212 &1033642478
 SpriteRenderer:
@@ -5339,6 +5341,11 @@ Transform:
   m_Father: {fileID: 55082687}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -51.726}
+--- !u!1 &1673327557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1565512626222160, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2145845441}
 --- !u!1 &1686352813
 GameObject:
   m_ObjectHideFlags: 0
@@ -6108,6 +6115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteController: {fileID: 1033642477}
+  spriteMotionMaskPanel: {fileID: 1673327557}
 --- !u!95 &1841999260
 Animator:
   serializedVersion: 3
@@ -7056,6 +7064,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114122598527297898, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4965754347054700, guid: 88bf25d3da384ff47b4ca788e9a1cb6a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7088,22 +7101,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114122598527297898, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 223402338235060240, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1190330509}
+    - target: {fileID: 114122598527297898, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickMaskPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114122598527297898, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114122598527297898, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114122598527297898, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88bf25d3da384ff47b4ca788e9a1cb6a, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &2145845442 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1893772398389760, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2145845441}
---- !u!114 &2145845443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2145845442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b2d8a23aedda34ea7214005db2b262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

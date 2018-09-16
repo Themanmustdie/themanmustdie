@@ -63,6 +63,7 @@ class IdleState : ISpriteState
     public void Reset()
     {
         stayAloneTime = 0;
+        spirteCtrl.spriteMaskPanel.SetActive(false);
     }
 }
 
@@ -85,10 +86,15 @@ class NormalMoveState : ISpriteState
 
         spirteCtrl.targetPos.z = 0;
         Vector3 moveDir = spirteCtrl.targetPos - originPos;
+        if (moveDir.magnitude < 1)
+        {
+            spirteCtrl.spriteMaskPanel.SetActive(false);
+        }
+
         if (moveDir.magnitude > 0.05)
         {
             spriteTr.position = Vector3.SmoothDamp(originPos, spirteCtrl.targetPos, ref velocity, 0.3F);
-          //  spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
+            //  spriteTr.Translate(moveDir.normalized * spirteCtrl.moveSpeed * Time.deltaTime, Space.World);
         }
         else
         {
@@ -99,16 +105,19 @@ class NormalMoveState : ISpriteState
     public void Reset()
     {
         // mouseDownPos = spriteTr.position;
+        spirteCtrl.spriteMaskPanel.SetActive(false);
     }
 }
 
 class DragState : ISpriteState
 {
     private Transform spriteTr;
+    private SpriteController spirteCtrl;
 
-    public DragState(Transform spriteTr)
+    public DragState(Transform spriteTr, SpriteController spirteCtrl)
     {
         this.spriteTr = spriteTr;
+        this.spirteCtrl = spirteCtrl;
     }
 
     public void Move()
@@ -121,7 +130,7 @@ class DragState : ISpriteState
 
     public void Reset()
     {
-
+        spirteCtrl.spriteMaskPanel.SetActive(false);
     }
 }
 
@@ -131,6 +140,7 @@ public class SpriteController : MonoBehaviour
     public Vector3 targetPos;
     public float moveSpeed = 3.0f;
     public GameObject girl;
+    public GameObject spriteMaskPanel;
 
     private Dictionary<SpriteState, ISpriteState> stateMap;
     private SpriteState state;
@@ -139,10 +149,12 @@ public class SpriteController : MonoBehaviour
     public void EnableMoving()
     {
         enableMoving = true;
+        spriteMaskPanel.SetActive(false);
     }
     public void DisableMoving()
     {
         enableMoving = false;
+
     }
 
     // Use this for initialization
@@ -154,7 +166,7 @@ public class SpriteController : MonoBehaviour
         // State map
         stateMap.Add(SpriteState.IdleState, new IdleState(tr, girl.GetComponent<Transform>(), this));
         stateMap.Add(SpriteState.NormalMoveState, new NormalMoveState(this, tr));
-        stateMap.Add(SpriteState.DragState, new DragState(tr));
+        stateMap.Add(SpriteState.DragState, new DragState(tr, this));
         state = SpriteState.NormalMoveState;
     }
 
@@ -191,7 +203,7 @@ public class SpriteController : MonoBehaviour
 
     public void ChangeState(SpriteState state, Vector3 targetPos)
     {
-        if(enableMoving)
+        if (enableMoving)
         {
             targetPos.z = 0;
             this.targetPos = targetPos;

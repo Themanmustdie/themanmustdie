@@ -56,7 +56,7 @@ public class IceMeltAndCreateWater : MonoBehaviour {
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
-                print(hit.collider.name);
+               // print(hit.collider.name);
                 if (hit.collider.gameObject.tag == gameObject.tag)
                 {
                     isHitIceCube = true;

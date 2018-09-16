@@ -706,6 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteController: {fileID: 1851938155}
+  spriteMotionMaskPanel: {fileID: 1721237583}
 --- !u!64 &87461916
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8065,6 +8066,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88bf25d3da384ff47b4ca788e9a1cb6a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1721237583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1565512626222160, guid: 88bf25d3da384ff47b4ca788e9a1cb6a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1721237582}
 --- !u!1 &1766939332
 GameObject:
   m_ObjectHideFlags: 0
@@ -8446,6 +8452,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114500770998965350, guid: 90e28d44d3a9e0e4ea783e41e4dbe13f,
+        type: 2}
+      propertyPath: spriteMaskPanel
+      value: 
+      objectReference: {fileID: 1721237583}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90e28d44d3a9e0e4ea783e41e4dbe13f, type: 2}
   m_IsPrefabAsset: 0

@@ -7,11 +7,13 @@ public class SkyTouchController : MonoBehaviour
 {
     private Vector3 mouseDownPos;
     public SpriteController spriteController;
+    public GameObject spriteMotionMaskPanel;
+     
 
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class SkyTouchController : MonoBehaviour
             if (clickDist < 0.3)
             {
                 spriteController.ChangeState(SpriteState.NormalMoveState, mouseUpPos);
+                spriteMotionMaskPanel.SetActive(true);
             }
         }
     }
