@@ -9,15 +9,25 @@ public class ReduceParentMass : MonoBehaviour {
     public Sprite trayWithWater;
     public Sprite trayWithoutWater;
     private bool hasPrompt = false;
+    public UnityEngine.Animator steam;
 
     private float time_;
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        //AnimatorStateInfo animatorInfo;
+        //animatorInfo = fire.GetCurrentAnimatorStateInfo(0);  //要在update获取
+        //if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("fire")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
+        //{
+        //    Destroy(steam);
+
+        //}
+
         if (Input.GetMouseButtonUp(0))
         {
             flag = false;
@@ -62,6 +72,7 @@ public class ReduceParentMass : MonoBehaviour {
         print("sprite.name " + sprite.name);
         if (sprite.name == trayWithWater.name)
         {
+            steam.SetBool("IsSteam", true);
             Rigidbody rb = transform.gameObject.GetComponent<Rigidbody>();
             rb.mass = 1;
             GetComponent<SpriteRenderer>().sprite = trayWithoutWater;
