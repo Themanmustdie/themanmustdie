@@ -1,14 +1,15 @@
-﻿<Properties StartupConfiguration="{9F94E66D-0073-06B6-1765-F37AFFF31CA8}|">
+﻿<Properties StartupConfiguration="{9F19A31D-CC8F-CAE6-86FC-F1BF20C73297}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/alan/Fail.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/alan/BackgroudMoveWithGirl.cs">
     <Files>
       <File FileName="Assets/Scripts/alan/TriggerOrgan.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/alan/OpenDoorAndLoadScene.cs" Line="24" Column="34" />
       <File FileName="Assets/Scripts/bindokun/SpriteController.cs" Line="92" Column="10" />
       <File FileName="Assets/Scripts/alan/ReduceParentMass.cs" Line="12" Column="39" />
-      <File FileName="Assets/Scripts/alan/RivetsFire.cs" Line="76" Column="6" />
-      <File FileName="Assets/Scripts/alan/FireVines.cs" Line="32" Column="50" />
-      <File FileName="Assets/Scripts/alan/Fail.cs" Line="19" Column="49" />
+      <File FileName="Assets/Scripts/alan/RivetsFire.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/alan/FireVines.cs" Line="54" Column="58" />
+      <File FileName="Assets/Scripts/alan/Fail.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/alan/BackgroudMoveWithGirl.cs" Line="18" Column="80" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
