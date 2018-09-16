@@ -10,6 +10,8 @@ public class IceMelt : MonoBehaviour
     public UnityEngine.Animator fire_;
     bool flag;
     DateTime t_MouseDown;
+
+    private float time_;
     // Use this for initialization
     void Start()
     {
@@ -47,17 +49,26 @@ public class IceMelt : MonoBehaviour
                 foreach (Transform child in gameObject.transform)
                 {
                     if (hit.collider.gameObject.tag == gameObject.tag)
+                    {
                         isHitIceCube = true;
+                        GameObject boy = GameObject.Find("BoySprite");
+                        time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                        break;
+                    }
                 }
-                if (hit.collider.gameObject.tag == "BoySprite")
-                    isHitSprite = true;
             }
 
-            if (isHitSprite && isHitIceCube)
+            if (isHitIceCube)
             {
-                melt_.SetBool("IsMelt", true);
-                fire_.SetBool("isFire", true);
+                Invoke("StartFire", time_);
             }
+            isHitIceCube = false;
         }
+    }
+
+    public void StartFire()
+    {
+        melt_.SetBool("IsMelt", true);
+        fire_.SetBool("isFire", true);
     }
 }

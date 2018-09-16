@@ -10,6 +10,10 @@ public class NewBurnCandleController : MonoBehaviour {
     private bool isClickFire = false;
     private bool isClickCandle = false;
 
+    public GameObject mask;
+
+    private float time_;
+
     public GameObject wall;
     public GameObject backgroundWall;
     private Animator aniBackgroundWall;
@@ -28,29 +32,32 @@ public class NewBurnCandleController : MonoBehaviour {
             RaycastHit[] hits = Physics.RaycastAll(ray);
             foreach (RaycastHit hit in hits)
             {
-                if (hit.collider.gameObject.tag == "BoySprite")
-                {
-                    isClickFire = true;
-                 //   Debug.Log("BoySprite");
-                }
-
                 if (hit.collider.gameObject.name.StartsWith("NewDetection"))
                 {
+                    mask.SetActive(true);
                     isClickCandle = true;
-                   // Debug.Log("NewDetection");
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
                 }
 
-                if (isClickFire & isClickCandle)
-                {
-                  //  Debug.Log("desdroy wall");
-                    Destroy(wall);
-                    NewBurnCandleController.isLightened = true;
-                    aniBackgroundWall.SetBool("isLighten", true);
-                }
             }
-            isClickFire = false;
+            if (isClickCandle)
+            {
+                Invoke("StartFire", time_);
+            }
             isClickCandle = false;
+          
         }
+    }
+
+
+    public void StartFire()
+    {
+        Destroy(wall);
+        NewBurnCandleController.isLightened = true;
+        aniBackgroundWall.SetBool("isLighten", true);
+        mask.SetActive(false);
     }
 
 }

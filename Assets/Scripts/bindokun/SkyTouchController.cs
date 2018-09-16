@@ -17,7 +17,6 @@ public class SkyTouchController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (EventSystem.current.IsPointerOverGameObject() || Input.touchCount > 0 && EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
         {
             return;

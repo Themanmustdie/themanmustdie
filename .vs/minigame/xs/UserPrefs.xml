@@ -1,12 +1,22 @@
 ﻿<Properties StartupConfiguration="{9F94E66D-0073-06B6-1765-F37AFFF31CA8}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/alan/TriggerOrgan.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/bindokun/BtnSettingController.cs">
     <Files>
-      <File FileName="Assets/Scripts/bindokun/ButterflyController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/bindokun/Girl/GirlController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/bindokun/Girl/PhysicsObject.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/bindokun/CameraManager.cs" Line="44" Column="25" />
-      <File FileName="Assets/Scripts/alan/TriggerOrgan.cs" Line="25" Column="31" />
+      <File FileName="Assets/Scripts/alan/CandleBurning.cs" Line="41" Column="17" />
+      <File FileName="Assets/Scripts/bindokun/NewBurnCandleController.cs" Line="40" Column="18" />
+      <File FileName="Assets/Scripts/bindokun/Level1-1/FruitFireController.cs" Line="86" Column="32" />
+      <File FileName="Assets/Scripts/bindokun/Level1-1/RopeController.cs" Line="86" Column="41" />
+      <File FileName="Assets/Scripts/bindokun/Level1-1/BranchFireController.cs" Line="85" Column="41" />
+      <File FileName="Assets/Scripts/alan/IceMelt.cs" Line="57" Column="22" />
+      <File FileName="Assets/Scripts/alan/IceMeltAndCreateWater.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/alan/ReduceParentMass.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/alan/IceMeltCondition.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/alan/RivetsFire.cs" Line="54" Column="40" />
+      <File FileName="Assets/Scripts/alan/IsAbleClick.cs" Line="14" Column="29" />
+      <File FileName="Assets/Scripts/bindokun/SkyTouchController.cs" Line="23" Column="17" />
+      <File FileName="Assets/Scripts/bindokun/SpriteController.cs" Line="159" Column="44" />
+      <File FileName="Assets/Scripts/bindokun/UIManager.cs" Line="5" Column="23" />
+      <File FileName="Assets/Scripts/bindokun/BtnSettingController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

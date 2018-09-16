@@ -12,6 +12,8 @@ public class IceMeltCondition : MonoBehaviour
     DateTime t_MouseDown;
     public GameObject roll;
     public GameObject water;
+
+    private float time_;
     // Use this for initialization
     void Start()
     {
@@ -50,25 +52,35 @@ public class IceMeltCondition : MonoBehaviour
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
-                print(hit.collider.name);
+                //print(hit.collider.name);
                 if (hit.collider.gameObject.tag == tag)
-                        isHitIceCube = true;
-                if (hit.collider.gameObject.tag == "BoySprite")
-                    isHitSprite = true;
-            }
-
-            if (isHitSprite && isHitIceCube)
-            {
-                fire_.SetBool("isFire", true);
-                if (roll != null)
                 {
-                    melt_.SetBool("IsMelt", true);
-                }
-                else {
-                    Destroy(melt_.gameObject);
-                    water.SetActive(true);
+                    isHitIceCube = true;
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
                 }
             }
+            if (isHitIceCube)
+            {
+                Invoke("StartFire", time_);
+            }
+            isHitIceCube = false;
         }
+    }
+
+    public void StartFire()
+    {
+        fire_.SetBool("isFire", true);
+        if (roll != null)
+        {
+            melt_.SetBool("IsMelt", true);
+        }
+        else
+        {
+            Destroy(melt_.gameObject);
+            water.SetActive(true);
+        }
+
     }
 }

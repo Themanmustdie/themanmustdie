@@ -9,6 +9,8 @@ public class FruitFireController : MonoBehaviour {
     bool flag;
     DateTime t_MouseDown;
     private bool hasFinish = false;
+
+    private float time_;
     // Use this for initialization
     void Start()
     {
@@ -72,17 +74,25 @@ public class FruitFireController : MonoBehaviour {
             foreach (RaycastHit hit in hits)
             {
                 if (hit.collider.gameObject.tag == gameObject.tag)
+                {
                     isHitIceRivets = true;
-                if (hit.collider.gameObject.tag == "BoySprite")
-                    isHitSprite = true;
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
+                }
             }
-
-            if (isHitSprite && isHitIceRivets)
-            {
-                fire_.SetBool("isFire", true);
+            if(isHitIceRivets){
+                Invoke("StartFire", time_);
             }
+            isHitIceRivets = false;
         }
     }
+
+    public void StartFire()
+    {
+        fire_.SetBool("isFire", true);
+    }
+
 
     public void DropFruits()
     {

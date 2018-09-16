@@ -17,6 +17,8 @@ public class IceMeltAndCreateWater : MonoBehaviour {
     public Sprite trayWithoutWater;
     public Sprite trayWithWater;
 
+    private float time_;
+
     private SoundManager soundManager;
     // Use this for initialization
     void Start()
@@ -54,29 +56,39 @@ public class IceMeltAndCreateWater : MonoBehaviour {
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
+                print(hit.collider.name);
                 if (hit.collider.gameObject.tag == gameObject.tag)
-                    isHitIceCube = true;
-                if (hit.collider.gameObject.tag == "BoySprite")
-                    isHitSprite = true;
-            }
-
-            if (isHitSprite && isHitIceCube)
-            {
-                melt_.SetBool(Condition, true);
-                fire_.SetBool("isFire", true);
-                soundManager.PlaySound(dropWaterSound);
-                if (!isInstan)
                 {
-                    //GameObject water = (GameObject)Resources.Load(pre);
-                    //water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.5f, 0), heavy.transform.rotation) as GameObject;
-                    //water.transform.parent = heavy.transform;
-                        SpriteRenderer reader = heavy.GetComponent<SpriteRenderer>();
-                        reader.sprite = trayWithWater;
-                        Rigidbody rb = heavy.GetComponent<Rigidbody>();
-                        rb.mass = 3;
-                        isInstan = true;
+                    isHitIceCube = true;
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
                 }
+                
             }
+            if (isHitIceCube)
+            {
+                Invoke("StartFire", time_);
+            }
+            isHitIceCube = false;
+        }
+    }
+
+    public void StartFire()
+    {
+        melt_.SetBool(Condition, true);
+        fire_.SetBool("isFire", true);
+        soundManager.PlaySound(dropWaterSound);
+        if (!isInstan)
+        {
+            //GameObject water = (GameObject)Resources.Load(pre);
+            //water = Instantiate(water, heavy.transform.position + new Vector3(0, 0.5f, 0), heavy.transform.rotation) as GameObject;
+            //water.transform.parent = heavy.transform;
+            SpriteRenderer reader = heavy.GetComponent<SpriteRenderer>();
+            reader.sprite = trayWithWater;
+            Rigidbody rb = heavy.GetComponent<Rigidbody>();
+            rb.mass = 3;
+            isInstan = true;
         }
     }
 }

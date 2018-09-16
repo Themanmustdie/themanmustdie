@@ -9,6 +9,8 @@ public class RivetsFire : MonoBehaviour
     public UnityEngine.Animator fire_;
     bool flag;
     DateTime t_MouseDown;
+    private bool hasFinish = false;
+    private float time_;
     // Use this for initialization
     void Start()
     {
@@ -18,11 +20,18 @@ public class RivetsFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hasFinish)
+        {
+            return;
+        }
+        
         AnimatorStateInfo animatorInfo;
         animatorInfo = fire_.GetCurrentAnimatorStateInfo(0);  //要在update获取
         if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName("fire")))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
-        {
+        {;
             Destroy(gameObject);
+            Destroy(fire_.gameObject);
+            hasFinish = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -42,16 +51,27 @@ public class RivetsFire : MonoBehaviour
             bool isHitIceRivets = false;
             foreach (RaycastHit hit in hits)
             {
+                print(hit.collider.name);
                 if (hit.collider.gameObject.tag == gameObject.tag)
+                {
                     isHitIceRivets = true;
-                if (hit.collider.gameObject.tag == "BoySprite")
-                    isHitSprite = true;
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
+                }
+               
             }
 
-            if (isHitSprite && isHitIceRivets)
+            if (isHitIceRivets)
             {
-                fire_.SetBool("isFire", true);
+                Invoke("StartFire", time_);
             }
+            isHitIceRivets = false;
         }
+    }
+
+    public void StartFire()
+    {
+        fire_.SetBool("isFire", true);
     }
 }

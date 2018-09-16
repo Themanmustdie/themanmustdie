@@ -11,6 +11,8 @@ public class RopeController : MonoBehaviour
     private bool hasFinish = false;
     public GameObject ropeFire;
 
+    private float time_;
+
     // Use this for initialization
     void Start()
     {
@@ -56,17 +58,27 @@ public class RopeController : MonoBehaviour
             foreach (RaycastHit hit in hits)
             {
                 if (hit.collider.gameObject.name == "Rope")
+                {
                     isHitIceRivets = true;
-                if (hit.collider.gameObject.tag == "BoySprite")
-                    isHitSprite = true;
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
+                }
             }
-
-            if (isHitSprite && isHitIceRivets)
+            if (isHitIceRivets)
             {
-                fire_.SetBool("isFire", true);
+                Invoke("StartFire", time_);
             }
+            isHitIceRivets = false;
+         
         }
     }
+
+    public void StartFire()
+    {
+        fire_.SetBool("isFire", true);
+    }
+
 
     public void DestroyRope()
     {

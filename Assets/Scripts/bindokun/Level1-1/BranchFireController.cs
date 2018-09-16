@@ -13,6 +13,8 @@ public class BranchFireController : MonoBehaviour
     bool flag;
     DateTime t_MouseDown;
     private bool hasFinish = false;
+
+    private float time_;
     // Use this for initialization
     void Start()
     {
@@ -23,10 +25,6 @@ public class BranchFireController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hasFinish)
-        {
-            return;
-        }
 
         AnimatorStateInfo animatorInfo;
         animatorInfo = fire_.GetCurrentAnimatorStateInfo(0);  //要在update获取
@@ -56,17 +54,25 @@ public class BranchFireController : MonoBehaviour
             foreach (RaycastHit hit in hits)
             {
                 if (hit.collider.gameObject.tag == gameObject.tag)
+                {
                     isHitIceRivets = true;
-                if (hit.collider.gameObject.tag == "BoySprite")
-                    isHitSprite = true;
+                    GameObject boy = GameObject.Find("BoySprite");
+                    time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
+                    break;
+                }
             }
-
-            if (isHitSprite && isHitIceRivets)
+            if (isHitIceRivets)
             {
-                fire_.SetBool("isFire", true);
-                GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(1);
+                Invoke("StartFire", time_);
             }
+            isHitIceRivets = false;
         }
+    }
+
+    public void StartFire()
+    {
+        fire_.SetBool("isFire", true);
+        GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(1);
     }
 
 

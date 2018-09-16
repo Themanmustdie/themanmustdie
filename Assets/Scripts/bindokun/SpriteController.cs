@@ -33,7 +33,7 @@ class IdleState : ISpriteState
 
         timethreshold = 1.0f;
         string strVal = ConfigManager.GetInstance.GetPara("commom-SpriteStayAloneDelay");
-        Debug.Log("stayAloneTime: " + strVal);
+        //Debug.Log("stayAloneTime: " + strVal);
         if (strVal != "")
         {
             timethreshold = float.Parse(strVal);
@@ -165,7 +165,7 @@ public class SpriteController : MonoBehaviour
         Move();
     }
 
-    private void Move()
+    public void Move()
     {
         if (enableMoving)
         {
