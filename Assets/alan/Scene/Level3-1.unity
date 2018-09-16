@@ -371,7 +371,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.10223171, y: 4.7380576, z: -1.3199724}
+  m_ConnectedAnchor: {x: 0.06848573, y: 2.041912, z: -1.3199724}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -3127,7 +3127,7 @@ GameObject:
   - component: {fileID: 874114792}
   - component: {fileID: 874114799}
   - component: {fileID: 874114800}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Ice
   m_TagString: IceRigth
   m_Icon: {fileID: 0}
@@ -3147,7 +3147,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!114 &874114793
 MonoBehaviour:
@@ -3202,7 +3202,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 12}
+  m_Size: {x: 2.33, y: 1.78}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -3233,8 +3233,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 874114791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.93, y: 7.53, z: -0.02}
-  m_LocalScale: {x: 0.68471605, y: 0.49660125, z: 0.4318272}
+  m_LocalPosition: {x: -3.06, y: 7.985, z: -0.02}
+  m_LocalScale: {x: 1.1681255, y: 0.953971, z: 0.4318272}
   m_Children:
   - {fileID: 494822140}
   m_Father: {fileID: 0}
@@ -3250,8 +3250,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1849432, y: 3.2396464, z: 2.30765}
-  m_Center: {x: -0.100622505, y: 0.8027025, z: -0.07005275}
+  m_Size: {x: 2.0979342, y: 1.5319114, z: 2.30765}
+  m_Center: {x: -0.069858015, y: -0.10139095, z: -0.07005275}
 --- !u!114 &874114798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6338,7 +6338,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.17525496, y: 4.858869, z: -1.3199724}
+  m_ConnectedAnchor: {x: 0.008560716, y: 2.0523899, z: -1.3199724}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -6628,7 +6628,7 @@ GameObject:
   - component: {fileID: 1607647375}
   - component: {fileID: 1607647374}
   - component: {fileID: 1607647381}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Ice2
   m_TagString: IceLeft
   m_Icon: {fileID: 0}
@@ -6648,7 +6648,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!65 &1607647375
 BoxCollider:
@@ -6660,8 +6660,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1849432, y: 3.2396464, z: 2.30765}
-  m_Center: {x: -0.100622505, y: 0.8027025, z: -0.07005275}
+  m_Size: {x: 2.0979342, y: 1.5319114, z: 2.30765}
+  m_Center: {x: -0.069858015, y: -0.10139095, z: -0.07005275}
 --- !u!114 &1607647376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6727,7 +6727,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 12}
+  m_Size: {x: 2.33, y: 1.99}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -6758,8 +6758,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1607647373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.93, y: 7.58, z: -0.02}
-  m_LocalScale: {x: 0.68471605, y: 0.49660125, z: 0.4318272}
+  m_LocalPosition: {x: -15.08, y: 7.985, z: -0.02}
+  m_LocalScale: {x: 1.1681255, y: 0.953971, z: 0.4318272}
   m_Children:
   - {fileID: 836015057}
   m_Father: {fileID: 0}

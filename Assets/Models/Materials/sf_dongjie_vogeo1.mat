@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: sf_dongjie_vogeo1
+  m_Shader: {fileID: 4800000, guid: de7e0ef86e0f5a54a81a1450588fc0af, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BenTi:
+        m_Texture: {fileID: 2800000, guid: 0309b02996a1b954b919e23ecd62f2fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BenTi_normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bing_wenli:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DepthTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitterTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 71091276211b9cf489038b3e4cebbc99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_bingwenli:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _xiaosan_texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Aniso: 0
+    - _BumpAmt: 0.12
+    - _Coverage: 0.5
+    - _Density: 0.95
+    - _DensityStatic: 4
+    - _Depth: 1
+    - _Falloff: 0.5
+    - _Glitter: 0.5
+    - _Normal_bingwenli_qiangdu: 2
+    - _Power: 0.2
+    - _RampPower: 1
+    - _Reflection: 0.5
+    - _Shininess: 0.08
+    - _Smooth: 0.5
+    - _Specular: 1
+    - _Speed: 3
+    - _Spread: 1
+    - _Transition: 0.5
+    - _TransitionSmooth: 0.5
+    - _gloss: 0.4330766
+    - _normal02: 2
+    - _specular: 1.579953
+    - _tuqi: 0.1335529
+    - _waifaguang_bian: 2
+    - _xiaosan_bian: 0.03658742
+    - _xiosan: 0.3076923
+    m_Colors:
+    - _BenTiColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Direction: {r: 0, g: 1, b: 0, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
+    - _bian_color: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
+    - _color: {r: 1, g: 1, b: 1, a: 1}
+    - _waifaguang: {r: 0.4196079, g: 0.6862745, b: 1, a: 1}
+    - _xiaosan_color: {r: 0.4078432, g: 0.4627451, b: 0.5019608, a: 1}

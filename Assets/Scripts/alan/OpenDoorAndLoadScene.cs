@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class OpenDoorAndLoadScene : MonoBehaviour {
     public int level;
-    public GameObject background;
-    public Sprite bg;
+    public GameObject door;
     // Use this for initialization
     void Start()
     {
@@ -22,7 +21,7 @@ public class OpenDoorAndLoadScene : MonoBehaviour {
     {
         if (other.tag == "girl")
         {
-            background.GetComponent<SpriteRenderer>().sprite = bg;
+            door.SetActive(true);
             Invoke("LoadScene", 2f);
         }
     }
