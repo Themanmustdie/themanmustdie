@@ -1976,6 +1976,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114559469796577438, guid: 4de0313a41aa2794aad6a8c3b04fc5f4,
+        type: 2}
+      propertyPath: promptList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4175228296745510, guid: 4de0313a41aa2794aad6a8c3b04fc5f4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2038,6 +2043,11 @@ Prefab:
       propertyPath: promptList.Array.data[1]
       value: 
       objectReference: {fileID: 1964977151}
+    - target: {fileID: 114713549462055572, guid: 4de0313a41aa2794aad6a8c3b04fc5f4,
+        type: 2}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114677651469610912, guid: 4de0313a41aa2794aad6a8c3b04fc5f4, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 4de0313a41aa2794aad6a8c3b04fc5f4, type: 2}

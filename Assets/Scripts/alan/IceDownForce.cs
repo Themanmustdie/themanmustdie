@@ -12,7 +12,7 @@ public class IceDownForce : MonoBehaviour
     void Start()
     {
         hitSound = GetComponent<AudioSource>();
-        soundManager = new SoundManager();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame  
