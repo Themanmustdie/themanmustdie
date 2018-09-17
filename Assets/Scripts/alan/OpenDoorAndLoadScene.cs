@@ -21,8 +21,10 @@ public class OpenDoorAndLoadScene : MonoBehaviour {
     {
         if (other.tag == "girl")
         {
+            Debug.Log("OnTriggerEnterOnTriggerEnterOnTriggerEnterOnTriggerEnter");
             door.SetActive(true);
-            Invoke("LoadScene", 2f);
+            GameObject.Find("Butterfly").GetComponent<Level4ButterflyController>().GetIntoRoom();
+            //Invoke("LoadScene", 2f);
         }
     }
 
