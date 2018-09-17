@@ -289,6 +289,8 @@
     <Compile Include="Assets\Scripts\bindokun\CameraController.cs" />
     <Compile Include="Assets\Scripts\bindokun\CameraManager.cs" />
     <Compile Include="Assets\Scripts\bindokun\ComicController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\ComicFadeInOutController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\ComicFinishCallBack.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\GirlController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Girl\PhysicsObject.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level0\CancelConfirmBtnController.cs" />
@@ -298,6 +300,7 @@
     <Compile Include="Assets\Scripts\bindokun\Level1-1\BoatController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\BranchFireController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\FruitFireController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level1-1\Memory1Trigger.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\RopeController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level3-1\IceMeltPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level3-1\RightIceMeltPromptController.cs" />
@@ -308,6 +311,7 @@
     <Compile Include="Assets\Scripts\bindokun\Level4\LampPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level4\SecondLampPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\NewBurnCandleController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\NewComicController.cs" />
     <Compile Include="Assets\Scripts\bindokun\NewGrilController.cs" />
     <Compile Include="Assets\Scripts\bindokun\OpenDoorController.cs" />
     <Compile Include="Assets\Scripts\bindokun\SkyTouchController.cs" />

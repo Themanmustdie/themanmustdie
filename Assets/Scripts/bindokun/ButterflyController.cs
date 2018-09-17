@@ -72,7 +72,7 @@ public class ButterflyController : MonoBehaviour
     {
         if (other.gameObject.name == "Girl")
         {
-            if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3)
+            if (SceneManager.GetActiveScene().buildIndex == 3)
             {
                 PlayMemoryOne();
                 uiManager.HideAllButtons();
