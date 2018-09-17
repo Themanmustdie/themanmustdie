@@ -17,6 +17,7 @@ public class Level4ButterflyController : MonoBehaviour
     private ButterflyController originCtrl;
     private bool isEnterRoom = false;
     public GameObject comicPanel;
+    private float startY = 0;
     // Use this for initialization
     void Start()
     {
@@ -24,7 +25,7 @@ public class Level4ButterflyController : MonoBehaviour
         boySprite = GameObject.Find("BoySprite");
         girl = GameObject.Find("Girl");
         originCtrl = GetComponent<ButterflyController>();
-
+        startY = trButterfly.position.y;
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class Level4ButterflyController : MonoBehaviour
             }
             else
             {
-                trButterfly.position = new Vector3(trButterfly.position.x - speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
+                trButterfly.position = new Vector3(trButterfly.position.x - speed * Time.deltaTime, startY + anim.Evaluate((Time.time - startTime) * speed), 0);
             }
         }
     }

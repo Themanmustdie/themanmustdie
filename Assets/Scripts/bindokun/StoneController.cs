@@ -7,6 +7,7 @@ public class StoneController : MonoBehaviour
 
     private AudioSource dropWaterSound;
     private AudioSource appleHitSound;
+    private AudioSource iceHitSound;
     private SoundManager soundManager;
     // Use this for initialization
     void Start()
@@ -14,6 +15,7 @@ public class StoneController : MonoBehaviour
         dropWaterSound = GetComponents<AudioSource>()[0];
         appleHitSound = GetComponents<AudioSource>()[1];
         soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
+        iceHitSound  = GetComponents<AudioSource>()[2];
     }
 
     // Update is called once per frame
@@ -32,6 +34,10 @@ public class StoneController : MonoBehaviour
         else if (collision.collider.name.StartsWith("Fruit"))
         {
             soundManager.PlaySound(appleHitSound);
+        }
+        else if(collision.collider.name.StartsWith("Barrier2"))
+        {
+            soundManager.PlaySound(iceHitSound);
         }
     }
 }

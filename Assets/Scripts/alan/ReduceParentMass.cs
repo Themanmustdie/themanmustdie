@@ -3,22 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReduceParentMass : MonoBehaviour {
+public class ReduceParentMass : MonoBehaviour
+{
     bool flag;
     DateTime t_MouseDown;
     public Sprite trayWithWater;
     public Sprite trayWithoutWater;
     private bool hasPrompt = false;
     public UnityEngine.Animator steam;
-
+    private UIManager uiManager;
     private float time_;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
 
         //AnimatorStateInfo animatorInfo;
         //animatorInfo = fire.GetCurrentAnimatorStateInfo(0);  //要在update获取
@@ -42,7 +45,6 @@ public class ReduceParentMass : MonoBehaviour {
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
-            bool isHitSprite = false;
             bool isHitWater = false;
             foreach (RaycastHit hit in hits)
             {
@@ -57,13 +59,12 @@ public class ReduceParentMass : MonoBehaviour {
 
             }
 
-             if (isHitWater)
+            if (isHitWater && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
-            isHitWater = false;
         }
-	}
+    }
 
     public void StartFire()
     {

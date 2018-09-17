@@ -10,7 +10,7 @@ public class FruitFireController : MonoBehaviour {
     DateTime t_MouseDown;
     private bool hasFinish = false;
     private UIManager uiManager;
-
+    private SoundManager soundManager;
     private float time_;
     // Use this for initialization
     void Start()
@@ -32,6 +32,7 @@ public class FruitFireController : MonoBehaviour {
             }
         }
         uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -93,6 +94,7 @@ public class FruitFireController : MonoBehaviour {
     public void StartFire()
     {
         fire_.SetBool("isFire", true);
+        soundManager.PlaySound(GetComponent<AudioSource>());
     }
 
 

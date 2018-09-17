@@ -23,6 +23,7 @@ public class OpenDoorController : MonoBehaviour {
         {
             Destroy(imgBackground);
             imgBackgroundOpenDoor.SetActive(true);
+            GetComponent<AudioSource>().Play();
         }
     }
     private void OnCollisionEnter(Collision collision)

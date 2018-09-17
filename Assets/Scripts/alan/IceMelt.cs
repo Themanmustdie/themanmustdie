@@ -8,6 +8,8 @@ public class IceMelt : MonoBehaviour
 
     public UnityEngine.Animator melt_;
     public UnityEngine.Animator fire_;
+    public AudioSource burnSound;
+    private SoundManager soundManager;
     bool flag;
     DateTime t_MouseDown;
     private UIManager uiManager;
@@ -18,6 +20,7 @@ public class IceMelt : MonoBehaviour
         melt_.SetBool("IsMelt", false);
         fire_.SetBool("isFire", false);
         uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -43,7 +46,6 @@ public class IceMelt : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
-            bool isHitSprite = false;
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
@@ -63,7 +65,6 @@ public class IceMelt : MonoBehaviour
             {
                 Invoke("StartFire", time_);
             }
-            isHitIceCube = false;
         }
     }
 
@@ -71,5 +72,6 @@ public class IceMelt : MonoBehaviour
     {
         melt_.SetBool("IsMelt", true);
         fire_.SetBool("isFire", true);
+        soundManager.PlaySound(burnSound);
     }
 }

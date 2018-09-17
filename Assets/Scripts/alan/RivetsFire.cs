@@ -12,11 +12,14 @@ public class RivetsFire : MonoBehaviour
     private bool hasFinish = false;
     private float time_;
     UIManager uiManager;
+    public AudioSource burnSound;
+    private SoundManager soundManager;
     // Use this for initialization
     void Start()
     {
         fire_.SetBool("isFire", false);
         uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -72,6 +75,7 @@ public class RivetsFire : MonoBehaviour
 
     public void StartFire()
     {
+        soundManager.PlaySound(burnSound);
         fire_.SetBool("isFire", true);
     }
 }

@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceMeltAndCreateWater : MonoBehaviour {
+public class IceMeltAndCreateWater : MonoBehaviour
+{
 
     public UnityEngine.Animator melt_;
     public UnityEngine.Animator fire_;
@@ -20,13 +21,15 @@ public class IceMeltAndCreateWater : MonoBehaviour {
     private float time_;
 
     private SoundManager soundManager;
+    private UIManager uiManager;
     // Use this for initialization
     void Start()
     {
         melt_.SetBool(Condition, false);
         fire_.SetBool("isFire", false);
         dropWaterSound = GetComponent<AudioSource>();
-        soundManager =GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -38,7 +41,7 @@ public class IceMeltAndCreateWater : MonoBehaviour {
         {
             Destroy(melt_);
             Destroy(gameObject);
-        
+
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -54,11 +57,10 @@ public class IceMeltAndCreateWater : MonoBehaviour {
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
-            bool isHitSprite = false;
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
-               // print(hit.collider.name);
+                // print(hit.collider.name);
                 if (hit.collider.gameObject.tag == gameObject.tag)
                 {
                     isHitIceCube = true;
@@ -66,13 +68,12 @@ public class IceMeltAndCreateWater : MonoBehaviour {
                     time_ = Mathf.Abs(Vector3.Distance(boy.transform.position, hit.transform.position)) / 8;
                     break;
                 }
-                
+
             }
-            if (isHitIceCube)
+            if (isHitIceCube && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
-            isHitIceCube = false;
         }
     }
 

@@ -12,13 +12,14 @@ public class RopeController : MonoBehaviour
     public GameObject ropeFire;
     private UIManager uiManager;
     private float time_;
-
+    private SoundManager soundManager;
     // Use this for initialization
     void Start()
     {
         fire_.SetBool("isFire", false);
         GameObject girl = GameObject.Find("Girl");
-        
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>();
     }
 
     // Update is called once per frame
@@ -75,6 +76,7 @@ public class RopeController : MonoBehaviour
     public void StartFire()
     {
         fire_.SetBool("isFire", true);
+        soundManager.GetComponent<AudioSource>();
     }
 
 

@@ -86,11 +86,8 @@ public class UIManager : MonoBehaviour
 
     public void OnClickMaskPanel()
     {
-        if (isPrompting)
-        {
-            isPrompting = false;
-            btnPromptCtrl.HidePrompt();
-        }
+        isPrompting = false;
+        btnPromptCtrl.HidePrompt();
         ShowCommonButtons();
         isBtnShowing = false;
     }

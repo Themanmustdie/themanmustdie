@@ -16,12 +16,14 @@ public class BranchFireController : MonoBehaviour
 
     private float time_;
     private UIManager uiManager;
+    private SoundManager soundManager;
     // Use this for initialization
     void Start()
     {
         fire_.SetBool("isFire", false);
         barrier = GameObject.Find("Barrier2");
         uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+        soundManager = GameObject.Find("EverySceneNeed").GetComponent<SoundManager>(); 
     }
 
     // Update is called once per frame
@@ -51,7 +53,6 @@ public class BranchFireController : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
-            bool isHitSprite = false;
             bool isHitIceRivets = false;
             foreach (RaycastHit hit in hits)
             {
@@ -73,6 +74,7 @@ public class BranchFireController : MonoBehaviour
     public void StartFire()
     {
         fire_.SetBool("isFire", true);
+        soundManager.PlaySound(GetComponent<AudioSource>());
         GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(1);
     }
 

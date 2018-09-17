@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class IceMeltCondition : MonoBehaviour
 {
-    
+
     public UnityEngine.Animator melt_;
     public UnityEngine.Animator fire_;
     bool flag;
@@ -14,11 +14,13 @@ public class IceMeltCondition : MonoBehaviour
     public GameObject water;
 
     private float time_;
+    private UIManager uiManager;
     // Use this for initialization
     void Start()
     {
         melt_.SetBool("IsMelt", false);
         fire_.SetBool("isFire", false);
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -48,7 +50,6 @@ public class IceMeltCondition : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
-            bool isHitSprite = false;
             bool isHitIceCube = false;
             foreach (RaycastHit hit in hits)
             {
@@ -61,11 +62,10 @@ public class IceMeltCondition : MonoBehaviour
                     break;
                 }
             }
-            if (isHitIceCube)
+            if (isHitIceCube && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
-            isHitIceCube = false;
         }
     }
 

@@ -15,7 +15,7 @@ public class IceDownForce : MonoBehaviour
         soundManager = new SoundManager();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame  
     void Update()
     {
         if (!isAddForce)

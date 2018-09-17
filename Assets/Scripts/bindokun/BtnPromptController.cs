@@ -55,9 +55,9 @@ public class BtnPromptController : MonoBehaviour
 
     public void HidePrompt()
     {
-        if (curPromptIdx >= 0 && curPromptIdx < promptList.Length)
+        for(int i = 0; i < promptList.Length; ++i)
         {
-            promptList[curPromptIdx].SetActive(false);
+            promptList[i].SetActive(false);
         }
     }
 

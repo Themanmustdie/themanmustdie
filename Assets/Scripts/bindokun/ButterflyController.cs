@@ -16,6 +16,7 @@ public class ButterflyController : MonoBehaviour
     public GameObject boySprite;
     private UIManager uiManager;
     public bool isFinish = false;
+    private float startY = 0;
 
     // Use this for initialization
 
@@ -24,6 +25,7 @@ public class ButterflyController : MonoBehaviour
         trButterfly = GetComponent<Transform>();
         startTime = Time.time;
         uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+        startY = trButterfly.position.y;
 
     }
     // Update is called once per frame
@@ -49,7 +51,7 @@ public class ButterflyController : MonoBehaviour
         }
         else
         {
-            trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
+            trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, startY + anim.Evaluate((Time.time - startTime) * speed), 0);
         }
     }
 }

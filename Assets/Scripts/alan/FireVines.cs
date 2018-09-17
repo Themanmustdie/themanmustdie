@@ -12,10 +12,13 @@ public class FireVines : MonoBehaviour {
 
     public GameObject balance;
     public GameObject heavyPoint;
+    private UIManager uiManager;
 	// Use this for initialization
 	void Start () {
         fire_.SetBool("isFire", false);
-	}
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -61,11 +64,10 @@ public class FireVines : MonoBehaviour {
 
             }
 
-            if (isHitIceRivets)
+            if (isHitIceRivets && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
-            isHitIceRivets = false;
         }
 	}
 
