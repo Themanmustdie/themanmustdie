@@ -17,16 +17,18 @@ public class NewBurnCandleController : MonoBehaviour {
     public GameObject wall;
     public GameObject backgroundWall;
     private Animator aniBackgroundWall;
+    private UIManager uiManager;
 
     // Use this for initialization
     void Start () {
         aniBackgroundWall = backgroundWall.GetComponent<Animator>();
         isLightened = false;
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (!NewBurnCandleController.isLightened && Input.GetMouseButtonDown(0))
+        if (!NewBurnCandleController.isLightened && Input.GetMouseButtonDown(0) && !uiManager.isBtnShowing)
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);

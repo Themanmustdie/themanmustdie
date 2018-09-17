@@ -15,11 +15,13 @@ public class BranchFireController : MonoBehaviour
     private bool hasFinish = false;
 
     private float time_;
+    private UIManager uiManager;
     // Use this for initialization
     void Start()
     {
         fire_.SetBool("isFire", false);
         barrier = GameObject.Find("Barrier2");
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -61,11 +63,10 @@ public class BranchFireController : MonoBehaviour
                     break;
                 }
             }
-            if (isHitIceRivets)
+            if (isHitIceRivets && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
-            isHitIceRivets = false;
         }
     }
 

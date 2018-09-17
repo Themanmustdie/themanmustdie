@@ -9,6 +9,7 @@ public class FruitFireController : MonoBehaviour {
     bool flag;
     DateTime t_MouseDown;
     private bool hasFinish = false;
+    private UIManager uiManager;
 
     private float time_;
     // Use this for initialization
@@ -30,6 +31,7 @@ public class FruitFireController : MonoBehaviour {
                 Physics.IgnoreCollision(trChild.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             }
         }
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -53,8 +55,8 @@ public class FruitFireController : MonoBehaviour {
                     hasFinish = true;
                 }
             }
-           
         }
+
         if (Input.GetMouseButtonUp(0))
         {
             flag = false;
@@ -64,6 +66,7 @@ public class FruitFireController : MonoBehaviour {
             t_MouseDown = DateTime.Now;
             flag = true;
         }
+        
 
         if (flag)
         {
@@ -81,10 +84,9 @@ public class FruitFireController : MonoBehaviour {
                     break;
                 }
             }
-            if(isHitIceRivets){
+            if(isHitIceRivets && !uiManager.isBtnShowing){
                 Invoke("StartFire", time_);
             }
-            isHitIceRivets = false;
         }
     }
 

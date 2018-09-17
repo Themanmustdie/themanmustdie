@@ -767,8 +767,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114677651469610912}
-        m_MethodName: OnClick
+      - m_Target: {fileID: 114674741719588854}
+        m_MethodName: OnClickBtnSetting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -819,6 +819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPrompting: 0
+  isBtnShowing: 0
+  maskPanel: {fileID: 0}
 --- !u!114 &114677651469610912
 MonoBehaviour:
   m_ObjectHideFlags: 1

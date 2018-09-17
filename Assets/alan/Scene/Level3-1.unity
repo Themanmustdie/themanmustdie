@@ -4509,7 +4509,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 288
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5206,6 +5206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPrompting: 0
+  isBtnShowing: 0
+  maskPanel: {fileID: 0}
 --- !u!114 &1443276250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6699,10 +6701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb3eec3db428d645bbbff0d61270c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnPrompt: {fileID: 0}
-  btnReplay: {fileID: 0}
-  btnGoBack: {fileID: 0}
-  maskPanel: {fileID: 0}
 --- !u!114 &1757953864
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class RopeController : MonoBehaviour
     DateTime t_MouseDown;
     private bool hasFinish = false;
     public GameObject ropeFire;
-
+    private UIManager uiManager;
     private float time_;
 
     // Use this for initialization
@@ -18,7 +18,7 @@ public class RopeController : MonoBehaviour
     {
         fire_.SetBool("isFire", false);
         GameObject girl = GameObject.Find("Girl");
-
+        
     }
 
     // Update is called once per frame
@@ -65,12 +65,10 @@ public class RopeController : MonoBehaviour
                     break;
                 }
             }
-            if (isHitIceRivets)
+            if (isHitIceRivets && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
-            isHitIceRivets = false;
-         
         }
     }
 

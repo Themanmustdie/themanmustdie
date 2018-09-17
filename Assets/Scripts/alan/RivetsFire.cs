@@ -11,10 +11,12 @@ public class RivetsFire : MonoBehaviour
     DateTime t_MouseDown;
     private bool hasFinish = false;
     private float time_;
+    UIManager uiManager;
     // Use this for initialization
     void Start()
     {
         fire_.SetBool("isFire", false);
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -47,7 +49,6 @@ public class RivetsFire : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
-            bool isHitSprite = false;
             bool isHitIceRivets = false;
             foreach (RaycastHit hit in hits)
             {
@@ -62,11 +63,10 @@ public class RivetsFire : MonoBehaviour
                
             }
 
-            if (isHitIceRivets)
+            if (isHitIceRivets && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
-            isHitIceRivets = false;
         }
     }
 

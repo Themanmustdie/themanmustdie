@@ -2,30 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour {
+public class UIManager : MonoBehaviour
+{
 
-    public bool isPrompting =false;
+    public bool isPrompting = false;
+    public bool isBtnShowing = false;
     private BtnPromptController btnPromptCtrl;
-    private BtnSettingController btnSettingCtrl;
+    
+    public GameObject maskPanel;
+    private UIManager uiManager;
+
+    // private BtnSettingController btnSettingCtrl;
     private CameraManager cameraMgr;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         btnPromptCtrl = GetComponentInChildren<BtnPromptController>(true);
         cameraMgr = GameObject.Find("EverySceneNeed").GetComponent<CameraManager>();
-        btnSettingCtrl = GetComponentInChildren<BtnSettingController>(true);
+        // btnSettingCtrl = GetComponentInChildren<BtnSettingController>(true);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void ShowCommonButtons()
     {
-        foreach(Transform tr in GetComponentInChildren<Transform>(true))
+        cameraMgr.BlurBackground(false);
+        foreach (Transform tr in GetComponentInChildren<Transform>(true))
         {
-            if(tr.gameObject.name == "btnLeft" || tr.gameObject.name == "btnRight" || tr.gameObject.name == "btnSetting")
+            if (tr.gameObject.name == "btnLeft" || tr.gameObject.name == "btnRight" || tr.gameObject.name == "btnSetting")
+            {
+                tr.gameObject.SetActive(true);
+            }
+            else
+            {
+                tr.gameObject.SetActive(false);
+            }
+        }
+    }
+    public void ShowControlButtons()
+    {
+        cameraMgr.BlurBackground(true);
+        foreach (Transform tr in GetComponentInChildren<Transform>(true))
+        {
+            if (tr.gameObject.name == "BtnPrompt" || tr.gameObject.name == "BtnReplay" || tr.gameObject.name == "BtnGoBack" || tr.gameObject.name == "UILayerMaskPanel")
+            {
+                tr.gameObject.SetActive(true);
+            }
+            else
             {
                 tr.gameObject.SetActive(true);
             }
@@ -36,8 +64,8 @@ public class UIManager : MonoBehaviour {
     {
         foreach (Transform tr in GetComponentInChildren<Transform>(true))
         {
-           
-            if(tr.gameObject.name == "UILayerMaskPanel")
+
+            if (tr.gameObject.name == "UILayerMaskPanel")
             {
                 tr.gameObject.SetActive(true);
             }
@@ -58,12 +86,25 @@ public class UIManager : MonoBehaviour {
 
     public void OnClickMaskPanel()
     {
-        if(isPrompting)
+        if (isPrompting)
         {
-            ShowCommonButtons();
-            btnSettingCtrl.OnClick();
             isPrompting = false;
             btnPromptCtrl.HidePrompt();
+        }
+        ShowCommonButtons();
+        isBtnShowing = false;
+    }
+
+    public void OnClickBtnSetting()
+    {
+        isBtnShowing = !isBtnShowing;
+        if (isBtnShowing)
+        {
+            ShowControlButtons();
+        }
+        else
+        {
+            ShowCommonButtons();
         }
     }
 }

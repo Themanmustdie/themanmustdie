@@ -16,6 +16,11 @@ public class IceMeltPrompt : MonoBehaviour {
 
     private void OnDestroy()
     {
-        GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(0);
+        BtnPromptController controller = GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true);
+        if(controller)
+        {
+            GameObject.Find("UILayer").GetComponentInChildren<BtnPromptController>(true).SwitchPromptFrom(0);   
+        }
+        
     }
 }

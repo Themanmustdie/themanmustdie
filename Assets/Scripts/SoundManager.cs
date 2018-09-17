@@ -20,7 +20,7 @@ public class SoundManager : MonoBehaviour
     
     public void PlaySound(AudioSource sound)
     {
-        Debug.Log(Time.time);
+        //Debug.Log(Time.time);
         if (soundTimeMap.ContainsKey(sound))
         {
             float hasPlayTime = Time.time - soundTimeMap[sound];

@@ -105,7 +105,7 @@ class NormalMoveState : ISpriteState
     public void Reset()
     {
         // mouseDownPos = spriteTr.position;
-        spirteCtrl.spriteMaskPanel.SetActive(false);
+        //spirteCtrl.spriteMaskPanel.SetActive(false);
     }
 }
 
@@ -154,7 +154,7 @@ public class SpriteController : MonoBehaviour
     public void DisableMoving()
     {
         enableMoving = false;
-
+        spriteMaskPanel.SetActive(true);
     }
 
     // Use this for initialization

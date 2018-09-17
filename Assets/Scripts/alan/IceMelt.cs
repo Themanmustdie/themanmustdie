@@ -10,13 +10,14 @@ public class IceMelt : MonoBehaviour
     public UnityEngine.Animator fire_;
     bool flag;
     DateTime t_MouseDown;
-
+    private UIManager uiManager;
     private float time_;
     // Use this for initialization
     void Start()
     {
         melt_.SetBool("IsMelt", false);
         fire_.SetBool("isFire", false);
+        uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -58,7 +59,7 @@ public class IceMelt : MonoBehaviour
                 }
             }
 
-            if (isHitIceCube)
+            if (isHitIceCube && !uiManager.isBtnShowing)
             {
                 Invoke("StartFire", time_);
             }
