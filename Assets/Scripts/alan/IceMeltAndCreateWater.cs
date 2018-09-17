@@ -36,7 +36,9 @@ public class IceMeltAndCreateWater : MonoBehaviour {
         animatorInfo = melt_.GetCurrentAnimatorStateInfo(0);  //要在update获取
         if ((animatorInfo.normalizedTime > 1.0f) && (animatorInfo.IsName(AniName)))//normalizedTime：0-1在播放、0开始、1结束 MyPlay为状态机动画的名字
         {
+            Destroy(melt_);
             Destroy(gameObject);
+        
         }
         if (Input.GetMouseButtonUp(0))
         {
