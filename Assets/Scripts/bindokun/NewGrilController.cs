@@ -27,6 +27,7 @@ public class NewGrilController : MonoBehaviour
     public void DisableMoving()
     {
         enableMoving = false;
+        isWalk = false;
     }
 
 
@@ -70,6 +71,7 @@ public class NewGrilController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        actionController.SetBool("isWalk", isWalk);
         if (!enableMoving)
         {
             return;
@@ -98,7 +100,7 @@ public class NewGrilController : MonoBehaviour
 
         //charController.SimpleMove(move * speed * Time.deltaTime);
         //charController.Move(new Vector3(move.x * speed * Time.deltaTime, -1f, 0));
-        actionController.SetBool("isWalk", isWalk);
+       
         // 判断女孩在摄像机的位置
         float girlPosX = Camera.main.WorldToViewportPoint(trGirl.position).x;
         if ((girlPosX >= 0.01 || move.x > 0) && (girlPosX <= 0.99 || move.x < 0))
