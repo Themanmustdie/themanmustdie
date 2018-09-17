@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IcePromptController : MonoBehaviour
-{
-
+public class RightIceMeltPromptController : MonoBehaviour {
 
     // Use this for initialization
     void Start()

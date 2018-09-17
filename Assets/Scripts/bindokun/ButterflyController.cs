@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class ButterflyController : MonoBehaviour
 {
-
-
     public float speed = 2.0f;
     //曲线
     public AnimationCurve anim;
@@ -16,8 +14,8 @@ public class ButterflyController : MonoBehaviour
     public float targetLocalXpos;
     public GameObject girl;
     public GameObject boySprite;
-    public GameObject comicPanel;
     private UIManager uiManager;
+    public bool isFinish = false;
 
     // Use this for initialization
 
@@ -28,64 +26,30 @@ public class ButterflyController : MonoBehaviour
         uiManager = GameObject.Find("UILayer").GetComponent<UIManager>();
 
     }
-
-
-
     // Update is called once per frame
-
     void Update()
     {
+        if(isFinish)
+        {
+            return;
+        }
 
         if (trButterfly.localPosition.x > targetLocalXpos)
         {
-
-
             if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 GameObject.Find("EverySceneNeed").GetComponent<CameraManager>().ChangeTarget(girl);
                 gameObject.SetActive(false);
             }
-            else if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3)
-            {
-                gameObject.SetActive(true);
-            }
-            else
-            {
-                gameObject.SetActive(false);
-            }
-
             girl.GetComponent<NewGrilController>().EnableMoving();
             boySprite.GetComponent<SpriteController>().EnableMoving();
             // 显示按钮
             GameObject.Find("UILayer").GetComponent<UIManager>().ShowCommonButtons();
+            isFinish = true;
         }
         else
         {
             trButterfly.position = new Vector3(trButterfly.position.x + speed * Time.deltaTime, anim.Evaluate((Time.time - startTime) * speed), 0);
         }
-
-
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "Girl")
-        {
-            if (SceneManager.GetActiveScene().buildIndex == 3)
-            {
-                PlayMemoryOne();
-                uiManager.HideAllButtons();
-                girl.GetComponent<NewGrilController>().DisableMoving();
-                Destroy(gameObject);
-            }
-        }
-
-    }
-
-
-    private void PlayMemoryOne()
-    {
-        comicPanel.SetActive(true);
     }
 }
