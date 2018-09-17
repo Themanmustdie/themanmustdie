@@ -7,7 +7,7 @@ public class OpenDoorController : MonoBehaviour {
 
     public GameObject imgBackground;
     public GameObject imgBackgroundOpenDoor;
-
+    private bool hasOpen = false;
     // Use this for initialization
     void Start () {
 		
@@ -19,11 +19,12 @@ public class OpenDoorController : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "girl")
+        if (other.tag == "girl" && !hasOpen)
         {
             Destroy(imgBackground);
             imgBackgroundOpenDoor.SetActive(true);
             GetComponent<AudioSource>().Play();
+            hasOpen = true;
         }
     }
     private void OnCollisionEnter(Collision collision)

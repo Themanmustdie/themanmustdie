@@ -301,6 +301,7 @@
     <Compile Include="Assets\Scripts\bindokun\Level1-1\FruitFireController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\Memory1Trigger.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level1-1\RopeController.cs" />
+    <Compile Include="Assets\Scripts\bindokun\Level3-1\PageTrigger.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level3-1\RightIceMeltPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level3-1\RightRopBurnPromptController.cs" />
     <Compile Include="Assets\Scripts\bindokun\Level3-1\TrestlePromptController.cs" />
